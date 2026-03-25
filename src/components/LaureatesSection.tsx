@@ -1,4 +1,4 @@
-import { Award, GraduationCap, Globe } from 'lucide-react';
+import { Award } from 'lucide-react';
 import jackImg from '../assets/jack-dongarra.jpg';
 import davidImg from '../assets/david-macmillan.jpg';
 import konImg from '../assets/konstantin-novoselov.jpg';
