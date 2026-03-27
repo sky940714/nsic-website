@@ -2,7 +2,6 @@ import { useEffect } from 'react'; // 👈 新增
 import { useLocation } from 'react-router-dom'; // 👈 新增
 import HeroSection from '../components/HeroSection';
 import OriginAndFounderSection from '../components/OriginAndFounderSection';
-import IntroductionSection from '../components/IntroductionSection';
 import NewsSection from '../components/NewsSection';
 import AnnouncementSection from '../components/AnnouncementSection';
 
@@ -26,7 +25,7 @@ export default function Home() {
     <>
       <HeroSection />
       <OriginAndFounderSection />
-      <IntroductionSection />
+
       <NewsSection />
       <AnnouncementSection />
     </>
