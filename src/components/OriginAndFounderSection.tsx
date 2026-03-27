@@ -1,3 +1,4 @@
+// 確保第一行只留下照片匯入，不要有任何 { Lightbulb }
 import presidentImg from '../assets/president.jpg';
 
 export default function OriginAndFounderSection() {
@@ -5,7 +6,7 @@ export default function OriginAndFounderSection() {
         <section className="py-24 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 
-                {/* 區塊一：峰會緣起 (維持不變) */}
+                {/* 區塊一：峰會緣起 */}
                 <div id="origin" className="mb-32 animate-on-scroll is-visible scroll-mt-24">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-blue-900 mb-4">起心動念</h2>
@@ -13,14 +14,12 @@ export default function OriginAndFounderSection() {
                     </div>
                     
                     <div className="grid md:grid-cols-2 gap-12 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-100">
-                        {/* 中文版 */}
                         <div className="space-y-4 text-slate-600 leading-relaxed text-justify">
                             <p>在科技浪潮席捲全球的今日，掌握先機、洞悉未來趨勢，成為各國競逐的焦點。台灣，作為全球科技產業的重要樞紐，更需要一個平台，匯聚國際頂尖智慧，引領科技創新，邁向更美好的未來。</p>
                             <p>有鑑於此，「諾科獎國際文教交流協會」將於 2025 年舉辦首屆「諾科獎台北峰會」。</p>
                             <p>本次峰會以「超級運算改變研究方式AI」為主題，期望搭建一個國際級的交流平台，邀請3位諾貝爾獎、1位圖靈獎得主等世界級科學巨擘，以及各領域的專家學者、企業領袖齊聚一堂，共同探討人工智慧、量子計算、生物科技等前瞻科技的發展趨勢。</p>
                             <p className="font-bold text-blue-800 mt-4">「2025 諾科獎台北峰會」，邀請您一同見證科技的力量，共創美好未來！</p>
                         </div>
-                        {/* 英文版 */}
                         <div className="space-y-4 text-slate-500 leading-relaxed text-justify md:border-l md:border-slate-200 md:pl-12">
                             <h3 className="text-xl font-bold text-slate-700 mb-4">2025 Nobel Prize Taipei Summit Origin</h3>
                             <p>Today, as the wave of science and technology sweeps across the world, seizing opportunities and understanding future trends has become the focus of competition among countries. Taiwan needs a platform to gather top international wisdom, lead technological innovation, and move towards a better future.</p>
@@ -30,12 +29,10 @@ export default function OriginAndFounderSection() {
                     </div>
                 </div>
 
-                {/* 區塊二：會長的話 (全新簡潔排版) */}
+                {/* 區塊二：會長的話 */}
                 <div id="founder" className="animate-on-scroll is-visible delay-100 scroll-mt-24">
                     <div className="bg-white rounded-[2rem] p-8 md:p-16 shadow-sm border border-slate-100">
                         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-                            
-                            {/* 左側：感性文字 */}
                             <div className="flex-grow space-y-8 order-2 md:order-1">
                                 <div>
                                     <h2 className="text-2xl font-bold text-slate-800 mb-2">會長的話</h2>
@@ -58,7 +55,6 @@ export default function OriginAndFounderSection() {
                                     </div>
                                 </div>
 
-                                {/* 會長簽名與頭銜 */}
                                 <div className="pt-8 border-t border-slate-100">
                                     <div className="flex items-end gap-4 mb-4">
                                         <span className="text-slate-500 text-sm">創會會長</span>
@@ -71,12 +67,9 @@ export default function OriginAndFounderSection() {
                                 </div>
                             </div>
 
-                            {/* 右側：圓形照片 */}
                             <div className="w-64 h-64 lg:w-80 lg:h-80 shrink-0 order-1 md:order-2">
                                 <div className="relative w-full h-full">
-                                    {/* 裝飾外圈 */}
                                     <div className="absolute -inset-4 border-2 border-amber-100 rounded-full animate-pulse"></div>
-                                    {/* 照片容器 */}
                                     <div className="w-full h-full rounded-full overflow-hidden border-8 border-white shadow-xl">
                                         <img 
                                             src={presidentImg} 
@@ -86,7 +79,6 @@ export default function OriginAndFounderSection() {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
