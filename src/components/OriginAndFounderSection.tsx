@@ -1,5 +1,3 @@
-import { Lightbulb } from 'lucide-react';
-// 匯入會長照片
 import presidentImg from '../assets/president.jpg';
 
 export default function OriginAndFounderSection() {
