@@ -1,5 +1,3 @@
-import { Award } from 'lucide-react';
-
 // 定義資料型別，讓 TypeScript 保護我們
 interface Laureate {
   id: number;
