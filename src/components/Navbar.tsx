@@ -13,9 +13,9 @@ const navMenus: Record<string, NavMenu> = {
     items: ['起心動念', '會長的話'],
   },
   agenda: {
-    label: '活動議程',
-    items: ['活動議程表'],
-  },
+  label: '活動內容', // 👈 改名
+  items: ['活動內容表'], // 👈 改名
+},
   guests: {
     label: '貴賓介紹',
     items: ['主要貴賓'],
@@ -32,6 +32,8 @@ const navMenus: Record<string, NavMenu> = {
 
 const pathMap: Record<string, string> = {
   '主要貴賓': '/guests',
+  '活動內容表': '/program', // 👈 連結到新分頁
+  '2025': '/review-2025',
   '聯絡我們': '/contact',
   '起心動念': '/#origin',
   '會長的話': '/#founder',

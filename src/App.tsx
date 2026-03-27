@@ -5,6 +5,8 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Guests from './pages/Guests';
 import Contact from './pages/Contact'; // 👈 匯入
+import Review2025 from './pages/Review2025';
+import Program from './pages/Program'; // 👈 匯入
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/guests" element={<Guests />} />
             <Route path="/contact" element={<Contact />} /> {/* 👈 新增 */}
+            <Route path="/review-2025" element={<Review2025 />} />
+            <Route path="/program" element={<Program />} /> {/* 👈 新增路徑 */}
           </Routes>
         </main>
 
