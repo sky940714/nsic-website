@@ -1,16 +1,19 @@
-import { useEffect } from 'react'; // 👈 新增
-import { useLocation } from 'react-router-dom'; // 👈 新增
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+// 匯入新設計的組件
 import HeroSection from '../components/HeroSection';
-import OriginAndFounderSection from '../components/OriginAndFounderSection';
+import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT US 佈局
+import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
+import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
 import NewsSection from '../components/NewsSection';
 import AnnouncementSection from '../components/AnnouncementSection';
 
 export default function Home() {
-  const { hash } = useLocation(); // 抓取網址後面的 #內容
+  const { hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      // 稍微延遲 100 毫秒，確保頁面元素都長出來了再捲動
       setTimeout(() => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
@@ -19,13 +22,23 @@ export default function Home() {
         }
       }, 100);
     }
-  }, [hash]); // 只要 # 字號改變，就會觸發這段程式碼
+  }, [hash]);
 
   return (
     <>
+      {/* 1. 滿版輪播首頁 */}
       <HeroSection />
-      <OriginAndFounderSection />
 
+      {/* 2. 關於我們 (NTHU 風格：照片左、文字右)  */}
+      <AboutSection /> 
+
+      {/* 3. 2026 峰會快訊 (含 Michael Levitt 介紹與連結) [cite: 1, 3] */}
+      <SummitBrief />
+
+      {/* 4. 會長的話 (感性對話排版) */}
+      <PresidentSection />
+
+      {/* 5. 其他資訊區塊 */}
       <NewsSection />
       <AnnouncementSection />
     </>

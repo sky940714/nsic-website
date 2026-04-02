@@ -17,14 +17,6 @@ const events = [
     participants: "大學校長、學者、研究人員、學生與受邀嘉賓。",
     englishTitle: "Yilan Centennial Dialogue on Science and Education"
   },
-  {
-    date: "2026年5月15日",
-    location: "花蓮",
-    title: "花蓮科學與文明對話",
-    venue: "花蓮專屬場域",
-    participants: "科學家、教育者、思想者與受邀嘉賓，進行一場小型而深入的科學與文明對話。",
-    englishTitle: "Hualien Dialogue on Science and Civilization"
-  }
 ];
 
 export default function Program() {
