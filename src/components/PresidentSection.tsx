@@ -30,7 +30,7 @@ export default function PresidentSection() {
                             <div className="pt-8 border-t border-slate-200">
                                 <div className="flex items-end gap-4 mb-4">
                                     <span className="text-slate-500 text-sm">創會會長</span>
-                                    <h3 className="text-3xl font-bold text-blue-900">朱愛蓮</h3>
+                                    <h3 className="text-3xl font-bold text-blue-900"> 朱愛蓮</h3>
                                 </div>
                                 <ul className="space-y-1 text-slate-500 text-sm">
                                     <li>• 農業土壤改良專家</li>

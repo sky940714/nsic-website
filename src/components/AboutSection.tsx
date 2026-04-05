@@ -31,7 +31,7 @@ export default function AboutSection() {
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="space-y-2">
               <h2 className="text-4xl font-bold text-slate-800 tracking-wider">NSIC</h2>
-              <p className="text-lg text-slate-500 font-medium">諾科獎 國際文教交流協會</p>
+              <p className="text-lg text-slate-500 font-medium">諾諾諾 國際文教交流協會</p>
               <div className="w-12 h-[1px] bg-slate-300 mt-6"></div>
             </div>
             
