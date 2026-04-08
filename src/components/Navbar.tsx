@@ -13,7 +13,7 @@ interface NavMenu {
 const navMenus: Record<string, NavMenu> = {
   peak: {
     label: '峰會介紹',
-    items: ['起心動念', '會長的話'],
+    items: ['關於我們', '會長的話'],
   },
   agenda: {
     label: '活動內容',
@@ -38,7 +38,7 @@ const pathMap: Record<string, string> = {
   '活動內容表': '/program',
   '2025': '/review-2025',
   '聯絡我們': '/contact',
-  '起心動念': '/#origin',
+  '關於我們': '/#origin',
   '會長的話': '/#founder',
   '首頁': '/',
 };
@@ -91,18 +91,6 @@ export default function Navbar({ onShowToast }: NavbarProps) {
                 hasScrolled || !isHomePage ? 'h-10' : 'h-12'
               } w-auto`}
             />
-          </div>
-          <div className="flex flex-col">
-            <h1 className={`text-xl font-bold tracking-tight transition-colors duration-500 ${
-              hasScrolled || !isHomePage ? 'text-slate-800' : 'text-white'
-            }`}>
-              諾科獎
-            </h1>
-            <p className={`text-[10px] tracking-widest transition-colors duration-500 ${
-              hasScrolled || !isHomePage ? 'text-slate-500' : 'text-white/80'
-            }`}>
-              國際文教交流協會
-            </p>
           </div>
         </Link>
 

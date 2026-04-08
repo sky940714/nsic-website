@@ -1,17 +1,23 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// 匯入新設計的組件
-import HeroSection from '../components/HeroSection';
-import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT US 佈局
-import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
-import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
+// 1. 匯入新設計的靜態 Hero 組件
+import StaticHero from '../components/StaticHero';
+
+// 2. 匯入其他必要的區塊組件
+import AboutSection from '../components/AboutSection';
+import PresidentSection from '../components/PresidentSection';
 import NewsSection from '../components/NewsSection';
 import AnnouncementSection from '../components/AnnouncementSection';
 
+/**
+ * 首頁組件 (Home Page)
+ * 已將原有的輪播 (HeroSection) 替換為深藍色背景的 StaticHero (Michael Levitt 版)
+ */
 export default function Home() {
   const { hash } = useLocation();
 
+  // 處理錨點捲動邏輯 (例如點擊導覽列跳轉到特定區塊)
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
@@ -26,19 +32,20 @@ export default function Home() {
 
   return (
     <>
-      {/* 1. 滿版輪播首頁 */}
-      <HeroSection />
+      {/* 1. 頂部 Hero 區塊：現在是深藍色專業背景與 2026 峰會資訊 */}
+      <StaticHero />
 
-      {/* 2. 關於我們 (NTHU 風格：照片左、文字右)  */}
+      {/* 2. 關於我們區塊 */}
       <AboutSection /> 
 
-      {/* 3. 2026 峰會快訊 (含 Michael Levitt 介紹與連結) [cite: 1, 3] */}
-      <SummitBrief />
+      {/* 注意：原本的 <SummitBrief /> 已整合進 <StaticHero />，
+         因此這裡不再需要匯入與渲染，避免內容重複。
+      */}
 
-      {/* 4. 會長的話 (感性對話排版) */}
+      {/* 3. 會長的話 */}
       <PresidentSection />
 
-      {/* 5. 其他資訊區塊 */}
+      {/* 4. 新聞與公告區塊 */}
       <NewsSection />
       <AnnouncementSection />
     </>
