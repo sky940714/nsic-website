@@ -1,77 +1,95 @@
-import { Calendar, MapPin, Users, Globe } from 'lucide-react';
-
-const events = [
-  {
-    date: "2026年5月13日",
-    location: "台北",
-    title: "台北科學與創新對話",
-    venue: "國立臺北科技大學",
-    participants: "大學校長、學者、研究人員、學生與受邀嘉賓。",
-    englishTitle: "Taipei Dialogue on Science and Innovation"
-  },
-  {
-    date: "2026年5月14日",
-    location: "宜蘭",
-    title: "宜蘭百年科學與教育對話",
-    venue: "國立宜蘭大學",
-    participants: "大學校長、學者、研究人員、學生與受邀嘉賓。",
-    englishTitle: "Yilan Centennial Dialogue on Science and Education"
-  },
-];
+import { Calendar, MapPin, Users, BookOpen } from 'lucide-react';
 
 export default function Program() {
-  return (
-    <div className="pt-32 pb-24 bg-slate-50 min-h-screen">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        
-        {/* 標題區 */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-slate-800">活動內容</h2>
-          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Nobel Science Dialogue Series</p>
-          <div className="w-12 h-1 bg-blue-600 mt-6"></div>
-        </div>
-
-        {/* 活動內容列表 */}
-        <div className="space-y-8">
-          {events.map((event, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition group">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+    return (
+        <div className="pt-32 pb-24 bg-white min-h-screen">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6">
                 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-blue-600 font-bold">
-                    <Calendar className="w-5 h-5" />
-                    <span className="text-lg">{event.date} | {event.location}</span>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-2xl font-bold text-slate-800 mb-1">{event.title}</h3>
-                    <p className="text-slate-400 text-sm font-medium uppercase tracking-wider">{event.englishTitle}</p>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-slate-600">
-                      <MapPin className="w-4 h-4 text-slate-400" />
-                      <span className="text-sm font-medium">活動地點：{event.venue}</span>
-                    </div>
-                    <div className="flex items-start gap-2 text-slate-600">
-                      <Users className="w-4 h-4 text-slate-400 mt-1" />
-                      <span className="text-sm leading-relaxed">參與對象：{event.participants}</span>
-                    </div>
-                  </div>
+                {/* 1. 頁面標題 */}
+                <div className="mb-16">
+                    <h2 className="text-4xl font-bold text-slate-800 flex items-center gap-3">
+                        <span style={{ color: '#0A2540' }}>✦</span> 峰會議程 Summit Agenda
+                    </h2>
+                    <div className="w-12 h-1 mt-6" style={{ backgroundColor: '#0A2540' }}></div>
                 </div>
 
-                <div className="hidden md:block">
-                   <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-200 group-hover:text-blue-500 transition">
-                      <Globe className="w-8 h-8" />
-                   </div>
+                {/* 2. 議程列表 */}
+                <div className="space-y-12">
+                    
+                    {/* --- 5/13 台北場次 --- */}
+                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
+                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
+                                <Calendar className="w-5 h-5" />
+                                2026年5月13日｜台北
+                            </div>
+                            <div className="flex items-center gap-2 text-slate-600 font-medium">
+                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
+                                國立台北科技大學
+                            </div>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
+                                </h3>
+                                <p className="text-2xl font-bold text-slate-800 leading-tight">
+                                    人工智慧與分子科學：理解生命與人類未來
+                                </p>
+                                <p className="text-slate-500 mt-2 italic">
+                                    Artificial Intelligence and Molecular Science: Understanding Life and the Future of Humanity
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
+                                </h3>
+                                <p className="text-lg text-slate-700">學術領袖與產業決策者</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- 5/14 宜蘭場次 --- */}
+                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
+                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
+                                <Calendar className="w-5 h-5" />
+                                2026年5月14日｜宜蘭
+                            </div>
+                            <div className="flex items-center gap-2 text-slate-600 font-medium">
+                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
+                                國立宜蘭大學
+                            </div>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
+                                </h3>
+                                <p className="text-2xl font-bold text-slate-800 leading-tight">
+                                    人工智慧如何改變生命科學與未來社會
+                                </p>
+                                <p className="text-slate-500 mt-2 italic">
+                                    How Artificial Intelligence is Transforming Life Sciences and Future Society
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
+                                </h3>
+                                <p className="text-lg text-slate-700">
+                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml1">（約250人）</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                
-              </div>
             </div>
-          ))}
         </div>
-
-      </div>
-    </div>
-  );
+    );
 }

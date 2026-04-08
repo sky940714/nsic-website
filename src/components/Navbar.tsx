@@ -17,7 +17,7 @@ const navMenus: Record<string, NavMenu> = {
   },
   agenda: {
     label: '活動內容',
-    items: ['活動內容表'],
+    items: ['峰會議程'],
   },
   guests: {
     label: '貴賓介紹',
@@ -35,7 +35,7 @@ const navMenus: Record<string, NavMenu> = {
 
 const pathMap: Record<string, string> = {
   '主要貴賓': '/guests',
-  '活動內容表': '/program',
+  '峰會議程': '/program',
   '2025': '/review-2025',
   '聯絡我們': '/contact',
   '關於我們': '/#origin',
