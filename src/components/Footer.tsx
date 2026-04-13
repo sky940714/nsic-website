@@ -1,18 +1,25 @@
-import { Feather, MessageCircle } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
+// 1. 匯入您的新 LOGO 圖片
+import Logo1 from '../assets/LOGO-1.png'; 
 
 /**
  * 頁尾導覽列 (Footer)
- * 只保留 Facebook 與 Line 社群連結
+ * 已更換左下角為 LOGO-1
  */
 export default function Footer() {
     return (
         <footer className="bg-slate-50 py-10 border-t border-slate-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
                 
-                {/* 1. 頁尾 Logo */}
-                <div className="flex items-center space-x-3">
-                    <Feather className="text-amber-700 w-8 h-8" />
-                    <div>
+                {/* 1. 頁尾 Logo (已更換為圖片) */}
+                <div className="flex items-center">
+                    <img 
+                        src={Logo1} 
+                        alt="諾科獎 LOGO" 
+                        className="h-12 w-auto object-contain" 
+                    />
+                    {/* 如果您的圖片內不含文字，可以保留下方的文字描述；若圖片已有文字則可刪除 */}
+                    <div className="ml-3">
                         <h1 className="text-xl font-bold text-gray-800 leading-none">諾科獎</h1>
                         <p className="text-[10px] text-gray-500 tracking-tighter">國際文教交流協會</p>
                     </div>

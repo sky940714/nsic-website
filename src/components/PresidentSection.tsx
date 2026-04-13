@@ -14,7 +14,7 @@ export default function PresidentSection() {
                                 <div className="w-10 h-1 bg-amber-500"></div>
                             </div>
                             
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 <p className="text-2xl lg:text-3xl font-medium text-slate-700 leading-tight">
                                     諾科獎的起點，是一個很單純的想法
                                 </p>
@@ -26,26 +26,23 @@ export default function PresidentSection() {
                                     我們相信，有些時刻，會讓一個人看見世界的高度
                                 </div>
                             </div>
-
-                            <div className="pt-8 border-t border-slate-200">
-                                <div className="flex items-end gap-4 mb-4">
-                                    <span className="text-slate-500 text-sm">創會會長</span>
-                                    <h3 className="text-3xl font-bold text-blue-900"> 朱愛蓮</h3>
-                                </div>
-                                <ul className="space-y-1 text-slate-500 text-sm">
-                                    <li>• 農業土壤改良專家</li>
-                                    <li>• 日本水質處理公司執行長</li>
-                                </ul>
-                            </div>
                         </div>
 
-                        {/* 右側：照片 */}
-                        <div className="w-64 h-64 lg:w-80 lg:h-80 shrink-0 order-1 md:order-2">
-                            <div className="relative w-full h-full">
-                                <div className="absolute -inset-4 border-2 border-amber-100 rounded-full"></div>
-                                <div className="w-full h-full rounded-full overflow-hidden border-8 border-white shadow-xl">
-                                    <img src={presidentImg} alt="朱愛蓮會長" className="w-full h-full object-cover" />
-                                </div>
+                        {/* 右側：純淨的照片呈現與姓名職稱 */}
+                        <div className="w-full max-w-[280px] md:w-72 shrink-0 order-1 md:order-2 flex flex-col items-center">
+                            {/* 照片：僅保留基本圓角，移除所有裝飾框與線條 */}
+                            <div className="w-full overflow-hidden rounded-xl shadow-lg mb-6">
+                                <img 
+                                    src={presidentImg} 
+                                    alt="朱愛蓮會長" 
+                                    className="w-full h-auto object-cover" 
+                                />
+                            </div>
+                            
+                            {/* 姓名與職稱：直接置於照片下方 */}
+                            <div className="text-center">
+                                <span className="block text-slate-500 text-sm mb-1">創會會長</span>
+                                <h3 className="text-2xl font-bold text-blue-900 tracking-wider">朱愛蓮</h3>
                             </div>
                         </div>
 
