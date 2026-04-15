@@ -15,9 +15,9 @@ const StaticHero = () => {
 
         {/* 副標題 */}
         <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-          連結台灣與世界頂尖科學家的國際科學對話平台 <br />
+          連結台灣與世界頂尖科學家 <br />
           <span className="text-base md:text-lg block mt-2 opacity-80 font-light">
-            A global platform connecting Taiwan with the world’s leading scientific minds
+            Connecting Taiwan with the world’s leading scientific minds
           </span>
         </p>
       
