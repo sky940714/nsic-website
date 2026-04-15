@@ -26,7 +26,7 @@ export default function Guests() {
   return (
     <div className="pt-20 min-h-screen bg-white">
       {/* 3. 呼叫通用積木，傳入「主要貴賓」標題與今年的資料 */}
-      <LaureatesSection pageTitle="主要貴賓" laureates={currentGuests} />
+      <LaureatesSection pageTitle="本年度邀請科學家" laureates={currentGuests} />
     </div>
   );
 }

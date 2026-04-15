@@ -15,7 +15,7 @@ export default function PresidentSection() {
                             </div>
                             
                             <div className="space-y-6">
-                                <p className="text-2xl lg:text-3xl font-medium text-slate-700 leading-tight">
+                                <p className="text-2xl lg:text-3xl font-medium text-slate-600 leading-tight">
                                     諾科獎的起點，是一個很單純的想法
                                 </p>
                                 <p className="text-xl lg:text-2xl text-slate-600 leading-snug">
