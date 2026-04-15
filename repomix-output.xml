@@ -40,57 +40,62 @@ The content is organized as follows:
 </file_summary>
 
 <directory_structure>
+public/
+  favicon.svg
+  icons.svg
+src/
+  assets/
+    about-origin.jpg
+    david-macmillan.jpg
+    hero-bg-1.jpg
+    hero-bg-2.jpg
+    hero-bg-3.jpg
+    hero.png
+    jack-dongarra.jpg
+    konstantin-novoselov.jpg
+    logo-1.png
+    logo-2.jpg
+    logo-bright.png
+    logo-niu.png
+    logo-ntut.png
+    logo-redin.png
+    logo.png
+    louis-ignarro.jpg
+    michael-levitt.jpg
+    president.jpg
+    react.svg
+    vite.svg
+  components/
+    AboutSection.tsx
+    AnnouncementSection.tsx
+    DialogueArchive.tsx
+    Footer.tsx
+    HeroSection.tsx
+    LaureatesSection.tsx
+    Navbar.tsx
+    NewsSection.tsx
+    OriginAndFounderSection.tsx
+    PresidentSection.tsx
+    ScrollToTop.tsx
+    StaticHero.tsx
+    SummitBrief.tsx
+    Toast.tsx
+  pages/
+    Contact.tsx
+    Guests.tsx
+    Home.tsx
+    Program.tsx
+    Review2025.tsx
+  App.css
+  App.tsx
+  index.css
+  main.tsx
 .gitignore
 eslint.config.js
 index.html
 package.json
 postcss.config.js
-public/favicon.svg
-public/icons.svg
 README.md
-src/App.css
-src/App.tsx
-src/assets/about-origin.jpg
-src/assets/david-macmillan.jpg
-src/assets/hero-bg-1.jpg
-src/assets/hero-bg-2.jpg
-src/assets/hero-bg-3.jpg
-src/assets/hero.png
-src/assets/jack-dongarra.jpg
-src/assets/konstantin-novoselov.jpg
-src/assets/logo-1.png
-src/assets/logo-2.jpg
-src/assets/logo-bright.png
-src/assets/logo-niu.png
-src/assets/logo-ntut.png
-src/assets/logo-redin.png
-src/assets/logo.png
-src/assets/louis-ignarro.jpg
-src/assets/michael-levitt.jpg
-src/assets/president.jpg
-src/assets/react.svg
-src/assets/vite.svg
-src/components/AboutSection.tsx
-src/components/AnnouncementSection.tsx
-src/components/DialogueArchive.tsx
-src/components/Footer.tsx
-src/components/HeroSection.tsx
-src/components/LaureatesSection.tsx
-src/components/Navbar.tsx
-src/components/NewsSection.tsx
-src/components/OriginAndFounderSection.tsx
-src/components/PresidentSection.tsx
-src/components/ScrollToTop.tsx
-src/components/StaticHero.tsx
-src/components/SummitBrief.tsx
-src/components/Toast.tsx
-src/index.css
-src/main.tsx
-src/pages/Contact.tsx
-src/pages/Guests.tsx
-src/pages/Home.tsx
-src/pages/Program.tsx
-src/pages/Review2025.tsx
 tailwind.config.js
 tsconfig.app.json
 tsconfig.json
@@ -100,68 +105,6 @@ vite.config.ts
 
 <files>
 This section contains the contents of the repository's files.
-
-<file path=".gitignore">
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-</file>
-
-<file path="eslint.config.js">
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-  },
-])
-</file>
-
-<file path="postcss.config.js">
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
-</file>
 
 <file path="public/favicon.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
@@ -192,269 +135,6 @@ export default {
     <path fill="#08060d" fill-rule="evenodd" d="M1.893 1.98c.052.072 1.245 1.769 2.653 3.77l2.892 4.114c.183.261.333.48.333.486s-.068.089-.152.183l-.522.593-.765.867-3.597 4.087c-.375.426-.734.834-.798.905a1 1 0 0 0-.118.148c0 .01.236.017.664.017h.663l.729-.83c.4-.457.796-.906.879-.999a692 692 0 0 0 1.794-2.038c.034-.037.301-.34.594-.675l.551-.624.345-.392a7 7 0 0 1 .34-.374c.006 0 .93 1.306 2.052 2.903l2.084 2.965.045.063h2.275c1.87 0 2.273-.003 2.266-.021-.008-.02-1.098-1.572-3.894-5.547-2.013-2.862-2.28-3.246-2.273-3.266.008-.019.282-.332 2.085-2.38l2-2.274 1.567-1.782c.022-.028-.016-.03-.65-.03h-.674l-.3.342a871 871 0 0 1-1.782 2.025c-.067.075-.405.458-.75.852a100 100 0 0 1-.803.91c-.148.172-.299.344-.99 1.127-.304.343-.32.358-.345.327-.015-.019-.904-1.282-1.976-2.808L6.365 1.85H1.8zm1.782.91 8.078 11.294c.772 1.08 1.413 1.973 1.425 1.984.016.017.241.02 1.05.017l1.03-.004-2.694-3.766L7.796 5.75 5.722 2.852l-1.039-.004-1.039-.004z" clip-rule="evenodd"/>
   </symbol>
 </svg>
-</file>
-
-<file path="README.md">
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-</file>
-
-<file path="src/App.css">
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
-
-#center {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
-}
-
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
 </file>
 
 <file path="src/assets/react.svg">
@@ -823,6 +503,193 @@ export function ToastContainer({ toasts }: ToastContainerProps) {
 }
 </file>
 
+<file path="src/App.css">
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+</file>
+
 <file path="src/index.css">
 @tailwind base;
 @tailwind components;
@@ -932,6 +799,144 @@ createRoot(document.getElementById('root')!).render(
 )
 </file>
 
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+  },
+])
+</file>
+
+<file path="postcss.config.js">
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+</file>
+
+<file path="README.md">
+# React + TypeScript + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+</file>
+
 <file path="tsconfig.app.json">
 {
   "compilerOptions": {
@@ -1010,77 +1015,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
-</file>
-
-<file path="index.html">
-<!doctype html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <link rel="icon" type="image/png" href="/logo-1.png" />
-    <link rel="apple-touch-icon" href="/logo-1.png" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>諾科獎台北峰會 2026</title>
-
-    <meta name="description" content="諾科獎國際文教交流協會 (NSIC) 致力於串聯世界級學術思想，培育青年世代的國際視野與公共責任。" />
-    
-    <meta property="og:site_name" content="諾科獎台北峰會 2026" />
-    <meta property="og:title" content="諾科獎台北峰會 2026" />
-    <meta property="og:description" content="一個以國際學術思想與公共議題為核心的年度平台。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.nsicworld.org" />
-    
-    <meta property="og:image" content="/logo-1.png" />
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-</file>
-
-<file path="src/App.tsx">
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import Guests from './pages/Guests';
-import Contact from './pages/Contact'; // 👈 匯入
-import Review2025 from './pages/Review2025';
-import Program from './pages/Program'; // 👈 匯入
-
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-white flex flex-col">
-        <Navbar />
-        
-        {/* 主要內容區塊會根據網址變化 */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/guests" element={<Guests />} />
-            <Route path="/contact" element={<Contact />} /> {/* 👈 新增 */}
-            <Route path="/review-2025" element={<Review2025 />} />
-            <Route path="/program" element={<Program />} /> {/* 👈 新增路徑 */}
-          </Routes>
-        </main>
-
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </Router>
-  );
-}
-
-export default App;
 </file>
 
 <file path="src/components/HeroSection.tsx">
@@ -1260,6 +1194,77 @@ export default function Review2025() {
 }
 </file>
 
+<file path="src/App.tsx">
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Guests from './pages/Guests';
+import Contact from './pages/Contact'; // 👈 匯入
+import Review2025 from './pages/Review2025';
+import Program from './pages/Program'; // 👈 匯入
+
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white flex flex-col">
+        <Navbar />
+        
+        {/* 主要內容區塊會根據網址變化 */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/guests" element={<Guests />} />
+            <Route path="/contact" element={<Contact />} /> {/* 👈 新增 */}
+            <Route path="/review-2025" element={<Review2025 />} />
+            <Route path="/program" element={<Program />} /> {/* 👈 新增路徑 */}
+          </Routes>
+        </main>
+
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="icon" type="image/png" href="/logo-1.png" />
+    <link rel="apple-touch-icon" href="/logo-1.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>諾科獎台北峰會 2026</title>
+
+    <meta name="description" content="諾科獎國際文教交流協會 (NSIC) 致力於串聯世界級學術思想，培育青年世代的國際視野與公共責任。" />
+    
+    <meta property="og:site_name" content="諾科獎台北峰會 2026" />
+    <meta property="og:title" content="諾科獎台北峰會 2026" />
+    <meta property="og:description" content="一個以國際學術思想與公共議題為核心的年度平台。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nsicworld.org" />
+    
+    <meta property="og:image" content="/logo-1.png" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+</file>
+
 <file path="tailwind.config.js">
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -1279,45 +1284,6 @@ export default {
     },
   },
   plugins: [],
-}
-</file>
-
-<file path="package.json">
-{
-  "name": "nsic-website",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.7.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.57.0",
-    "vite": "^8.0.1"
-  }
 }
 </file>
 
@@ -1372,108 +1338,6 @@ export default function AboutSection() {
     </section>
   );
 }
-</file>
-
-<file path="src/components/Footer.tsx">
-import { MessageCircle } from 'lucide-react';
-// 1. 匯入您的新 LOGO 圖片
-import Logo1 from '../assets/LOGO-1.png'; 
-
-/**
- * 頁尾導覽列 (Footer)
- * 已更換左下角為 LOGO-1
- */
-export default function Footer() {
-    return (
-        <footer className="bg-slate-50 py-10 border-t border-slate-200">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
-                
-                {/* 1. 頁尾 Logo (已更換為圖片) */}
-                <div className="flex items-center">
-                    <img 
-                        src={Logo1} 
-                        alt="諾科獎 LOGO" 
-                        className="h-12 w-auto object-contain" 
-                    />
-                    {/* 如果您的圖片內不含文字，可以保留下方的文字描述；若圖片已有文字則可刪除 */}
-                    <div className="ml-3">
-                        <h1 className="text-xl font-bold text-gray-800 leading-none">諾科獎</h1>
-                        <p className="text-[10px] text-gray-500 tracking-tighter">國際文教交流協會</p>
-                    </div>
-                </div>
-
-                {/* 2. 版權聲明 */}
-                <p className="text-sm text-slate-400">© 2026 諾科獎 國際文教交流協會. All Rights Reserved.</p>
-
-                {/* 3. 社群連結圖示 (僅保留 Facebook 與 Line) */}
-                <div className="flex space-x-4">
-                    {/* Facebook 連結 */}
-                    <a 
-                        href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-full bg-[#1877f2] text-white flex items-center justify-center hover:opacity-80 hover:-translate-y-1 transition transform shadow-md"
-                        title="Facebook"
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                        </svg>
-                    </a>
-                    
-                    {/* LINE 連結 */}
-                    <a 
-                        href="https://line.me/ti/p/~@171iygsm" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-full bg-[#06c755] text-white flex items-center justify-center hover:opacity-80 hover:-translate-y-1 transition transform shadow-md"
-                        title="Line"
-                    >
-                        <MessageCircle className="w-5 h-5" />
-                    </a>
-                </div>
-
-            </div>
-        </footer>
-    );
-}
-</file>
-
-<file path="src/components/StaticHero.tsx">
-const StaticHero = () => {
-  return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-[#002B5B] text-white overflow-hidden text-center">
-      {/* 背景可以放一張低透明度的科技感圖片 */}
-      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-20 pointer-events-none" />
-      
-      <div className="relative z-10 max-w-5xl">
-        {/* 主標題 */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          諾科獎國際科學對話平台 <br />
-          <span className="text-2xl md:text-4xl block mt-3 font-light tracking-widest">
-            Nobel Science International Dialogue
-          </span>
-        </h1>
-
-        {/* 副標題 */}
-        <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-          連結台灣與世界頂尖科學家的國際科學對話平台 <br />
-          <span className="text-base md:text-lg block mt-2 opacity-80 font-light">
-            A global platform connecting Taiwan with the world’s leading scientific minds
-          </span>
-        </p>
-      
-      </div>
-
-      {/* 捲動提示 */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
-        <p className="text-xs tracking-widest mb-2">SCROLL DOWN</p>
-        <div className="w-[1px] h-10 bg-white mx-auto"></div>
-      </div>
-    </section>
-  );
-};
-
-export default StaticHero;
 </file>
 
 <file path="src/pages/Guests.tsx">
@@ -1609,6 +1473,109 @@ export default function Program() {
 }
 </file>
 
+<file path="package.json">
+{
+  "name": "nsic-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.0",
+    "vite": "^8.0.1"
+  }
+}
+</file>
+
+<file path="src/components/Footer.tsx">
+import { MessageCircle } from 'lucide-react';
+// 1. 匯入您的新 LOGO 圖片
+import Logo1 from '../assets/logo-1.png'; 
+
+/**
+ * 頁尾導覽列 (Footer)
+ * 已更換左下角為 LOGO-1
+ */
+export default function Footer() {
+    return (
+        <footer className="bg-slate-50 py-10 border-t border-slate-200">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-between gap-8">
+                
+                {/* 1. 頁尾 Logo (已更換為圖片) */}
+                <div className="flex items-center">
+                    <img 
+                        src={Logo1} 
+                        alt="諾科獎 LOGO" 
+                        className="h-12 w-auto object-contain" 
+                    />
+                    {/* 如果您的圖片內不含文字，可以保留下方的文字描述；若圖片已有文字則可刪除 */}
+                    <div className="ml-3">
+                        <h1 className="text-xl font-bold text-gray-800 leading-none">諾科獎</h1>
+                        <p className="text-[10px] text-gray-500 tracking-tighter">國際文教交流協會</p>
+                    </div>
+                </div>
+
+                {/* 2. 版權聲明 */}
+                <p className="text-sm text-slate-400">© 2026 諾科獎 國際文教交流協會. All Rights Reserved.</p>
+
+                {/* 3. 社群連結圖示 (僅保留 Facebook 與 Line) */}
+                <div className="flex space-x-4">
+                    {/* Facebook 連結 */}
+                    <a 
+                        href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-[#1877f2] text-white flex items-center justify-center hover:opacity-80 hover:-translate-y-1 transition transform shadow-md"
+                        title="Facebook"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    
+                    {/* LINE 連結 */}
+                    <a 
+                        href="https://line.me/ti/p/~@171iygsm" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-[#06c755] text-white flex items-center justify-center hover:opacity-80 hover:-translate-y-1 transition transform shadow-md"
+                        title="Line"
+                    >
+                        <MessageCircle className="w-5 h-5" />
+                    </a>
+                </div>
+
+            </div>
+        </footer>
+    );
+}
+</file>
+
 <file path="src/components/PresidentSection.tsx">
 import presidentImg from '../assets/president.jpg';
 
@@ -1664,6 +1631,44 @@ export default function PresidentSection() {
         </section>
     );
 }
+</file>
+
+<file path="src/components/StaticHero.tsx">
+const StaticHero = () => {
+  return (
+    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-[#002B5B] text-white overflow-hidden text-center">
+      {/* 背景可以放一張低透明度的科技感圖片 */}
+      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-20 pointer-events-none" />
+      
+      <div className="relative z-10 max-w-5xl">
+        {/* 主標題 */}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+          諾科獎國際科學對話平台 <br />
+          <span className="text-2xl md:text-4xl block mt-3 font-light tracking-widest">
+            Nobel Science International Dialogue
+          </span>
+        </h1>
+
+        {/* 副標題 */}
+        <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
+          連結台灣與世界頂尖科學家 <br />
+          <span className="text-base md:text-lg block mt-2 opacity-80 font-light">
+            Connecting Taiwan with the world’s leading scientific minds
+          </span>
+        </p>
+      
+      </div>
+
+      {/* 捲動提示 */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
+        <p className="text-xs tracking-widest mb-2">SCROLL DOWN</p>
+        <div className="w-[1px] h-10 bg-white mx-auto"></div>
+      </div>
+    </section>
+  );
+};
+
+export default StaticHero;
 </file>
 
 <file path="src/pages/Contact.tsx">
