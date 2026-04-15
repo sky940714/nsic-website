@@ -1,6 +1,6 @@
 import { MessageCircle } from 'lucide-react';
 // 1. 匯入您的新 LOGO 圖片
-import Logo1 from '../assets/LOGO-1.png'; 
+import Logo1 from '../assets/logo-1.png'; 
 
 /**
  * 頁尾導覽列 (Footer)
