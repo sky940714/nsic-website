@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-// 匯入 5/9 (峰會晚宴) 圖片 [已加上 2025 路徑]
+// 匯入 5/9 (峰會晚宴) 圖片 [已統一加上 2025 路徑]
 import nightnight1 from '../assets/2025/nightnightevent/nightnight1.jpg';
 import nightnight2 from '../assets/2025/nightnightevent/nightnight2.jpg';
 import nightnight3 from '../assets/2025/nightnightevent/nightnight3.jpg';
@@ -10,7 +10,7 @@ import nightnight6 from '../assets/2025/nightnightevent/nightnight6.jpg';
 import nightnight7 from '../assets/2025/nightnightevent/nightnight7.jpg';
 import nightnight8 from '../assets/2025/nightnightevent/nightnight8.jpg';
 
-// 匯入 5/9 (北科大 最終場 - Louis J. Ignarro) 圖片
+// 匯入 5/9 (北科大 最終場 - Louis J. Ignarro) 圖片 [已統一加上 2025 路徑]
 import ntut4_1 from '../assets/2025/ntut/ntut4-1.jpg';
 import ntut4_2 from '../assets/2025/ntut/ntut4-2.jpg';
 import ntut4_3 from '../assets/2025/ntut/ntut4-3.jpg';
@@ -40,7 +40,7 @@ import ntut1_2 from '../assets/2025/ntut/ntut1-2.jpg';
 import ntut1_3 from '../assets/2025/ntut/ntut1-3.jpg';
 import ntut1_4 from '../assets/2025/ntut/ntut1-4.jpg';
 
-// 匯入其他活動圖片 [皆已確認為 2025 資料夾]
+// 匯入 5/8 (路亞) 圖片
 import luya1 from '../assets/2025/luya/luya-1.jpg';
 import luya2 from '../assets/2025/luya/luya-2.jpg';
 import luya3 from '../assets/2025/luya/luya-3.jpg';
@@ -48,6 +48,7 @@ import luya4 from '../assets/2025/luya/luya-4.jpg';
 import luya5 from '../assets/2025/luya/luya-5.jpg';
 import luya6 from '../assets/2025/luya/luya-6.jpg';
 
+// 匯入 5/7 (貴賓之夜) 圖片
 import night1 from '../assets/2025/nightevent/night1.jpg';
 import night2 from '../assets/2025/nightevent/night2.jpg';
 import night3 from '../assets/2025/nightevent/night3.jpg';
@@ -56,6 +57,7 @@ import night6 from '../assets/2025/nightevent/night6.jpg';
 import night7 from '../assets/2025/nightevent/night7.jpg';
 import night8 from '../assets/2025/nightevent/night8.jpg';
 
+// 匯入 5/8 (北一女中) 圖片
 import tfg1 from '../assets/2025/tfghighschool/tfg1.jpg';
 import tfg2 from '../assets/2025/tfghighschool/tfg2.jpg';
 import tfg3 from '../assets/2025/tfghighschool/tfg3.jpg';
@@ -64,11 +66,12 @@ import tfg5 from '../assets/2025/tfghighschool/tfg5.jpg';
 import tfg6 from '../assets/2025/tfghighschool/tfg6.jpg';
 import tfg7 from '../assets/2025/tfghighschool/tfg7.jpg';
 
-// 💡 確保只有 bright1, bright2, bright3 (沒有 bright4！)
+// 匯入 5/8 (偏鄉學子) 圖片
 import bright1 from '../assets/2025/bright/bright1.jpg';
 import bright2 from '../assets/2025/bright/bright2.jpg';
 import bright3 from '../assets/2025/bright/bright3.jpg';
 
+// 匯入 5/7 (建中參訪) 圖片
 import ckhs1 from '../assets/2025/ckhighschool/ckhs1.jpg';
 import ckhs2 from '../assets/2025/ckhighschool/ckhs2.jpg';
 import ckhs3 from '../assets/2025/ckhighschool/ckhs3.jpg';
@@ -89,7 +92,7 @@ export interface EventType {
   details: string;
 }
 
-// 資料陣列：依照日期由新到舊排列 (最新活動 05.09 在上方)
+// 資料陣列：依照日期由新到舊排列
 export const archiveData: EventType[] = [
   {
     id: 10, 
