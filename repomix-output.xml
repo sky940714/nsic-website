@@ -40,80 +40,192 @@ The content is organized as follows:
 </file_summary>
 
 <directory_structure>
-public/
-  favicon.svg
-  icons.svg
-src/
-  assets/
-    luya/
-      luya-1.jpg
-      luya-2.jpg
-      luya-3.jpg
-      luya-4.jpg
-      luya-5.jpg
-      luya-6.jpg
-    about-origin.jpg
-    david-macmillan.jpg
-    hero-bg-1.jpg
-    hero-bg-2.jpg
-    hero-bg-3.jpg
-    hero.png
-    jack-dongarra.jpg
-    konstantin-novoselov.jpg
-    logo-1.png
-    logo-2.jpg
-    logo-bright.png
-    logo-niu.png
-    logo-ntut.png
-    logo-redin.png
-    logo.png
-    louis-ignarro.jpg
-    michael-levitt.jpg
-    president.jpg
-    react.svg
-    vite.svg
-  components/
-    AboutSection.tsx
-    AnnouncementSection.tsx
-    DialogueArchive.tsx
-    Footer.tsx
-    HeroSection.tsx
-    LaureatesSection.tsx
-    Navbar.tsx
-    NewsSection.tsx
-    OriginAndFounderSection.tsx
-    PresidentSection.tsx
-    ScrollToTop.tsx
-    StaticHero.tsx
-    SummitBrief.tsx
-    Toast.tsx
-  pages/
-    Contact.tsx
-    EventDetail.tsx
-    Guests.tsx
-    Home.tsx
-    Program.tsx
-    Review2025.tsx
-  App.css
-  App.tsx
-  index.css
-  main.tsx
-  vite-env.d.ts
 .gitignore
 eslint.config.js
 index.html
 package.json
 postcss.config.js
+public/favicon.svg
+public/icons.svg
 README.md
+src/App.css
+src/App.tsx
+src/assets/2025/bright/bright1.jpg
+src/assets/2025/bright/bright2.jpg
+src/assets/2025/bright/bright3.jpg
+src/assets/2025/ckhighschool/ckhs1.jpg
+src/assets/2025/ckhighschool/ckhs2.jpg
+src/assets/2025/ckhighschool/ckhs3.jpg
+src/assets/2025/ckhighschool/ckhs4.jpg
+src/assets/2025/ckhighschool/ckhs5.jpg
+src/assets/2025/ckhighschool/ckhs6.jpg
+src/assets/2025/luya/Luya-1.jpg
+src/assets/2025/luya/luya-2.jpg
+src/assets/2025/luya/luya-3.jpg
+src/assets/2025/luya/luya-4.jpg
+src/assets/2025/luya/luya-5.jpg
+src/assets/2025/luya/luya-6.jpg
+src/assets/2025/nightevent/night1.jpg
+src/assets/2025/nightevent/night2.jpg
+src/assets/2025/nightevent/night3.jpg
+src/assets/2025/nightevent/night4.jpg
+src/assets/2025/nightevent/night6.jpg
+src/assets/2025/nightevent/night7.jpg
+src/assets/2025/nightevent/night8.jpg
+src/assets/2025/nightnightevent/nightnight1.jpg
+src/assets/2025/nightnightevent/nightnight2.jpg
+src/assets/2025/nightnightevent/nightnight3.jpg
+src/assets/2025/nightnightevent/nightnight4.jpg
+src/assets/2025/nightnightevent/nightnight5.jpg
+src/assets/2025/nightnightevent/nightnight6.jpg
+src/assets/2025/nightnightevent/nightnight7.jpg
+src/assets/2025/nightnightevent/nightnight8.jpg
+src/assets/2025/ntut/ntut1-1.jpg
+src/assets/2025/ntut/ntut1-2.jpg
+src/assets/2025/ntut/ntut1-3.jpg
+src/assets/2025/ntut/ntut1-4.jpg
+src/assets/2025/ntut/ntut2-1.jpg
+src/assets/2025/ntut/ntut2-2.jpg
+src/assets/2025/ntut/ntut2-3.jpg
+src/assets/2025/ntut/ntut2-4.jpg
+src/assets/2025/ntut/ntut2-5.jpg
+src/assets/2025/ntut/ntut2-6.jpg
+src/assets/2025/ntut/ntut3-1.jpg
+src/assets/2025/ntut/ntut3-2.jpg
+src/assets/2025/ntut/ntut3-3.jpg
+src/assets/2025/ntut/ntut3-4.jpg
+src/assets/2025/ntut/ntut3-5.jpg
+src/assets/2025/ntut/ntut3-6.jpg
+src/assets/2025/ntut/ntut4-1.jpg
+src/assets/2025/ntut/ntut4-2.jpg
+src/assets/2025/ntut/ntut4-3.jpg
+src/assets/2025/ntut/ntut4-4.jpg
+src/assets/2025/ntut/ntut4-5.jpg
+src/assets/2025/ntut/ntut4-6.jpg
+src/assets/2025/tfghighschool/tfg1.jpg
+src/assets/2025/tfghighschool/tfg2.jpg
+src/assets/2025/tfghighschool/tfg3.jpg
+src/assets/2025/tfghighschool/tfg4.jpg
+src/assets/2025/tfghighschool/tfg5.jpg
+src/assets/2025/tfghighschool/tfg6.jpg
+src/assets/2025/tfghighschool/tfg7.jpg
+src/assets/about-origin.jpg
+src/assets/david-macmillan.jpg
+src/assets/hero-bg-1.jpg
+src/assets/hero-bg-2.jpg
+src/assets/hero-bg-3.jpg
+src/assets/hero.png
+src/assets/jack-dongarra.jpg
+src/assets/konstantin-novoselov.jpg
+src/assets/logo-1.png
+src/assets/logo-2.jpg
+src/assets/logo-bright.png
+src/assets/logo-niu.png
+src/assets/logo-ntut.png
+src/assets/logo-redin.png
+src/assets/logo.png
+src/assets/louis-ignarro.jpg
+src/assets/michael-levitt.jpg
+src/assets/news/new1.jpg
+src/assets/news/new2.jpg
+src/assets/president.jpg
+src/assets/react.svg
+src/assets/vite.svg
+src/components/AboutSection.tsx
+src/components/AnnouncementSection.tsx
+src/components/DialogueArchive.tsx
+src/components/Footer.tsx
+src/components/HeroSection.tsx
+src/components/LaureatesSection.tsx
+src/components/Navbar.tsx
+src/components/NewsSection.tsx
+src/components/OriginAndFounderSection.tsx
+src/components/PresidentSection.tsx
+src/components/ScrollToTop.tsx
+src/components/StaticHero.tsx
+src/components/SummitBrief.tsx
+src/components/Toast.tsx
+src/index.css
+src/main.tsx
+src/pages/Contact.tsx
+src/pages/EventDetail.tsx
+src/pages/Guests.tsx
+src/pages/Home.tsx
+src/pages/Program.tsx
+src/pages/Review2025.tsx
+src/vite-env.d.ts
 tailwind.config.js
 tsconfig.app.json
 tsconfig.json
 tsconfig.node.json
+vercel.json
 vite.config.ts
 </directory_structure>
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+  },
+])
+</file>
+
+<file path="postcss.config.js">
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+</file>
 
 <file path="public/favicon.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
@@ -146,359 +258,80 @@ This section contains the contents of the repository's files.
 </svg>
 </file>
 
-<file path="src/assets/react.svg">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
-</file>
+<file path="README.md">
+# React + TypeScript + Vite
 
-<file path="src/assets/vite.svg">
-<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
-</file>
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-<file path="src/components/AnnouncementSection.tsx">
-export default function AnnouncementSection() {
-    return (
-        <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">諾科獎臺北峰會中立公告暨名義使用說明</h2>
-                
-                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
-                    <p>諾科獎為以公益價值、教育推動與國際交流為核心之公益協會，秉持中立與獨立原則運作。諾科獎不為任何政黨、候選人或政治團體進行背書、動員或宣傳；亦不涉及任何宗教立場，且不以任何特定宗教觀點作為訴求。</p>
-                    
-                    <p>為確保諾科獎之永續發展與專業品質，諾科獎得於不影響理念獨立、內容自主及公共責任之前提下，進行必要之合作與資源支持安排。任何合作不得要求介入或影響諾科獎之核心治理、活動或課程內容、講者安排或其他關鍵決策。未經諾科獎事前之正式書面授權，任何個人或單位不得以諾科獎名義、名稱、標誌或相關識別，進行對外宣傳、合作聲稱、活動舉辦、商品販售、募款，或任何足以使第三人誤認、混淆與諾科獎具有合作、授權或關聯關係之行為。媒體報導、學術引用或其他合理描述，如未造成混淆或誤導者，不在此限。</p>
-                    
-                    <p>凡涉及誤用、擅用或可能造成混淆、誤導之情形，諾科獎得要求立即停止使用、更正、移除相關內容，並保留依法採取必要措施之權利。</p>
-                    
-                    <p>本公告為諾科獎對外之長期適用原則說明，旨在維護協會之公益性、獨立性與公共信任。</p>
-                    
-                    <p>如需申請授權或通報疑似誤用，請聯繫：<a href="mailto:Service@Nsic.Org.Tw" className="text-blue-600 hover:text-blue-800 hover:underline transition">Service@Nsic.Org.Tw</a></p>
-                </div>
-            </div>
-        </section>
-    );
-}
-</file>
+Currently, two official plugins are available:
 
-<file path="src/components/NewsSection.tsx">
-import { Clock } from 'lucide-react';
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-export default function NewsSection() {
-    return (
-        <section className="py-20 bg-slate-50">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6">
-                <h2 className="text-3xl font-bold text-slate-800 mb-12 animate-on-scroll is-visible">最新消息</h2>
-                
-                <div className="space-y-12">
-                    {/* News Item 1 */}
-                    <div className="flex flex-col md:flex-row gap-8 items-start animate-on-scroll is-visible border-b border-slate-200 pb-12">
-                        <div className="w-full md:w-1/3 shrink-0">
-                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&q=80&w=400" alt="朱愛蓮會長回到故鄉" className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md transition duration-300" />
-                        </div>
-                        <div className="w-full md:w-2/3">
-                            <div className="flex items-center text-xs text-slate-500 mb-3 font-medium">
-                                <Clock className="w-3.5 h-3.5 mr-1.5" /> 2025-09-08
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-800 mb-3 hover:text-blue-700 transition cursor-pointer">朱愛蓮會長回到故鄉</h3>
-                            <p className="text-slate-600 leading-relaxed text-sm">
-                                朱愛蓮會長今日回到故鄉，特別感謝花蓮高中、花蓮女中兩位校長親自陪同，參觀花中典雅莊重的禮堂<a href="#" className="text-slate-400 hover:text-blue-600 transition ml-1">...查看更多 &gt;</a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    {/* News Item 2 */}
-                    <div className="flex flex-col md:flex-row gap-8 items-start animate-on-scroll is-visible border-b border-slate-200 pb-12">
-                        <div className="w-full md:w-1/3 shrink-0">
-                            <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=400" alt="諾貝爾科學之光" className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md transition duration-300" />
-                        </div>
-                        <div className="w-full md:w-2/3">
-                            <div className="flex items-center text-xs text-slate-500 mb-3 font-medium">
-                                <Clock className="w-3.5 h-3.5 mr-1.5" /> 2025-09-03
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-800 mb-3 hover:text-blue-700 transition cursor-pointer">諾貝爾科學之光 照亮偏鄉學子夢想</h3>
-                            <p className="text-slate-600 leading-relaxed text-sm">
-                                2025年5月8日，在教育部青年署的協助下，24所偏鄉中學近400位孩子來到政大公企中心，有些極偏遠地區學校甚至前一天就提早過來<a href="#" className="text-slate-400 hover:text-blue-600 transition ml-1">...查看更多 &gt;</a>
-                            </p>
-                        </div>
-                    </div>
+## React Compiler
 
-                    {/* News Item 3 */}
-                    <div className="flex flex-col md:flex-row gap-8 items-start animate-on-scroll is-visible">
-                        <div className="w-full md:w-1/3 shrink-0">
-                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=400" alt="朱會長到新北市三光國小" className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md transition duration-300" />
-                        </div>
-                        <div className="w-full md:w-2/3">
-                            <div className="flex items-center text-xs text-slate-500 mb-3 font-medium">
-                                <Clock className="w-3.5 h-3.5 mr-1.5" /> 2025-09-02
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-800 mb-3 hover:text-blue-700 transition cursor-pointer">朱會長到新北市三光國小</h3>
-                            <p className="text-slate-600 leading-relaxed text-sm">
-                                今天朱會長到新北市三光國小。學校不僅開設陶藝、陶笛、擊劍、小提琴、薩克斯風班，孩子畢業時還要具備一項才藝<a href="#" className="text-slate-400 hover:text-blue-600 transition ml-1">...查看更多 &gt;</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
-</file>
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-<file path="src/components/ScrollToTop.tsx">
-import { useEffect, useState } from 'react';
-import { ArrowUp } from 'lucide-react';
+## Expanding the ESLint configuration
 
-export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-  const toggleVisibility = () => {
-    if (window.scrollY > 400) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-  useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
-    return () => {
-      window.removeEventListener('scroll', toggleVisibility);
-    };
-  }, []);
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-  return (
-    <button
-      onClick={scrollToTop}
-      className={`fixed bottom-10 right-8 bg-[#81b7d5] hover:bg-[#5b9bbd] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-40 transform hover:-translate-y-1 ${
-        isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
-      }`}
-      aria-label="回到頂部"
-    >
-      <ArrowUp className="w-6 h-6" />
-    </button>
-  );
-}
-</file>
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-<file path="src/components/SummitBrief.tsx">
-// src/components/SummitBrief.tsx
-import { Link } from 'react-router-dom';
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-export default function SummitBrief() {
-  return (
-    <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
-      {/* 裝飾背景斜線 */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-600/10 -skew-x-12 transform translate-x-20"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
-          {/* 左欄：活動基本資訊 */}
-          <div className="space-y-8">
-            <div className="space-y-2">
-               <h2 className="text-5xl font-bold tracking-tighter">2026 諾科獎台北峰會</h2>
-               <p className="text-blue-400 text-lg font-medium">從台北出發，開啟與世界持續對話的起點</p>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-8 border-t border-white/10 pt-8">
-               <div>
-                 <p className="text-white/40 text-xs uppercase tracking-widest mb-2">活動日期</p>
-                 <p className="text-xl font-bold">2026年5月13日至5月14日</p>
-               </div>
-               <div>
-                 <p className="text-white/40 text-xs uppercase tracking-widest mb-2">活動地點</p>
-                 <p className="text-xl font-bold">台北、宜蘭</p>
-               </div>
-            </div>
-          </div>
-
-          {/* 右欄：峰會重點內容 */}
-          <div className="space-y-10">
-             <div>
-               <h3 className="text-xl font-bold mb-6 flex items-center gap-4">
-                 <span className="w-8 h-[1px] bg-blue-500"></span> 峰會重點
-               </h3>
-               <div className="space-y-6 text-white/70 leading-relaxed">
-                 <p>本次峰會邀請 <span className="text-white font-bold underline decoration-blue-500 underline-offset-4">2013年諾貝爾化學獎得主 Michael Levitt 教授</span> 來台交流。</p>
-                 <p>其研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。</p>
-                 <p className="text-white italic text-lg font-light">「這不只是知識的傳遞，而是一場關於『如何理解世界』的對話。」</p>
-               </div>
-             </div>
-
-             {/* 右下角 MORE 連結 */}
-             <div className="flex justify-end">
-               <Link 
-                 to="/program" 
-                 className="group relative flex items-center gap-4 bg-white text-slate-900 px-8 py-4 rounded-full font-bold overflow-hidden transition-all hover:pr-12"
-               >
-                 <span className="relative z-10">MORE DETAILS</span>
-                 <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all">→</span>
-               </Link>
-             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="src/components/Toast.tsx">
-import { useState } from 'react';
-import { Info } from 'lucide-react';
-
-interface Toast {
-  id: number;
-  message: string;
-}
-
-let toastId = 0;
-
-export function useToast() {
-  const [toasts, setToasts] = useState<Toast[]>([]);
-
-  const showToast = (message: string, duration = 3000) => {
-    const id = toastId++;
-    const newToast: Toast = { id, message };
-    
-    setToasts(prev => [...prev, newToast]);
-
-    if (duration > 0) {
-      setTimeout(() => {
-        setToasts(prev => prev.filter(t => t.id !== id));
-      }, duration);
-    }
-
-    return id;
-  };
-
-  return { toasts, showToast };
-}
-
-interface ToastContainerProps {
-  toasts: Toast[];
-  onRemove?: (id: number) => void;
-}
-
-export function ToastContainer({ toasts }: ToastContainerProps) {
-  return (
-    <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center pointer-events-none">
-      {toasts.map(toast => (
-        <div
-          key={toast.id}
-          className="bg-slate-800/90 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-2xl text-sm font-medium mb-3 flex items-center gap-2 pointer-events-auto animate-in fade-in slide-in-from-bottom-4 duration-300"
-        >
-          <Info className="w-4 h-4" />
-          {toast.message}
-        </div>
-      ))}
-    </div>
-  );
-}
-</file>
-
-<file path="src/pages/EventDetail.tsx">
-import { useParams, useNavigate } from 'react-router-dom';
-import { archiveData } from '../components/DialogueArchive';
-import type { EventType } from '../components/DialogueArchive'; 
-
-// 輪播套件
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-export default function EventDetail() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  
-  // 尋找對應的活動資料
-  const event = (archiveData as EventType[]).find(e => e.id === Number(id));
-
-  if (!event) {
-    return (
-      <div className="py-20 text-center text-slate-500">
-        找不到活動內容
-      </div>
-    );
-  }
-
-  return (
-    // pt-32 確保不被導覽列壓到
-    <div className="bg-white min-h-screen pt-32 pb-16">
-      <div className="max-w-4xl mx-auto px-6">
-        
-        {/* 返回按鈕 */}
-        <button 
-          onClick={() => navigate(-1)}
-          className="mb-10 text-[#002B5B] hover:text-blue-700 transition-colors flex items-center gap-2 font-medium group"
-        >
-          <span className="group-hover:-translate-x-1 transition-transform">←</span> 返回歷年回顧
-        </button>
-
-        <div className="space-y-6">
-          {/* 日期與地點 */}
-          <div className="flex flex-wrap items-center gap-4">
-            <span className="text-[#002B5B] font-mono font-bold text-3xl">{event.date}</span>
-            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-semibold">
-              {event.location}
-            </span>
-          </div>
-
-          {/* 標題 */}
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
-            {event.title}
-          </h1>
-
-          {/* 圖片輪播區塊 */}
-          <div className="w-full rounded-3xl overflow-hidden shadow-xl my-10 bg-slate-50 border border-slate-100">
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              spaceBetween={0}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 3500, disableOnInteraction: false }}
-              className="aspect-video w-full"
-            >
-              {event.images?.map((src: string, index: number) => (
-                <SwiperSlide key={index}>
-                  <img 
-                    src={src} 
-                    alt={`${event.title}-${index}`} 
-                    className="w-full h-full object-cover" 
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* 文字內容區塊（請確認這一段有在你的檔案裡） */}
-          <div className="prose prose-slate max-w-none">
-            {/* 活動簡介 */}
-            <p className="text-xl text-slate-600 font-medium mb-6">
-              {event.description}
-            </p>
-            
-            <div className="h-[1px] w-full bg-slate-100 my-8"></div>
-            
-            {/* 活動詳情 */}
-            <h4 className="text-lg font-bold text-slate-800 mb-4">活動詳情與紀錄</h4>
-            <p className="text-slate-600 leading-loose text-justify whitespace-pre-wrap">
-              {event.details}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 </file>
 
 <file path="src/App.css">
@@ -688,110 +521,133 @@ export default function EventDetail() {
 }
 </file>
 
-<file path="src/index.css">
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+<file path="src/assets/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
+</file>
 
-@layer base {
-    :root {
-        /* 定義全域變數，方便日後微調 */
-        --app-bg: #f5f5f5;      /* 背景淺灰 */
-        --app-text: #1a1a1a;    /* 文字深黑 */
-        --app-primary: #1e3a8a;  /* 重點深藍 (Tailwind blue-900) */
-        --app-accent: #0f172a;   /* 更深一點的藍用於懸停或強調 */
+<file path="src/components/AnnouncementSection.tsx">
+export default function AnnouncementSection() {
+    return (
+        <section className="py-24 bg-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">諾科獎臺北峰會中立公告暨名義使用說明</h2>
+                
+                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
+                    <p>諾科獎為以公益價值、教育推動與國際交流為核心之公益協會，秉持中立與獨立原則運作。諾科獎不為任何政黨、候選人或政治團體進行背書、動員或宣傳；亦不涉及任何宗教立場，且不以任何特定宗教觀點作為訴求。</p>
+                    
+                    <p>為確保諾科獎之永續發展與專業品質，諾科獎得於不影響理念獨立、內容自主及公共責任之前提下，進行必要之合作與資源支持安排。任何合作不得要求介入或影響諾科獎之核心治理、活動或課程內容、講者安排或其他關鍵決策。未經諾科獎事前之正式書面授權，任何個人或單位不得以諾科獎名義、名稱、標誌或相關識別，進行對外宣傳、合作聲稱、活動舉辦、商品販售、募款，或任何足以使第三人誤認、混淆與諾科獎具有合作、授權或關聯關係之行為。媒體報導、學術引用或其他合理描述，如未造成混淆或誤導者，不在此限。</p>
+                    
+                    <p>凡涉及誤用、擅用或可能造成混淆、誤導之情形，諾科獎得要求立即停止使用、更正、移除相關內容，並保留依法採取必要措施之權利。</p>
+                    
+                    <p>本公告為諾科獎對外之長期適用原則說明，旨在維護協會之公益性、獨立性與公共信任。</p>
+                    
+                    <p>如需申請授權或通報疑似誤用，請聯繫：<a href="mailto:Service@Nsic.Org.Tw" className="text-blue-600 hover:text-blue-800 hover:underline transition">Service@Nsic.Org.Tw</a></p>
+                </div>
+            </div>
+        </section>
+    );
+}
+</file>
+
+<file path="src/components/ScrollToTop.tsx">
+import { useEffect, useState } from 'react';
+import { ArrowUp } from 'lucide-react';
+
+export default function ScrollToTop() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 400) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
     }
+  };
 
-    body {
-        font-family: 'Noto Sans TC', sans-serif;
-        background-color: var(--app-bg);
-        color: var(--app-text);
-        margin: 0;
-        -webkit-font-smoothing: antialiased;
-    }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
-    /* 統一標題顏色 */
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--app-text);
-        font-weight: 700;
-    }
+  useEffect(() => {
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
+  }, []);
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-10 right-8 bg-[#81b7d5] hover:bg-[#5b9bbd] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-40 transform hover:-translate-y-1 ${
+        isVisible ? 'opacity-100 visible' : 'opacity-0 invisible'
+      }`}
+      aria-label="回到頂部"
+    >
+      <ArrowUp className="w-6 h-6" />
+    </button>
+  );
+}
+</file>
+
+<file path="src/components/Toast.tsx">
+import { useState } from 'react';
+import { Info } from 'lucide-react';
+
+interface Toast {
+  id: number;
+  message: string;
 }
 
-@layer components {
-    /* 移除漸層，改為統一深藍色 */
-    .hero-title-primary {
-        color: var(--app-primary);
+let toastId = 0;
+
+export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([]);
+
+  const showToast = (message: string, duration = 3000) => {
+    const id = toastId++;
+    const newToast: Toast = { id, message };
+    
+    setToasts(prev => [...prev, newToast]);
+
+    if (duration > 0) {
+      setTimeout(() => {
+        setToasts(prev => prev.filter(t => t.id !== id));
+      }, duration);
     }
 
-    /* 重點裝飾類別：可用於強調文字或小標 */
-    .text-highlight {
-        color: var(--app-primary);
-        font-weight: 600;
-    }
+    return id;
+  };
 
-    /* 導航列底線動畫：顏色改為深藍 */
-    .tv-nav-hover {
-        position: relative;
-    }
-    .tv-nav-hover::after {
-        content: '';
-        position: absolute;
-        bottom: -6px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background-color: var(--app-primary);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        transform: translateX(-50%);
-    }
-
-    .group:hover .tv-nav-hover::after,
-    .nav-item:hover .tv-nav-hover::after {
-        width: 100%;
-    }
-
-    /* 捲動動畫 */
-    .animate-on-scroll {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-    .animate-on-scroll.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  return { toasts, showToast };
 }
 
-/* 移除原本藍色的 hex-bg，如果需要背景紋理，建議改為極淺的灰色 */
-.hex-bg {
-    background-color: #f5f5f5;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23000000' fill-opacity='0.03'/%3E%3C/svg%3E");
-    background-size: 100px;
+interface ToastContainerProps {
+  toasts: Toast[];
+  onRemove?: (id: number) => void;
 }
 
-/* 其他功能性樣式保持不變 */
-.tv-dropdown-shadow {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+export function ToastContainer({ toasts }: ToastContainerProps) {
+  return (
+    <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] flex flex-col items-center pointer-events-none">
+      {toasts.map(toast => (
+        <div
+          key={toast.id}
+          className="bg-slate-800/90 backdrop-blur-sm text-white px-6 py-3 rounded-full shadow-2xl text-sm font-medium mb-3 flex items-center gap-2 pointer-events-auto animate-in fade-in slide-in-from-bottom-4 duration-300"
+        >
+          <Info className="w-4 h-4" />
+          {toast.message}
+        </div>
+      ))}
+    </div>
+  );
 }
-’
-details > summary { list-style: none; }
-details > summary::-webkit-details-marker { display: none; }
-
-@keyframes slideUp {
-    from { transform: translateY(10px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.animate-in {
-    animation: slideUp 0.3s ease-out forwards;
-}
-
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-700 { animation-delay: 700ms; }
 </file>
 
 <file path="src/main.tsx">
@@ -807,150 +663,111 @@ createRoot(document.getElementById('root')!).render(
 )
 </file>
 
+<file path="src/pages/EventDetail.tsx">
+import { useParams, useNavigate } from 'react-router-dom';
+import { archiveData } from '../components/DialogueArchive';
+import type { EventType } from '../components/DialogueArchive'; 
+
+// 輪播套件
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+export default function EventDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  
+  // 尋找對應的活動資料
+  const event = (archiveData as EventType[]).find(e => e.id === Number(id));
+
+  if (!event) {
+    return (
+      <div className="py-20 text-center text-slate-500">
+        找不到活動內容
+      </div>
+    );
+  }
+
+  return (
+    // pt-32 確保不被導覽列壓到
+    <div className="bg-white min-h-screen pt-32 pb-16">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        {/* 返回按鈕 */}
+        <button 
+          onClick={() => navigate(-1)}
+          className="mb-10 text-[#002B5B] hover:text-blue-700 transition-colors flex items-center gap-2 font-medium group"
+        >
+          <span className="group-hover:-translate-x-1 transition-transform">←</span> 返回歷年回顧
+        </button>
+
+        <div className="space-y-6">
+          {/* 日期與地點 */}
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-[#002B5B] font-mono font-bold text-3xl">{event.date}</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-semibold">
+              {event.location}
+            </span>
+          </div>
+
+          {/* 標題 */}
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+            {event.title}
+          </h1>
+
+          {/* 圖片輪播區塊 */}
+          <div className="w-full rounded-3xl overflow-hidden shadow-xl my-10 bg-slate-50 border border-slate-100">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              className="aspect-video w-full"
+            >
+              {event.images?.map((src: string, index: number) => (
+                <SwiperSlide key={index}>
+                  <img 
+                    src={src} 
+                    alt={`${event.title}-${index}`} 
+                    className="w-full h-full object-cover" 
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* 文字內容區塊（請確認這一段有在你的檔案裡） */}
+          <div className="prose prose-slate max-w-none">
+            {/* 活動簡介 */}
+            <p className="text-xl text-slate-600 font-medium mb-6">
+              {event.description}
+            </p>
+            
+            <div className="h-[1px] w-full bg-slate-100 my-8"></div>
+            
+            {/* 活動詳情 */}
+            <h4 className="text-lg font-bold text-slate-800 mb-4">活動詳情與紀錄</h4>
+            <p className="text-slate-600 leading-loose text-justify whitespace-pre-wrap">
+              {event.details}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
 <file path="src/vite-env.d.ts">
 /// <reference types="vite/client" />
 
 declare module 'swiper/css';
 declare module 'swiper/css/navigation';
 declare module 'swiper/css/pagination';
-</file>
-
-<file path=".gitignore">
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-</file>
-
-<file path="eslint.config.js">
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { defineConfig, globalIgnores } from 'eslint/config'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      js.configs.recommended,
-      tseslint.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-    },
-  },
-])
-</file>
-
-<file path="postcss.config.js">
-export default {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
-</file>
-
-<file path="README.md">
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 </file>
 
 <file path="tsconfig.app.json">
@@ -1023,6 +840,17 @@ export default defineConfig([
 }
 </file>
 
+<file path="vercel.json">
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+</file>
+
 <file path="vite.config.ts">
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -1033,119 +861,36 @@ export default defineConfig({
 })
 </file>
 
-<file path="src/components/DialogueArchive.tsx">
-import { Link } from 'react-router-dom';
-import jackImg from '../assets/jack-dongarra.jpg';
-import konImg from '../assets/konstantin-novoselov.jpg';
+<file path="index.html">
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="icon" type="image/png" href="/logo-1.png" />
+    <link rel="apple-touch-icon" href="/logo-1.png" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-// 1. 匯入路亞系列圖片
-import luya1 from '../assets/luya/luya-1.jpg';
-import luya2 from '../assets/luya/luya-2.jpg';
-import luya3 from '../assets/luya/luya-3.jpg';
-import luya4 from '../assets/luya/luya-4.jpg';
-import luya5 from '../assets/luya/luya-5.jpg';
-import luya6 from '../assets/luya/luya-6.jpg';
+    <title>諾科獎台北峰會 2026</title>
 
-// 2. 定義介面 (提供給 EventDetail.tsx 使用)
-export interface EventType {
-  id: number;
-  date: string;
-  time: string;
-  title: string;
-  location: string;
-  speakers: string[];
-  displayImage: string;
-  images: string[]; 
-  description: string;
-  details: string;
-}
+    <meta name="description" content="諾科獎國際文教交流協會 (NSIC) 致力於串聯世界級學術思想，培育青年世代的國際視野與公共責任。" />
+    
+    <meta property="og:site_name" content="諾科獎台北峰會 2026" />
+    <meta property="og:title" content="諾科獎台北峰會 2026" />
+    <meta property="og:description" content="一個以國際學術思想與公共議題為核心的年度平台。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nsicworld.org" />
+    
+    <meta property="og:image" content="/logo-1.png" />
 
-// 3. 更新資料陣列
-export const archiveData: EventType[] = [
-  {
-    id: 1,
-    date: "09.05",
-    time: "10:00–12:00",
-    title: "國際交流參訪｜學術 × 產業對話",
-    location: "陽明交通大學、新竹科學園區",
-    speakers: ["傑克·唐加拉", "戴維·麥克米倫"],
-    displayImage: jackImg,
-    images: [jackImg],
-    description: "圖靈獎與諾貝爾化學獎得主共同參與，探討學術研究如何轉化為產業動力。",
-    details: "本次參訪深入探討了高效能運算與有機催化在半導體製程中的應用..."
-  },
-  {
-    id: 2,
-    date: "05.07",
-    time: "14:30–15:30",
-    title: "建國中學特別企劃｜跨領域科學對話",
-    location: "建國中學",
-    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
-    displayImage: konImg,
-    images: [konImg],
-    description: "三位大師與高中生面對面，播下科學探索的種子。",
-    details: "三位大師分享了各自在物理、化學與醫學領域的挫折與突破..."
-  },
-  {
-    id: 3,
-    date: "05.08",
-    time: "10:00–11:30",
-    title: "校園講座｜生命科學與醫學對話",
-    location: "林口路亞實驗教育機構",
-    speakers: ["路易斯·J·伊格納羅"],
-    displayImage: luya1,
-    images: [luya1, luya2, luya3, luya4, luya5, luya6], 
-    description: "諾貝爾醫學獎得主分享一氧化氮的研究歷程與生命科學的未來。",
-    details: "【回顧｜5/8 校園育苗專場｜科學種子在路亞發芽 🌱】\n在5月8日的「科學育苗計畫」校園專場中，路亞實驗教育機構迎來一位重量級嘉賓——1998年諾貝爾生理學或醫學獎得主 Louis J. Ignarro 教授。Ignarro 教授以深入淺出的方式分享自己在生理學研究上的突破，並與學生們對話交流，鼓勵年輕世代相信自己、勇敢探索，讓現場孩子們大受啟發。更令人感動的是，這場科學與教育的相遇，不僅點燃了好奇心，也在孩子們心中種下了未來的可能。感謝路亞實驗教育機構長期推動「科學育苗計畫」，讓更多孩子有機會親身接觸世界級科學家，在生活中看見科學、夢想與未來的連結。"
-  }
-];
-
-// 4. 關鍵修正：必須使用 export default 匯出組件
-export default function DialogueArchive() {
-  return (
-    <div className="bg-slate-50 py-16">
-      <div className="max-w-5xl mx-auto px-6">
-        
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="text-4xl font-bold text-[#002B5B]">歷年國際對話</h2>
-          <div className="h-[2px] flex-grow bg-slate-200"></div>
-        </div>
-
-        <div className="space-y-8">
-          {archiveData.map((item) => (
-            <Link 
-              key={item.id}
-              to={`/archive/${item.id}`}
-              className="block bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer overflow-hidden group"
-            >
-              <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8 items-center">
-                <div className="w-full md:w-24 shrink-0 text-center md:text-left">
-                  <div className="text-[#002B5B] font-mono font-bold text-2xl">{item.date}</div>
-                  <div className="text-slate-400 text-xs mt-1">{item.time}</div>
-                </div>
-                <div className="flex-grow space-y-3">
-                  <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-semibold">
-                    {item.location}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="w-32 h-24 shrink-0 rounded-xl overflow-hidden border border-slate-100 shadow-inner">
-                  <img src={item.displayImage} alt="" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
 </file>
 
 <file path="src/components/HeroSection.tsx">
@@ -1251,6 +996,118 @@ export default function HeroSection() {
 }
 </file>
 
+<file path="src/index.css">
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+@layer base {
+    :root {
+        /* 極簡配色定義 */
+        --app-bg: #ffffff;         /* 純白底 */
+        --app-text: #1a1a1a;       /* 深黑字，維持高對比 */
+        --app-primary: #002B5B;    /* 你專案使用的核心深藍色 */
+        --app-secondary: #f8fafc;  /* 輔助淺灰色，用於區隔不同區塊 */
+        --app-border: #e2e8f0;     /* 細微邊框顏色 */
+    }
+
+    body {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: var(--app-bg);
+        color: var(--app-text);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* 統一標題顏色，確保全站一致 */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--app-text);
+        font-weight: 700;
+        letter-spacing: 0.025em;
+    }
+}
+
+@layer components {
+    /* 標題與文字裝飾 */
+    .hero-title-primary {
+        color: var(--app-primary);
+    }
+
+    .text-highlight {
+        color: var(--app-primary);
+        font-weight: 600;
+    }
+
+    /* 導航列底線動畫：更換為深藍色 */
+    .tv-nav-hover {
+        position: relative;
+    }
+    
+    .tv-nav-hover::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--app-primary);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-50%);
+    }
+
+    .group:hover .tv-nav-hover::after,
+    .nav-item:hover .tv-nav-hover::after {
+        width: 100%;
+    }
+
+    /* 元素捲動進入畫面的動畫 */
+    .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .animate-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 移除灰底感，背景紋理改為極淺的裝飾 */
+.hex-bg {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23000000' fill-opacity='0.02'/%3E%3C/svg%3E");
+    background-size: 100px;
+}
+
+/* 下拉選單與卡片陰影微調：讓白色介面更有層次感 */
+.tv-dropdown-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* 隱藏原生細節標籤標記 */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* 基礎動畫設定 */
+@keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-in {
+    animation: slideUp 0.3s ease-out forwards;
+}
+
+/* 動態延遲類別 */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-700 { animation-delay: 700ms; }
+</file>
+
 <file path="src/pages/Review2025.tsx">
 import DialogueArchive from '../components/DialogueArchive';
 import LaureatesSection from '../components/LaureatesSection';
@@ -1325,56 +1182,44 @@ export default function Review2025() {
 }
 </file>
 
-<file path="index.html">
-<!doctype html>
-<html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    
-    <link rel="icon" type="image/png" href="/logo-1.png" />
-    <link rel="apple-touch-icon" href="/logo-1.png" />
+<file path="src/App.tsx">
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Guests from './pages/Guests';
+import Contact from './pages/Contact';
+import Review2025 from './pages/Review2025';
+import Program from './pages/Program';
+import EventDetail from './pages/EventDetail'; // 👈 待會建立此頁面
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white flex flex-col">
+        <Navbar />
+        
+        {/* 主要內容區塊會根據網址變化 */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/guests" element={<Guests />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/review-2025" element={<Review2025 />} />
+            <Route path="/program" element={<Program />} />
+            <Route path="/archive/:id" element={<EventDetail />} /> {/* 👈 動態路由 */}
+          </Routes>
+        </main>
 
-    <title>諾科獎台北峰會 2026</title>
-
-    <meta name="description" content="諾科獎國際文教交流協會 (NSIC) 致力於串聯世界級學術思想，培育青年世代的國際視野與公共責任。" />
-    
-    <meta property="og:site_name" content="諾科獎台北峰會 2026" />
-    <meta property="og:title" content="諾科獎台北峰會 2026" />
-    <meta property="og:description" content="一個以國際學術思想與公共議題為核心的年度平台。" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.nsicworld.org" />
-    
-    <meta property="og:image" content="/logo-1.png" />
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-</file>
-
-<file path="tailwind.config.js">
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      colors: {
-        // 背景底色：極淺灰
-        'app-bg': '#f5f5f5', 
-        // 重點標示：深藍色
-        'app-primary': '#1e3a8a', 
-        // 一般文字：深黑色（或接近全黑的 Slate-900）
-        'app-text': '#1a1a1a', 
-      },
-    },
-  },
-  plugins: [],
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </Router>
+  );
 }
+
+export default App;
 </file>
 
 <file path="src/components/AboutSection.tsx">
@@ -1425,6 +1270,146 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/NewsSection.tsx">
+import { useState } from 'react';
+import { Clock, X } from 'lucide-react';
+
+// === 圖片匯入區 ===
+import new1Img from '../assets/news/new1.jpg';
+import new2Img from '../assets/news/new2.jpg';
+
+// 定義新聞資料的型別
+interface NewsItem {
+  id: number;
+  date: string;
+  title: string;
+  summary: string;
+  content: string;
+  image: string;
+}
+
+// === 新聞資料庫 ===
+const newsData: NewsItem[] = [
+  {
+    id: 1,
+    date: "2026-04-13",
+    title: "圓夢東部｜把與世界對話的機會，帶進宜蘭大學百年校慶",
+    summary: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯",
+    content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、很安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
+    image: new2Img // 照片已對調為 new2.jpg (禮堂)
+  },
+  {
+    id: 2,
+    date: "2026-04-09",
+    title: "籌備幕後｜重視每一個細節，感謝最強國際執行夥伴",
+    summary: "今天場勘。走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節...",
+    content: "今天場勘。\n\n走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節，很知道每一場會議、每一個節奏都是對講者及現場的尊重，那個當下對某個人來說，可能是影響往後的一個重要時刻，這種事沒辦法隨便。\n\n不知為什麼，今天一進現場就想到去年五月，那超級的五天四夜接待及三天14個大小現場⋯\n\n回想在當下，因為知道有紅映團隊，我不用一直回頭確認，采傑隨行秘書們在貴賓旁安靜照顧，不搶戲，但什麼都想到了～幾位得主回去之後都還特別提到他們的細膩。\n\n今年一樣有他們在，我放心！\n\n#國際執行夥伴\n#紅映國際活動製作\n#采傑國際會議服務",
+    image: new1Img // 照片已對調為 new1.jpg (場地討論)
+  }
+];
+
+export default function NewsSection() {
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+
+  return (
+    <section className="py-20 bg-slate-50 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        
+        {/* 標題區 */}
+        <div className="flex items-center gap-6 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">最新消息</h2>
+          <div className="h-[2px] flex-grow bg-slate-200"></div>
+        </div>
+        
+        {/* 新聞列表 */}
+        <div className="space-y-12">
+          {newsData.map((news, index) => (
+            <div 
+              key={news.id} 
+              onClick={() => setSelectedNews(news)}
+              className={`flex flex-col md:flex-row gap-6 md:gap-10 items-start animate-on-scroll is-visible cursor-pointer group ${index !== newsData.length - 1 ? 'border-b border-slate-200 pb-10 md:pb-12' : ''}`}
+            >
+              {/* 左側縮圖 */}
+              <div className="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition duration-300 aspect-video md:aspect-[4/3] bg-slate-200">
+                <img 
+                  src={news.image} 
+                  alt={news.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+              </div>
+              
+              {/* 右側文字 */}
+              <div className="w-full md:w-7/12 flex flex-col justify-center">
+                <div className="flex items-center text-xs text-slate-500 mb-2 md:mb-3 font-medium">
+                  <Clock className="w-3.5 h-3.5 mr-1.5" /> {news.date}
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3 group-hover:text-[#002B5B] transition leading-snug">
+                  {news.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-sm mb-4 line-clamp-3">
+                  {news.summary}
+                </p>
+                <span className="text-slate-400 group-hover:text-[#002B5B] transition text-sm font-bold tracking-widest">
+                  查看詳情 <span className="ml-1 inline-block group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 彈出視窗 (Modal) */}
+      {selectedNews && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-sm transition-opacity">
+          
+          <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300">
+            
+            <button 
+              onClick={() => setSelectedNews(null)}
+              className="absolute top-4 right-4 z-10 w-9 h-9 md:w-10 md:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Modal 上方：大圖片 */}
+            <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
+              <img 
+                src={selectedNews.image} 
+                alt={selectedNews.title} 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+            </div>
+
+            {/* Modal 下方：完整文字內容 */}
+            <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
+              <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
+                <Clock className="w-4 h-4" />
+                {selectedNews.date}
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-8 leading-tight">
+                {selectedNews.title}
+              </h2>
+              
+              <div className="text-base md:text-lg text-slate-600 leading-relaxed text-justify whitespace-pre-wrap">
+                {selectedNews.content}
+              </div>
+            </div>
+
+          </div>
+          
+          <div 
+            className="absolute inset-0 z-[-1]" 
+            onClick={() => setSelectedNews(null)}
+          ></div>
+        </div>
+      )}
+
     </section>
   );
 }
@@ -1528,44 +1513,64 @@ export default function Program() {
 }
 </file>
 
-<file path="src/App.tsx">
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import Guests from './pages/Guests';
-import Contact from './pages/Contact';
-import Review2025 from './pages/Review2025';
-import Program from './pages/Program';
-import EventDetail from './pages/EventDetail'; // 👈 待會建立此頁面
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-white flex flex-col">
-        <Navbar />
-        
-        {/* 主要內容區塊會根據網址變化 */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/guests" element={<Guests />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/review-2025" element={<Review2025 />} />
-            <Route path="/program" element={<Program />} />
-            <Route path="/archive/:id" element={<EventDetail />} /> {/* 👈 動態路由 */}
-          </Routes>
-        </main>
-
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </Router>
-  );
+<file path="tailwind.config.js">
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        // 背景底色：極淺灰
+        'app-bg': '#f5f5f5', 
+        // 重點標示：深藍色
+        'app-primary': '#1e3a8a', 
+        // 一般文字：深黑色（或接近全黑的 Slate-900）
+        'app-text': '#1a1a1a', 
+      },
+    },
+  },
+  plugins: [],
 }
+</file>
 
-export default App;
+<file path="package.json">
+{
+  "name": "nsic-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.1",
+    "swiper": "^12.1.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.0",
+    "vite": "^8.0.1"
+  }
+}
 </file>
 
 <file path="src/components/Footer.tsx">
@@ -1632,631 +1637,76 @@ export default function Footer() {
 }
 </file>
 
-<file path="src/components/PresidentSection.tsx">
-import presidentImg from '../assets/president.jpg';
+<file path="src/components/SummitBrief.tsx">
+import { Link } from 'react-router-dom';
 
-export default function PresidentSection() {
-    return (
-        <section id="founder" className="py-24 bg-white scroll-mt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <div className="bg-slate-50 rounded-[2rem] p-8 md:p-16 border border-slate-100">
-                    <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-                        
-                        {/* 左側：文字內容 */}
-                        <div className="flex-grow space-y-8 order-2 md:order-1">
-                            <div>
-                                <h2 className="text-2xl font-bold text-slate-800 mb-2">會長的話</h2>
-                                <div className="w-10 h-1 bg-amber-500"></div>
-                            </div>
-                            
-                            <div className="space-y-6">
-                                <p className="text-2xl lg:text-3xl font-medium text-slate-600 leading-tight">
-                                    諾科獎的起點，是一個很單純的想法
-                                </p>
-                                <p className="text-xl lg:text-2xl text-slate-600 leading-snug">
-                                    讓世界級的科學家，走進台灣，<br className="hidden lg:block" />
-                                    與下一代面對面對話。
-                                </p>
-                                <div className="pt-4 text-lg text-slate-500 italic">
-                                    我們相信，有些時刻，會讓一個人看見世界的高度
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* 右側：純淨的照片呈現與姓名職稱 */}
-                        <div className="w-full max-w-[280px] md:w-72 shrink-0 order-1 md:order-2 flex flex-col items-center">
-                            {/* 照片：僅保留基本圓角，移除所有裝飾框與線條 */}
-                            <div className="w-full overflow-hidden rounded-xl shadow-lg mb-6">
-                                <img 
-                                    src={presidentImg} 
-                                    alt="朱愛蓮會長" 
-                                    className="w-full h-auto object-cover" 
-                                />
-                            </div>
-                            
-                            {/* 姓名與職稱：直接置於照片下方 */}
-                            <div className="text-center">
-                                <span className="block text-slate-500 text-sm mb-1">創會會長</span>
-                                <h3 className="text-2xl font-bold text-blue-900 tracking-wider">朱愛蓮</h3>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
-}
-</file>
-
-<file path="src/components/StaticHero.tsx">
-const StaticHero = () => {
+export default function SummitBrief() {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-[#e0e0e1] text-white overflow-hidden text-center">
-      {/* 背景可以放一張低透明度的科技感圖片 */}
-      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-20 pointer-events-none" />
+    <section className="py-24 bg-[#f8fafc] text-[#1a1a1a] overflow-hidden relative border-y border-slate-100">
+      {/* 裝飾線條 */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 -skew-x-12 transform translate-x-20"></div>
       
-      <div className="relative z-10 max-w-5xl">
-        {/* 主標題 */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          諾科獎國際科學對話平台 <br />
-          <span className="text-2xl md:text-4xl block mt-3 font-light tracking-widest">
-            Nobel Science International Dialogue
-          </span>
-        </h1>
-
-        {/* 副標題 */}
-        <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
-          連結台灣與世界頂尖科學家 <br />
-          <span className="text-base md:text-lg block mt-2 opacity-80 font-light">
-            A global platform connecting Taiwan with the world’s leading scientific minds
-          </span>
-        </p>
-      
-      </div>
-
-      {/* 捲動提示 */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
-        <p className="text-xs tracking-widest mb-2">SCROLL DOWN</p>
-        <div className="w-[1px] h-10 bg-white mx-auto"></div>
-      </div>
-    </section>
-  );
-};
-
-export default StaticHero;
-</file>
-
-<file path="src/pages/Contact.tsx">
-import { Mail, MessageCircle, Landmark } from 'lucide-react';
-
-// 1. 匯入圖片檔案
-import LogoOrganizers from '../assets/logo-2.jpg';      
-import LogoNTUT from '../assets/logo-ntut.png';        
-import LogoNIU from '../assets/logo-niu.png';          
-import LogoRedin from '../assets/logo-redin.png';      
-import LogoBright from '../assets/logo-bright.png';    
-
-const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-export default function Contact() {
-  return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        
-        {/* 標題區 */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
-          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
-          <div className="w-12 h-1 bg-blue-600 mt-6"></div>
-        </div>
-
-        {/* 聯絡資訊區塊 */}
-        <div className="space-y-12 mb-16">
-          <div className="text-lg text-slate-600 leading-relaxed">
-            <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
-            <div className="flex gap-6 mb-10">
-              <a href="https://www.facebook.com/..." target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <FacebookIcon className="w-7 h-7 fill-current" />
-              </a>
-              <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <MessageCircle className="w-7 h-7 fill-current" />
-              </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          
+          {/* 左欄：活動基本資訊 */}
+          <div className="space-y-8">
+            <div className="space-y-3">
+               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#002B5B]">2026 諾科獎台北峰會</h2>
+               <p className="text-slate-500 text-lg font-medium tracking-wide">從台北出發，開啟與世界持續對話的起點</p>
             </div>
-            <div className="flex items-center gap-3 text-blue-500">
-              <Mail className="w-5 h-5" />
-              <span>E-mail：</span>
-              <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
+            
+            <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8">
+               <div>
+                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-2">活動日期</p>
+                 <p className="text-xl font-bold text-slate-800">
+                   <span className="inline-block">2026年5月13日</span>
+                   <span className="inline-block">至5月14日</span>
+                 </p>
+               </div>
+               <div>
+                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-2">活動地點</p>
+                 <p className="text-xl font-bold text-slate-800">台北、宜蘭</p>
+               </div>
             </div>
           </div>
 
-          {/* 銀行匯款資訊 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
-            <div className="p-5 bg-slate-50 rounded-lg space-y-3 border border-slate-100">
-              <div className="flex items-center gap-2 text-blue-700 font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
-            </div>
-            <div className="p-5 bg-slate-50 rounded-lg space-y-3 border border-slate-100">
-              <div className="flex items-center gap-2 text-blue-700 font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
-            </div>
+          {/* 右欄：峰會重點內容 */}
+          <div className="space-y-10">
+             <div>
+               <h3 className="text-xl font-bold mb-6 flex items-center gap-4 text-slate-800">
+                 <span className="w-8 h-[1px] bg-[#002B5B]"></span> 峰會重點
+               </h3>
+               
+               {/* 解決奇怪空格的關鍵：將手機版設定為 text-left，平板以上才使用 text-justify */}
+               <div className="space-y-6 text-slate-600 leading-relaxed text-left md:text-justify">
+                 
+                 {/* 移除標籤前後多餘的空白，使用 px-1 確保間距自然且不會被硬拉開 */}
+                 <p>本次峰會邀請<span className="text-[#002B5B] font-bold border-b border-blue-200 pb-0.5 px-1">2013年諾貝爾化學獎得主 <span className="whitespace-nowrap">Michael Levitt 教授</span></span>來台交流。</p>
+                 
+                 <p>其研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。</p>
+                 
+                 <p className="text-slate-500 italic text-lg font-light border-l-2 border-slate-200 pl-4 py-1 mt-4">
+                   <span className="inline-block">「這不只是知識的傳遞，」</span>
+                   <span className="inline-block">而是一場關於『如何理解世界』的對話。」</span>
+                 </p>
+               </div>
+             </div>
+
+             {/* 右下角 MORE 連結 */}
+             <div className="flex justify-end">
+               <Link 
+                 to="/program" 
+                 className="group relative flex items-center gap-4 bg-[#002B5B] text-white px-8 py-4 rounded-full font-bold overflow-hidden transition-all shadow-sm hover:shadow-md hover:bg-[#001f42] hover:pr-12"
+               >
+                 <span className="relative z-10">MORE DETAILS</span>
+                 <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all">→</span>
+               </Link>
+             </div>
           </div>
-        </div>
-
-        {/* 夥伴單位區塊 */}
-        <div className="pt-10 border-t border-slate-100 space-y-12">
-          {/* 主辦單位 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
-            <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
-          </section>
-
-          {/* 學術合作夥伴 - 維持縮小後的比例 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-7 md:h-9 w-auto object-contain" />
-              <img src={LogoNIU} alt="國立宜蘭大學" className="h-10 md:h-12 w-auto object-contain" />
-            </div>
-          </section>
-
-          {/* 國際執行夥伴 - 再次放大 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              {/* 依照您的要求提升至 h-16 md:h-18 */}
-              <img src={LogoRedin} alt="紅映國際活動製作" className="h-18 md:h-20 w-auto object-contain" />
-              <img src={LogoBright} alt="采傑國際會議服務" className="h-18 md:h-20 w-auto object-contain" />
-            </div>
-          </section>
-        </div>
-
-      </div>
-    </div>
-  );
-}
-</file>
-
-<file path="src/pages/Guests.tsx">
-import michaelLevittImg from '../assets/michael-levitt.jpg';
-import jackDongarraImg from '../assets/jack-dongarra.jpg';
-import konNovoselovImg from '../assets/konstantin-novoselov.jpg';
-import louisIgnarroImg from '../assets/louis-ignarro.jpg';
-import davidMacmillanImg from '../assets/david-macmillan.jpg';
-
-// 1. 將貴賓分類
-const mainMasters = [
-  {
-    id: 1,
-    nameZh: "邁可·列維特",
-    nameEn: "MICHAEL LEVITT",
-    title: "2013年諾貝爾化學獎得主",
-    image: michaelLevittImg,
-    description: "1947年，列維特在南非開普敦出生。他致力於蛋白質的電腦模擬，這一領域在當時剛剛起步，他開發了第一個計算蛋白質分子動力學的程式...",
-  }
-];
-
-const otherMasters = [
-  {
-    id: 2,
-    nameZh: "傑克·唐加拉",
-    nameEn: "JACK DONGARRA",
-    title: "圖靈獎得主",
-    image: jackDongarraImg,
-  },
-  {
-    id: 3,
-    nameZh: "康斯坦丁·諾沃肖洛夫",
-    nameEn: "KONSTANTIN NOVOSELOV",
-    title: "諾貝爾物理學獎得主",
-    image: konNovoselovImg,
-  },
-  {
-    id: 4,
-    nameZh: "路易斯·J·伊格納羅",
-    nameEn: "LOUIS J. IGNARRO",
-    title: "諾貝爾醫學獎得主",
-    image: louisIgnarroImg,
-  },
-  {
-    id: 5,
-    nameZh: "戴維·麥克米倫",
-    nameEn: "DAVID MACMILLAN",
-    title: "諾貝爾化學獎得主",
-    image: davidMacmillanImg,
-  }
-];
-
-export default function Guests() {
-  return (
-    <div className="bg-white min-h-screen pt-32 pb-20">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        {/* 標題 */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">科學大師陣容</h1>
-          <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
-        </div>
-
-        {/* 區塊一：主要貴賓 (大圖模式) */}
-        <div className="space-y-20 mb-24">
-          {mainMasters.map(master => (
-            <div key={master.id} className="relative group overflow-hidden rounded-3xl bg-slate-900 aspect-[16/9] md:aspect-[21/9]">
-              {/* 背景大圖 */}
-              <img 
-                src={master.image} 
-                className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" 
-                alt={master.nameZh} 
-              />
-              {/* 文字疊加層 */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
-                <div className="max-w-3xl">
-                  <span className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-4">
-                    {master.title}
-                  </span>
-                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">{master.nameZh}</h2>
-                  <p className="text-xl font-mono text-blue-400 mb-6">{master.nameEn}</p>
-                  <p className="text-slate-200 leading-relaxed text-sm md:text-base line-clamp-3 md:line-clamp-none">
-                    {master.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* 區塊二：其他貴賓 (維持原本並排一行的小圖模式) */}
-        <div className="border-t border-slate-100 pt-16">
-          <h3 className="text-2xl font-bold text-slate-800 mb-10 text-center">更多受邀貴賓</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {otherMasters.map(master => (
-              <div key={master.id} className="text-center group">
-                <div className="aspect-square rounded-2xl overflow-hidden border border-slate-100 mb-4 shadow-sm group-hover:shadow-md transition-shadow">
-                  <img src={master.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt={master.nameZh} />
-                </div>
-                <h4 className="font-bold text-slate-800">{master.nameZh}</h4>
-                <p className="text-xs text-slate-400 mt-1">{master.nameEn}</p>
-                <p className="text-[10px] text-blue-600 mt-2 font-medium">{master.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </div>
-    </div>
-  );
-}
-</file>
-
-<file path="package.json">
-{
-  "name": "nsic-website",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.7.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.14.1",
-    "swiper": "^12.1.3"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.57.0",
-    "vite": "^8.0.1"
-  }
-}
-</file>
-
-<file path="src/components/LaureatesSection.tsx">
-interface Laureate {
-  id: number;
-  nameCH: string;
-  nameEN: string;
-  title: string;
-  image: string;
-  bio: string;
-}
-
-interface Props {
-  pageTitle: string;
-  laureates: Laureate[];
-}
-
-export default function LaureatesSection({ laureates }: Props) {
-  return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-slate-800">科學大師陣容</h2>
-          <div className="w-12 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-        </div>
-
-        {/* 橫向並排網格 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {laureates.map((person) => (
-            <div key={person.id} className="text-center group">
-              {/* 圓角正方形照片，縮小尺寸 */}
-              <div className="relative w-70 h-90 mx-auto mb-6">
-                <div className="absolute inset-0 border-2 border-blue-100 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform"></div>
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
-                  <img 
-                    src={person.image} 
-                    alt={person.nameCH} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="text-lg font-bold text-slate-800">{person.nameCH}</h3>
-                <p className="text-xs font-semibold text-blue-600 uppercase tracking-wider">{person.nameEN}</p>
-                <p className="text-[10px] text-slate-400 font-medium px-4 py-1 bg-slate-50 inline-block rounded-full">
-                  {person.title}
-                </p>
-                {/* 介紹放在下方，字體縮小 */}
-                <p className="text-xs text-slate-500 leading-relaxed mt-4 px-2 line-clamp-3 group-hover:line-clamp-none transition-all">
-                  {person.bio}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
-  );
-}
-</file>
-
-<file path="src/components/Navbar.tsx">
-import { useState, useEffect } from 'react';
-import { ChevronDown, ChevronRight, Globe, Settings, Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-
-// 1. 匯入你的 Logo
-import logoImg from '../assets/logo.png';
-
-interface NavMenu {
-  label: string;
-  items: string[];
-}
-
-const navMenus: Record<string, NavMenu> = {
-  peak: {
-    label: '峰會介紹',
-    items: ['關於我們', '會長的話'],
-  },
-  agenda: {
-    label: '活動內容',
-    items: ['峰會議程'],
-  },
-  guests: {
-    label: '貴賓介紹',
-    items: ['主要貴賓'],
-  },
-  review: {
-    label: '歷年回顧',
-    items: ['2025'],
-  },
-  about: {
-    label: '聯絡我們',
-    items: [],
-  }
-};
-
-const pathMap: Record<string, string> = {
-  '主要貴賓': '/guests',
-  '峰會議程': '/program',
-  '2025': '/review-2025',
-  '聯絡我們': '/contact',
-  '關於我們': '/#origin',
-  '會長的話': '/#founder',
-  '首頁': '/',
-};
-
-interface NavbarProps {
-  onShowToast?: (msg: string) => void;
-}
-
-export default function Navbar({ onShowToast }: NavbarProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const location = useLocation();
-
-  // 判斷是否在首頁 (首頁才需要透明轉白色的效果)
-  const isHomePage = location.pathname === '/';
-
-  const handleShowToast = (message: string) => {
-    if (onShowToast) {
-      onShowToast(message);
-    } else {
-      alert(message);
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <header 
-      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-        hasScrolled || !isHomePage
-          ? 'bg-white/95 backdrop-blur-md shadow-md py-0 border-b border-slate-200' 
-          : 'bg-transparent py-2 border-b border-white/10'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-        
-        {/* Logo 區塊 */}
-        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
-          <div className="relative">
-            <img 
-              src={logoImg} 
-              alt="諾科獎 Logo" 
-              className={`transition-all duration-500 object-contain ${
-                hasScrolled || !isHomePage ? 'h-10' : 'h-12'
-              } w-auto`}
-            />
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
-          {Object.entries(navMenus).map(([key, menu]) => {
-            const hasItems = menu.items.length > 0;
-            const targetPath = pathMap[menu.label] || '#';
-            const textColor = hasScrolled || !isHomePage 
-              ? 'text-slate-700 hover:text-blue-600' 
-              : 'text-white/90 hover:text-white';
-
-            return (
-              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
-                {hasItems ? (
-                  <>
-                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
-                      {menu.label}
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
-                    </span>
-                    {/* Dropdown Menu */}
-                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
-                        {menu.items.map((item) => (
-                          <Link 
-                            key={item} 
-                            to={pathMap[item] || '#'} 
-                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-blue-600 transition-all"
-                          >
-                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
-                    {menu.label}
-                  </Link>
-                )}
-              </div>
-            );
-          })}
-        </nav>
-
-        {/* Right Toolbar */}
-        <div className="flex items-center space-x-5">
-          {/* Language Selector */}
-          <div className="hidden sm:flex items-center group relative h-full cursor-pointer">
-            <div className={`flex items-center text-sm font-medium transition-colors duration-500 ${
-              hasScrolled || !isHomePage ? 'text-slate-500 hover:text-blue-600' : 'text-white/80 hover:text-white'
-            }`}>
-              <Globe className="w-4 h-4 mr-1.5" /> 繁中
-              <ChevronDown className="w-3.5 h-3.5 ml-1 transition-transform group-hover:rotate-180" />
-            </div>
-            {/* Language Dropdown */}
-            <div className="absolute top-full right-0 pt-2 w-32 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-white rounded-lg border border-slate-100 py-1.5 shadow-xl">
-                <button className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600">中文</button>
-                <button onClick={() => handleShowToast('English version is under construction')} className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-blue-600">English</button>
-              </div>
-            </div>
-          </div>
-
-          <button 
-            onClick={() => handleShowToast('系統設定功能即將開放')}
-            className={`transition-all hover:rotate-90 duration-500 ${
-              hasScrolled || !isHomePage ? 'text-slate-400 hover:text-blue-600' : 'text-white/60 hover:text-white'
-            }`}
-          >
-            <Settings className="w-5 h-5" />
-          </button>
-
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              hasScrolled || !isHomePage ? 'text-slate-600 hover:bg-slate-100' : 'text-white hover:bg-white/10'
-            }`}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu (內容不變) */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
-          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-            {Object.entries(navMenus).map(([key, menu]) => {
-              const hasItems = menu.items.length > 0;
-              const targetPath = pathMap[menu.label] || '#';
-
-              if (!hasItems) {
-                return (
-                  <Link 
-                    key={key}
-                    to={targetPath}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-xl transition"
-                  >
-                    {menu.label}
-                  </Link>
-                );
-              }
-
-              return (
-                <details key={key} className="group">
-                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
-                    {menu.label}
-                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-blue-500/30 ml-6 my-1">
-                    {menu.items.map((item) => (
-                      <Link 
-                        key={item}
-                        to={pathMap[item] || '#'} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-blue-600 hover:bg-white rounded-lg transition"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                </details>
-              );
-            })}
-          </div>
-        </div>
-      )}
-    </header>
   );
 }
 </file>
@@ -2315,6 +1765,213 @@ export default function AboutSection() {
 }
 </file>
 
+<file path="src/components/StaticHero.tsx">
+const StaticHero = () => {
+  return (
+    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-white text-[#1a1a1a] overflow-hidden text-center">
+      {/* 輕微的背景點綴 */}
+      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-5 pointer-events-none" />
+      
+      <div className="relative z-10 max-w-5xl">
+        {/* 主標題：使用 break-keep 避免中文字斷開 */}
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 break-keep">
+          <span className="inline-block">諾科獎</span>
+          <span className="inline-block">國際科學對話平台</span>
+        </h1>
+        
+        {/* 副標題 */}
+        <h2 className="text-xl md:text-3xl font-light tracking-widest text-[#002B5B] mb-8">
+          Nobel Science International Dialogue
+        </h2>
+        
+        <div className="space-y-2">
+          <p className="text-base md:text-xl text-slate-600">
+            連結台灣與世界頂尖科學家
+          </p>
+          <p className="text-xs md:text-sm text-slate-400 font-light italic">
+            A global platform connecting Taiwan with the world’s leading scientific minds
+          </p>
+        </div>
+      </div>
+
+      {/* 捲動提示：顏色改為深灰色 */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+        <p className="text-[10px] tracking-widest mb-2 text-slate-800">SCROLL DOWN</p>
+        <div className="w-[1px] h-10 bg-slate-800 mx-auto"></div>
+      </div>
+    </section>
+  );
+};
+
+export default StaticHero;
+</file>
+
+<file path="src/pages/Contact.tsx">
+import { Mail, MessageCircle, Landmark } from 'lucide-react';
+
+// 1. 匯入圖片檔案
+import LogoOrganizers from '../assets/logo-2.jpg';      
+import LogoNTUT from '../assets/logo-ntut.png';        
+import LogoNIU from '../assets/logo-niu.png';          
+import LogoRedin from '../assets/logo-redin.png';      
+import LogoBright from '../assets/logo-bright.png';    
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+export default function Contact() {
+  return (
+    <div className="pt-32 pb-24 bg-white min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        
+        {/* 標題區 */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
+          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
+          <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
+        </div>
+
+        {/* 聯絡資訊區塊 */}
+        <div className="space-y-12 mb-16">
+          <div className="text-lg text-slate-600 leading-relaxed">
+            <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
+            <div className="flex gap-6 mb-10">
+              <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+                <FacebookIcon className="w-7 h-7 fill-current" />
+              </a>
+              <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+                <MessageCircle className="w-7 h-7 fill-current" />
+              </a>
+            </div>
+            <div className="flex items-center gap-3 text-[#002B5B]">
+              <Mail className="w-5 h-5" />
+              <span>E-mail：</span>
+              <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
+            </div>
+          </div>
+
+          {/* 銀行匯款資訊 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+              <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
+            </div>
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+              <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
+            </div>
+          </div>
+        </div>
+
+        {/* 夥伴單位區塊 */}
+        <div className="pt-10 border-t border-slate-100 space-y-12">
+          
+          {/* 主辦單位 */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
+            <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
+          </section>
+
+          {/* 學術合作夥伴 (統一設為 h-12 md:h-14) */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
+            </div>
+          </section>
+
+          {/* 國際執行夥伴 (統一設為 h-12 md:h-14) */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/Guests.tsx">
+import michaelLevittImg from '../assets/michael-levitt.jpg';
+
+// 1. 只保留主要貴賓
+const mainMasters = [
+  {
+    id: 1,
+    nameZh: "邁可·列維特",
+    nameEn: "MICHAEL LEVITT",
+    title: "2013年諾貝爾化學獎得主",
+    image: michaelLevittImg,
+    description: "1947年，列維特在南非開普敦出生。他致力於蛋白質的電腦模擬，這一領域在當時剛剛起步，他開發了第一個計算蛋白質分子動力學的程式。\n\n他的研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。",
+  }
+];
+
+export default function Guests() {
+  return (
+    <div className="bg-white min-h-screen pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* 頁面標題：已更改為「本年度受邀科學家」 */}
+        <div className="text-center mb-16 md:mb-24">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">本年度受邀科學家</h1>
+          <div className="w-12 h-1 bg-[#002B5B] mx-auto rounded-full"></div>
+        </div>
+
+        {/* 主要貴賓介紹區塊 (左圖右文，手機版自動上下排列) */}
+        <div className="max-w-5xl mx-auto">
+          {mainMasters.map(master => (
+            <div key={master.id} className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+              
+              {/* 左側：照片 */}
+              <div className="w-full md:w-5/12 shrink-0">
+                <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-slate-100 relative group">
+                  <img 
+                    src={master.image} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    alt={master.nameZh} 
+                  />
+                </div>
+              </div>
+
+              {/* 右側：文字介紹 */}
+              <div className="w-full md:w-7/12 flex flex-col justify-center space-y-6">
+                <div>
+                  <span className="inline-block px-4 py-1.5 bg-[#002B5B] text-white text-sm font-bold rounded-full mb-6 shadow-sm">
+                    {master.title}
+                  </span>
+                  
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-2">{master.nameZh}</h2>
+                  <p className="text-xl tracking-widest text-slate-400 font-medium uppercase mb-6">{master.nameEn}</p>
+                  
+                  <div className="w-12 h-[2px] bg-slate-200 mb-6"></div>
+                </div>
+                
+                <div className="text-slate-600 text-lg leading-relaxed text-justify space-y-4">
+                  {master.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+</file>
+
 <file path="src/pages/Home.tsx">
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -2358,6 +2015,648 @@ export default function Home() {
       <AnnouncementSection />
     </>
   );
+}
+</file>
+
+<file path="src/components/DialogueArchive.tsx">
+import { Link } from 'react-router-dom';
+
+// 匯入 5/9 (峰會晚宴) 圖片 [已統一加上 2025 路徑]
+import nightnight1 from '../assets/2025/nightnightevent/nightnight1.jpg';
+import nightnight2 from '../assets/2025/nightnightevent/nightnight2.jpg';
+import nightnight3 from '../assets/2025/nightnightevent/nightnight3.jpg';
+import nightnight4 from '../assets/2025/nightnightevent/nightnight4.jpg';
+import nightnight5 from '../assets/2025/nightnightevent/nightnight5.jpg';
+import nightnight6 from '../assets/2025/nightnightevent/nightnight6.jpg';
+import nightnight7 from '../assets/2025/nightnightevent/nightnight7.jpg';
+import nightnight8 from '../assets/2025/nightnightevent/nightnight8.jpg';
+
+// 匯入 5/9 (北科大 最終場 - Louis J. Ignarro) 圖片 [已統一加上 2025 路徑]
+import ntut4_1 from '../assets/2025/ntut/ntut4-1.jpg';
+import ntut4_2 from '../assets/2025/ntut/ntut4-2.jpg';
+import ntut4_3 from '../assets/2025/ntut/ntut4-3.jpg';
+import ntut4_4 from '../assets/2025/ntut/ntut4-4.jpg';
+import ntut4_5 from '../assets/2025/ntut/ntut4-5.jpg';
+import ntut4_6 from '../assets/2025/ntut/ntut4-6.jpg';
+
+// 匯入 5/8 (北科大 第三場 - Konstantin Novoselov) 圖片
+import ntut3_1 from '../assets/2025/ntut/ntut3-1.jpg';
+import ntut3_2 from '../assets/2025/ntut/ntut3-2.jpg';
+import ntut3_3 from '../assets/2025/ntut/ntut3-3.jpg';
+import ntut3_4 from '../assets/2025/ntut/ntut3-4.jpg';
+import ntut3_5 from '../assets/2025/ntut/ntut3-5.jpg';
+import ntut3_6 from '../assets/2025/ntut/ntut3-6.jpg';
+
+// 匯入 5/8 (北科大 第二場 - David W.C. MacMillan) 圖片
+import ntut2_1 from '../assets/2025/ntut/ntut2-1.jpg';
+import ntut2_2 from '../assets/2025/ntut/ntut2-2.jpg';
+import ntut2_3 from '../assets/2025/ntut/ntut2-3.jpg';
+import ntut2_4 from '../assets/2025/ntut/ntut2-4.jpg';
+import ntut2_5 from '../assets/2025/ntut/ntut2-5.jpg';
+import ntut2_6 from '../assets/2025/ntut/ntut2-6.jpg';
+
+// 匯入 5/8 (北科大 第一場 - Jack Dongarra) 圖片
+import ntut1_1 from '../assets/2025/ntut/ntut1-1.jpg';
+import ntut1_2 from '../assets/2025/ntut/ntut1-2.jpg';
+import ntut1_3 from '../assets/2025/ntut/ntut1-3.jpg';
+import ntut1_4 from '../assets/2025/ntut/ntut1-4.jpg';
+
+// 匯入 5/8 (路亞) 圖片
+import luya1 from '../assets/2025/luya/luya-1.jpg';
+import luya2 from '../assets/2025/luya/luya-2.jpg';
+import luya3 from '../assets/2025/luya/luya-3.jpg';
+import luya4 from '../assets/2025/luya/luya-4.jpg';
+import luya5 from '../assets/2025/luya/luya-5.jpg';
+import luya6 from '../assets/2025/luya/luya-6.jpg';
+
+// 匯入 5/7 (貴賓之夜) 圖片
+import night1 from '../assets/2025/nightevent/night1.jpg';
+import night2 from '../assets/2025/nightevent/night2.jpg';
+import night3 from '../assets/2025/nightevent/night3.jpg';
+import night4 from '../assets/2025/nightevent/night4.jpg';
+import night6 from '../assets/2025/nightevent/night6.jpg';
+import night7 from '../assets/2025/nightevent/night7.jpg';
+import night8 from '../assets/2025/nightevent/night8.jpg';
+
+// 匯入 5/8 (北一女中) 圖片
+import tfg1 from '../assets/2025/tfghighschool/tfg1.jpg';
+import tfg2 from '../assets/2025/tfghighschool/tfg2.jpg';
+import tfg3 from '../assets/2025/tfghighschool/tfg3.jpg';
+import tfg4 from '../assets/2025/tfghighschool/tfg4.jpg';
+import tfg5 from '../assets/2025/tfghighschool/tfg5.jpg';
+import tfg6 from '../assets/2025/tfghighschool/tfg6.jpg';
+import tfg7 from '../assets/2025/tfghighschool/tfg7.jpg';
+
+// 匯入 5/8 (偏鄉學子) 圖片
+import bright1 from '../assets/2025/bright/bright1.jpg';
+import bright2 from '../assets/2025/bright/bright2.jpg';
+import bright3 from '../assets/2025/bright/bright3.jpg';
+
+// 匯入 5/7 (建中參訪) 圖片
+import ckhs1 from '../assets/2025/ckhighschool/ckhs1.jpg';
+import ckhs2 from '../assets/2025/ckhighschool/ckhs2.jpg';
+import ckhs3 from '../assets/2025/ckhighschool/ckhs3.jpg';
+import ckhs4 from '../assets/2025/ckhighschool/ckhs4.jpg';
+import ckhs5 from '../assets/2025/ckhighschool/ckhs5.jpg';
+import ckhs6 from '../assets/2025/ckhighschool/ckhs6.jpg';
+
+export interface EventType {
+  id: number;
+  date: string;
+  time: string; 
+  title: string;
+  location: string;
+  speakers: string[];
+  displayImage: string;
+  images: string[]; 
+  description: string;
+  details: string;
+}
+
+// 資料陣列：依照日期由新到舊排列
+export const archiveData: EventType[] = [
+  {
+    id: 10, 
+    date: "05.09",
+    time: "18:00–21:30", 
+    title: "峰會晚宴｜小小科學種子閃耀登場",
+    location: "峰會晚宴",
+    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
+    displayImage: nightnight1,
+    images: [nightnight1, nightnight2, nightnight3, nightnight4, nightnight5, nightnight6, nightnight7, nightnight8],
+    description: "2025諾科獎台北峰會壓軸晚宴圓滿落幕，三位國際大師與產官學界貴賓齊聚，小小科學種子帶來精彩話劇演出。",
+    details: "【回顧｜5/9 峰會晚宴圓滿落幕 小小科學種子閃耀登場 】\n\n2025諾科獎台北峰會於5月9日晚間舉辦壓軸晚宴，三位來自諾貝爾與圖靈獎的大師與產官學界貴賓齊聚一堂，為這場為期三天的國際交流盛會畫下圓滿句點。\n\n晚宴中，特別邀請路亞實驗教育機構的小朋友們登台演出一齣富有創意與科學想像力的話劇，孩子們以純真生動的方式，表達他們對科學的理解與熱情，贏得全場嘉賓與大師們熱烈掌聲。\n\n這不僅是一場科學與產業的交流晚宴，更是希望與靈感的傳遞。感謝所有參與者與協力夥伴，讓2025諾科獎台北峰會圓滿落幕，也為未來世代播下追夢的種子。"
+  },
+  {
+    id: 9, 
+    date: "05.09",
+    time: "09:30–12:00", 
+    title: "台北科技大學｜Louis J. Ignarro 公益演講",
+    location: "台北科技大學",
+    speakers: ["路易斯·J·伊格納羅"],
+    displayImage: ntut4_1,
+    images: [ntut4_1, ntut4_2, ntut4_3, ntut4_4, ntut4_5, ntut4_6],
+    description: "1998年諾貝爾醫學獎得主 Louis J. Ignarro 教授分享一氧化氮研究歷程，啟發夢想與信念的生命對話。",
+    details: "【回顧｜5/9 Louis J. Ignarro 公益演講圓滿落幕 】\n\n「2025臺灣諾科獎週」最終場臺北市大學聯合公益演講於5月9日上午在臺北科技大學登場，由1998年諾貝爾生理學或醫學獎得主 Louis J. Ignarro 教授擔綱主講，吸引眾多醫學與生命科學領域師生熱情參與。\n\nIgnarro 教授以其開創性的研究—發現一氧化氮在生理訊號傳導中的關鍵角色為主軸，分享他長達15年的研究歷程，以及面對質疑與挑戰仍不放棄的堅持。他強調：「做研究不能只為了結果，更是為了對生命本質的理解與貢獻。」\n\n本場演講由諾科獎國際文教交流協會主辦、馬偕紀念醫院協辦，並特別感謝中央研究院院長廖俊智院士親臨現場致詞，肯定Ignarro 教授對生醫科學界的深遠貢獻，也勉勵在場青年學子勇於探索、投身科研。\n\n現場互動熱烈，學生提問踴躍，Ignarro 教授也以親切、風趣的態度一一回應，留下深刻印象。這場演講不僅是一堂科學課，更是一場啟發夢想與信念的生命對話。"
+  },
+  {
+    id: 8, 
+    date: "05.08",
+    time: "16:30–18:00", 
+    title: "台北科技大學｜Konstantin Novoselov 公益演講",
+    location: "台北科技大學",
+    speakers: ["康斯坦丁·諾沃肖洛夫"],
+    displayImage: ntut3_1,
+    images: [ntut3_1, ntut3_2, ntut3_3, ntut3_4, ntut3_5, ntut3_6],
+    description: "2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授分享石墨烯發現歷程，與學子探討科學創新的本質。",
+    details: "【回顧｜5/8 Konstantin Novoselov 台北科大公益演講 精彩回顧】\n\n「2025臺灣諾科獎週」系列活動於5月8日持續登場，下午場由2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授主講，現場座無虛席、反應熱烈。\n\n本場由諾科獎國際文教交流協會主辦、國立宜蘭大學協辦，特別感謝中央研究院副院長 周美吟院士親臨致詞與共襄盛舉，為活動增添亮點。\n\nNovoselov 教授以石墨烯的發現歷程為起點，深入分享科學創新的本質與跨領域合作的重要。他鼓勵學生勇於提問、保持好奇，並相信「重大發現往往來自對簡單問題的深刻思考」。\n\n現場學生提問踴躍，展現對科學的熱情與思辨力，也在與大師的互動中，激發對未來科技參與的想像與行動力。"
+  },
+  {
+    id: 7, 
+    date: "05.08",
+    time: "14:00–16:30", 
+    title: "台北科技大學｜David W.C. MacMillan 公益演講",
+    location: "台北科技大學",
+    speakers: ["戴維·麥克米倫"],
+    displayImage: ntut2_1,
+    images: [ntut2_1, ntut2_2, ntut2_3, ntut2_4, ntut2_5, ntut2_6],
+    description: "2021年諾貝爾化學獎得主 David W.C. MacMillan 教授分享有機催化技術革命，鼓勵青年擁抱未知。",
+    details: "【回顧｜5/8 David W.C. MacMillan 北科大公益演講 精彩回顧】\n\n在「2025臺灣諾科獎週」系列活動中，5月8日下午由2021年諾貝爾化學獎得主 David W.C. MacMillan 教授擔綱演講，吸引大量青年學子與科學愛好者熱烈參與。\n\n本場演講由諾科獎國際文教交流協會主辦、台北科技大學協辦，並榮幸邀請到中研院牟中原院士親臨現場致詞，為活動揭開深具高度與溫度的序幕。\n\nMacMillan 教授以其在不對稱有機催化技術方面的革命性研究為起點，分享自己從蘇格蘭小鎮走向國際科學舞台的歷程，鼓勵青年勇於發問、擁抱未知。他強調：「科學並非遙不可及，而是來自對身邊世界的好奇與觀察」。\n\n現場互動熱烈，學生踴躍提問，大師亦親切回應，這場面對面的對話不僅傳遞了知識，更為未來播下了靈感與勇氣的種子。"
+  },
+  {
+    id: 6, 
+    date: "05.08",
+    time: "09:30–12:00",
+    title: "台北科技大學｜Jack Dongarra 公益演講",
+    location: "台北科技大學",
+    speakers: ["傑克·唐加拉"],
+    displayImage: ntut1_1,
+    images: [ntut1_1, ntut1_2, ntut1_3, ntut1_4], 
+    description: "2021年圖靈獎得主 Jack Dongarra 教授分享高效能運算的前瞻貢獻，鼓勵青年參與科學與創新。",
+    details: "【回顧｜5/8 Jack Dongarra 台北科大公益演講 精彩時刻 】\n\n在「臺灣諾科獎週」系列活動中，由諾科獎國際文教交流協會主辦、國立中正大學協辦的臺北市大學聯合公益演講於5月8日上午在台北科技大學登場，講者為2021年圖靈獎得主 Jack Dongarra 教授。\n\n講題聚焦「青年學子未來如何參與科學與創新」，Dongarra 教授以生動案例介紹他在高效能運算（HPC）與超級電腦應用上的前瞻貢獻，並鼓勵學生勇於進入科學現場，掌握跨領域合作與技術突破的契機。\n\n現場座無席虛，氣氛熱烈，來自各校的青年學子踴躍提問，Dongarra 教授亦誠懇回應，展現一位國際頂尖科學家對教育的熱情與對未來世代的期許。\n\n透過這場演講，不僅讓學生對運算與科學創新有更深入的理解，也激發了對參與未來全球挑戰的想像力與信心。"
+  },
+  {
+    id: 1, 
+    date: "05.08",
+    time: "09:00–12:00",
+    title: "台北市北一女中｜向大師學習：諾貝爾化學獎得主對談",
+    location: "北一女中",
+    speakers: ["戴維·麥克米倫"],
+    displayImage: tfg1,
+    images: [tfg1, tfg2, tfg3, tfg4, tfg5, tfg6, tfg7],
+    description: "2021年諾貝爾化學獎得主 David W.C. MacMillan 與北一女中學生深度對談，並親自展示諾貝爾獎牌。",
+    details: "【回顧｜5/8 向大師學習｜北一女迎來諾貝爾化學獎得主 】\n\n5月8日上午，由台北市教育局主辦的「台北市高中公益場－向大師學習」於北一女中盛大舉行，榮幸邀請到2021年諾貝爾化學獎得主 David W.C. MacMillan 與北市多所高中學子對談，展開一場充滿啟發與思辨的科學饗宴。\n\n為了讓同學們能夠親眼見證諾貝爾的榮耀，MacMillan 教授特地從國外攜帶他本人所獲得的諾貝爾獎牌來到現場，引起全場驚喜與感動。同學們不僅近距離接觸國際級大師，還親眼看到象徵全球科學最高榮譽的獎牌，現場氣氛熱烈而難忘。\n\n感謝北一女中協辦與台北市教育局的精心規劃，讓青年學子在青春階段就能與世界頂尖科學家交流對話，激盪對未來的更多想像。"
+  },
+  {
+    id: 4, 
+    date: "05.08",
+    time: "09:30–12:00",
+    title: "全省高中公益演講｜諾貝爾科學之光：照亮偏鄉學子夢想",
+    location: "政大公企中心",
+    speakers: ["康斯坦丁·諾沃肖洛夫"],
+    displayImage: bright1,
+    images: [bright1, bright2, bright3],
+    description: "2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授與全台偏鄉高中學子面對面交流，鼓勵青年勇敢逐夢。",
+    details: "【回顧｜諾貝爾科學之光：照亮偏鄉學子夢想 】\n\n在教育部青年發展署的支持下，5月8日上午於政大公企中心舉辦的「全省高中公益演講」順利登場，主題為「諾貝爾科學之光：照亮偏鄉學子夢想」。\n\n現場邀請到2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授親臨分享，與來自全台各地，尤其偏鄉地區的高中學子進行面對面交流。Novoselov 教授以自身經歷鼓勵青年學子勇於提問、勇敢逐夢，現場氣氛熱烈、充滿啟發。\n\n這場公益演講不僅是一堂科學教育的精彩課，更是一道希望的光，讓來自不同角落的學子感受到世界與未來的可能性。"
+  },
+  {
+    id: 3, 
+    date: "05.08",
+    time: "10:00–11:30",
+    title: "校園講座｜生命科學與醫學對話",
+    location: "林口路亞實驗教育機構",
+    speakers: ["路易斯·J·伊格納羅"],
+    displayImage: luya1,
+    images: [luya1, luya2, luya3, luya4, luya5, luya6], 
+    description: "諾貝爾醫學獎得主分享一氧化氮的研究歷程與生命科學的未來。",
+    details: "【回顧｜5/8 校園育苗專場｜科學種子在路亞發芽 🌱】\n\n在5月8日的「科學育苗計畫」校園專場中，路亞實驗教育機構迎來一位重量級嘉賓——1998年諾貝爾生理學或醫學獎得主 Louis J. Ignarro 教授。Ignarro 教授以深入淺出的方式分享自己在生理學研究上的突破，並與學生們對話交流，鼓勵年輕世代相信自己、勇敢探索，讓現場孩子們大受啟發。\n\n更令人感動的是，這場科學與教育的相遇，不僅點燃了好奇心，也在孩子們心中種下了未來的可能。感謝路亞實驗教育機構長期推動「科學育苗計畫」，讓更多孩子有機會親身接觸世界級科學家，在生活中看見科學、夢想與未來的連結。"
+  },
+  {
+    id: 5, 
+    date: "05.07",
+    time: "14:30–16:30",
+    title: "建中參訪｜科學大師走進百年學府",
+    location: "建國中學",
+    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
+    displayImage: ckhs1,
+    images: [ckhs1, ckhs2, ckhs3, ckhs4, ckhs5, ckhs6],
+    description: "圖靈獎與諾貝爾物理、醫學獎得主親臨建中，與學子熱烈對談，啟發科學熱情。",
+    details: "【回顧｜5/7 建中參訪｜科學大師走進百年學府 】\n\n在2025諾科獎台北峰會開幕前夕，三位國際級科學大師——圖靈獎得主 Jack Dongarra 、物理獎得主 Konstantin Novoselov，以及醫學獎得主 Louis J. Ignarro——特別走進百年學府建國中學，與學子們展開一場啟發思維的深度對話。\n\n面對來自全球科研高峰的大師，建中學生熱情提問，現場交流熱烈。三位得主也紛紛肯定台灣學生的思辨能力與對科學的熱情，並鼓勵大家勇敢追夢、探索未知。\n\n這場跨世代的相遇，讓科學不再只是書本上的知識，而是可以親身感受、對話與實踐的未來方向。"
+  },
+  {
+    id: 2, 
+    date: "05.07",
+    time: "18:30–21:00",
+    title: "超級貴賓之夜｜產官學界與國際大師的創新對話",
+    location: "W Hotel",
+    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
+    displayImage: night1,
+    images: [night1, night2, night3, night4, night6, night7, night8], 
+    description: "匯聚產官學界領袖與重要嘉賓，與諾貝爾及圖靈獎大師共話未來，共享知識與創新的交流盛宴。",
+    details: "【回顧｜2025臺灣諾科獎週開幕日精彩時刻】\n\n2025臺灣諾科獎週於5月7日精彩展開！當日上午，大師們特別走訪建國中學，與師生進行深度交流，感受到台灣年輕世代對科學的熱情與潛力。\n\n下午在台北科技大學舉行的正式開幕典禮，象徵這場國際級科學盛會隆重啟動，四位諾貝爾與圖靈獎得主齊聚一堂，場面盛大。\n\n晚間於W Hotel舉辦的「超級貴賓之夜」更匯聚來自產官學界的重要嘉賓，與國際大師共話未來，共享知識與創新的交流盛宴。\n\n這一天，為2025諾科獎台北峰會寫下精彩序章，也開啟科學與教育的新對話。\n\n更多高光時刻，敬請持續關注！"
+  }
+];
+
+export default function DialogueArchive() {
+  return (
+    <div className="bg-[#f8fafc] py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* 標題區 */}
+        <div className="flex items-center gap-6 mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">歷年國際對話</h2>
+          <div className="h-[2px] flex-grow bg-slate-200"></div>
+        </div>
+
+        {/* 卡片列表 */}
+        <div className="space-y-12">
+          {archiveData.map((item) => (
+            <Link 
+              key={item.id}
+              to={`/archive/${item.id}`}
+              className="block bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-500 cursor-pointer overflow-hidden group border border-slate-100"
+            >
+              <div className="flex flex-col md:flex-row items-center">
+                
+                {/* 區塊 1：文字資訊 */}
+                <div className="order-2 md:order-1 flex-1 w-full p-8 md:p-12 flex flex-col justify-center">
+                  
+                  {/* 日期與地點 */}
+                  <div className="flex flex-wrap items-center gap-4 mb-6">
+                    <span className="text-4xl md:text-5xl font-bold text-[#002B5B] tracking-tighter">
+                      {item.date}
+                    </span>
+                    <span className="px-4 py-1.5 bg-blue-50/50 text-[#002B5B] text-xs md:text-sm rounded-full font-semibold border border-blue-100/50">
+                      {item.location}
+                    </span>
+                  </div>
+                  
+                  {/* 標題與簡介 */}
+                  <h3 className="text-2xl font-bold text-slate-800 mb-4 group-hover:text-[#002B5B] transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-500 text-base leading-relaxed mb-6">
+                    {item.description}
+                  </p>
+
+                  {/* 滑動顯示的「查看更多」按鈕 */}
+                  <div className="mt-auto flex items-center text-sm font-bold text-[#002B5B] tracking-widest opacity-0 group-hover:opacity-100 transition-all transform translate-y-2 group-hover:translate-y-0 duration-300">
+                    VIEW DETAILS <span className="ml-2">→</span>
+                  </div>
+                </div>
+
+                {/* 區塊 2：大圖片 */}
+                <div className="order-1 md:order-2 w-full md:w-5/12 shrink-0 relative overflow-hidden aspect-video md:aspect-[4/3]">
+                  <img 
+                    src={item.displayImage} 
+                    alt={item.title} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  />
+                </div>
+
+              </div>
+            </Link>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/LaureatesSection.tsx">
+interface Laureate {
+  id: number;
+  nameCH: string;
+  nameEN: string;
+  title: string;
+  image: string;
+  bio: string;
+}
+
+interface Props {
+  pageTitle?: string;
+  laureates: Laureate[];
+}
+
+export default function LaureatesSection({ pageTitle = "科學大師陣容", laureates }: Props) {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        
+        {/* 標題區塊 */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">{pageTitle}</h2>
+          <div className="w-12 h-1 bg-[#002B5B] mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        {/* 橫向並排網格：手機版1欄、平板2欄、電腦4欄 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {laureates.map((person) => (
+            <div key={person.id} className="flex flex-col items-center text-center group">
+              
+              {/* 照片區塊：限制最大寬度，確保手機版照片大小適中 */}
+              <div className="relative w-2/3 sm:w-full max-w-[240px] aspect-[3/4] mb-8">
+                {/* 底部旋轉裝飾框 */}
+                <div className="absolute inset-0 border-2 border-slate-200 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+                {/* 照片本體 */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-50">
+                  <img 
+                    src={person.image} 
+                    alt={person.nameCH} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                  />
+                </div>
+              </div>
+
+              {/* 文字資訊區塊 */}
+              <div className="flex flex-col items-center w-full px-2">
+                
+                {/* 中英文姓名 */}
+                <h3 className="text-xl font-bold text-slate-800 mb-1">{person.nameCH}</h3>
+                <p className="text-xs font-bold text-[#002B5B] uppercase tracking-widest mb-4">
+                  {person.nameEN}
+                </p>
+                
+                {/* 分隔線與頭銜 (取代原本的底色橢圓框) */}
+                <div className="w-8 h-[1px] bg-slate-200 mb-3"></div>
+                <p className="text-[11px] text-slate-400 font-medium tracking-widest mb-4">
+                  {person.title}
+                </p>
+                
+                {/* 簡介 */}
+                <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
+                  {person.bio}
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/Navbar.tsx">
+import { useState } from 'react';
+import { ChevronDown, ChevronRight, Globe, Settings, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+// 1. 匯入你的 Logo
+import logoImg from '../assets/logo.png';
+
+interface NavMenu {
+  label: string;
+  items: string[];
+}
+
+const navMenus: Record<string, NavMenu> = {
+  peak: {
+    label: '峰會介紹',
+    items: ['關於我們', '會長的話'],
+  },
+  agenda: {
+    label: '活動內容',
+    items: ['峰會議程'],
+  },
+  guests: {
+    label: '貴賓介紹',
+    items: ['主要貴賓'],
+  },
+  review: {
+    label: '歷年回顧',
+    items: ['2025'],
+  },
+  about: {
+    label: '聯絡我們',
+    items: [],
+  }
+};
+
+const pathMap: Record<string, string> = {
+  '主要貴賓': '/guests',
+  '峰會議程': '/program',
+  '2025': '/review-2025',
+  '聯絡我們': '/contact',
+  '關於我們': '/#origin',
+  '會長的話': '/#founder',
+  '首頁': '/',
+};
+
+interface NavbarProps {
+  onShowToast?: (msg: string) => void;
+}
+
+export default function Navbar({ onShowToast }: NavbarProps) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleShowToast = (message: string) => {
+    if (onShowToast) {
+      onShowToast(message);
+    } else {
+      alert(message);
+    }
+  };
+
+  return (
+    <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        
+        {/* Logo 區塊 */}
+        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
+          <div className="relative">
+            <img 
+              src={logoImg} 
+              alt="諾科獎 Logo" 
+              className="transition-all duration-500 object-contain h-10 w-auto"
+            />
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
+          {Object.entries(navMenus).map(([key, menu]) => {
+            const hasItems = menu.items.length > 0;
+            const targetPath = pathMap[menu.label] || '#';
+            const textColor = 'text-slate-700 hover:text-[#002B5B]'; // 統一深色文字
+
+            return (
+              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
+                {hasItems ? (
+                  <>
+                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
+                      {menu.label}
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                    </span>
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
+                        {menu.items.map((item) => (
+                          <Link 
+                            key={item} 
+                            to={pathMap[item] || '#'} 
+                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
+                          >
+                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
+                    {menu.label}
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        {/* Right Toolbar */}
+        <div className="flex items-center space-x-5">
+          {/* Language Selector */}
+          <div className="hidden sm:flex items-center group relative h-full cursor-pointer">
+            <div className="flex items-center text-sm font-medium transition-colors duration-300 text-slate-500 hover:text-[#002B5B]">
+              <Globe className="w-4 h-4 mr-1.5" /> 繁中
+              <ChevronDown className="w-3.5 h-3.5 ml-1 transition-transform group-hover:rotate-180" />
+            </div>
+            {/* Language Dropdown */}
+            <div className="absolute top-full right-0 pt-2 w-32 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-white rounded-lg border border-slate-100 py-1.5 shadow-xl">
+                <button className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">中文</button>
+                <button onClick={() => handleShowToast('English version is under construction')} className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">English</button>
+              </div>
+            </div>
+          </div>
+
+          <button 
+            onClick={() => handleShowToast('系統設定功能即將開放')}
+            className="transition-all hover:rotate-90 duration-500 text-slate-400 hover:text-[#002B5B]"
+          >
+            <Settings className="w-5 h-5" />
+          </button>
+
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
+          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+            {Object.entries(navMenus).map(([key, menu]) => {
+              const hasItems = menu.items.length > 0;
+              const targetPath = pathMap[menu.label] || '#';
+
+              if (!hasItems) {
+                return (
+                  <Link 
+                    key={key}
+                    to={targetPath}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#002B5B] rounded-xl transition"
+                  >
+                    {menu.label}
+                  </Link>
+                );
+              }
+
+              return (
+                <details key={key} className="group">
+                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
+                    {menu.label}
+                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-[#002B5B]/30 ml-6 my-1">
+                    {menu.items.map((item) => (
+                      <Link 
+                        key={item}
+                        to={pathMap[item] || '#'} 
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
+</file>
+
+<file path="src/components/PresidentSection.tsx">
+import presidentImg from '../assets/president.jpg';
+
+export default function PresidentSection() {
+    return (
+        <section id="founder" className="py-24 bg-white scroll-mt-24 border-t border-slate-100">
+            <div className="max-w-6xl mx-auto px-6">
+                
+                {/* 頂部小標題 */}
+                <div className="mb-12 md:mb-16 text-center md:text-left">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide mb-4">會長的話</h2>
+                    <div className="w-12 h-1 bg-[#002B5B] rounded-full mx-auto md:mx-0"></div>
+                </div>
+
+                {/* 內容區塊 */}
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-12 lg:gap-20">
+                    
+                    {/* 區塊 1：文字與引言 */}
+                    <div className="order-2 md:order-1 w-full md:w-7/12 flex flex-col justify-center relative">
+                        
+                        {/* 裝飾性巨型引號 */}
+                        <div className="hidden md:block absolute -top-12 -left-8 text-[140px] text-slate-50 font-serif leading-none select-none z-0">
+                            “
+                        </div>
+
+                        <div className="relative z-10 w-full">
+                            
+                            <h3 className="text-3xl lg:text-4xl font-bold text-[#002B5B] leading-snug tracking-wide mb-8 text-center md:text-left">
+                                諾科獎的起點，<br />是一個很單純的想法
+                            </h3>
+
+                            {/* 內文說明：加入 md:hidden 控制手機版專屬斷行 */}
+                            <div className="space-y-6 text-lg md:text-xl text-slate-600 leading-relaxed text-justify md:text-left mb-10 md:pr-12">
+                                <p className="font-medium">
+                                    讓世界級的科學家，走進台灣，<br className="md:hidden" />與下一代面對面對話。
+                                </p>
+                                {/* 精緻小分隔線 */}
+                                <div className="hidden md:block w-16 h-[1px] bg-slate-300"></div>
+                            </div>
+
+                            {/* 雜誌風質感引言卡片：加入 md:hidden 控制手機版專屬斷行 */}
+                            <blockquote className="relative p-6 sm:p-8 bg-gradient-to-br from-[#f8fafc] to-white border border-slate-100 rounded-2xl shadow-sm md:mr-8 mt-4">
+                                <div className="absolute top-0 left-0 w-2 h-full bg-[#002B5B] rounded-l-2xl"></div>
+                                <p className="text-lg md:text-xl lg:text-2xl text-slate-500 italic font-light leading-relaxed">
+                                    「我們相信，有些時刻，<br className="md:hidden" />會讓一個人看見世界的高度。」
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    {/* 區塊 2：照片與署名 */}
+                    <div className="order-1 md:order-2 w-full max-w-[320px] md:max-w-none md:w-5/12 flex flex-col items-center md:items-end z-10">
+                        <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-slate-100 mb-6 relative group">
+                            <img 
+                                src={presidentImg} 
+                                alt="朱愛蓮會長" 
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                            />
+                        </div>
+                        <div className="text-center md:text-right w-full md:pr-4">
+                            <span className="block text-slate-400 text-[10px] tracking-[0.2em] uppercase mb-1 font-semibold">
+                                Founder & President
+                            </span>
+                            <span className="block text-slate-500 text-sm mb-2 font-medium">
+                                創會會長
+                            </span>
+                            <h4 className="text-3xl font-bold text-[#002B5B] tracking-widest">
+                                朱愛蓮
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
 }
 </file>
 
