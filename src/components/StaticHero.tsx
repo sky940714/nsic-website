@@ -16,7 +16,7 @@ const StaticHero = () => {
           - sm 以上恢復正常間距與大小
           - md 以上維持原本 text-3xl 大氣感
         */}
-        <h2 className="text-[10px] sm:text-lg md:text-3xl font-light tracking-tighter sm:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-visible">
+        <h2 className="text-[2px] sm:text-lg md:text-3xl font-light tracking-tighter sm:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-visible">
           Nobel Science International Dialogue
         </h2>
         
@@ -29,7 +29,7 @@ const StaticHero = () => {
             - 手機版極限 text-[9px] 確保強行一行
             - 使用 whitespace-nowrap 禁止任何斷行
           */}
-          <p className="text-[9px] sm:text-xs md:text-sm text-slate-400 font-light italic whitespace-nowrap overflow-visible">
+          <p className="text-[2px] sm:text-xs md:text-sm text-slate-400 font-light italic whitespace-nowrap overflow-visible">
             A global platform connecting Taiwan with the world’s leading scientific minds
           </p>
         </div>
