@@ -4,23 +4,32 @@ const StaticHero = () => {
       {/* 輕微的背景點綴 */}
       <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-5 pointer-events-none" />
       
-      <div className="relative z-10 max-w-5xl">
+      <div className="relative z-10 max-w-5xl w-full">
         {/* 主標題：使用 break-keep 避免中文字斷開 */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 break-keep">
           <span className="inline-block">諾科獎</span>
           <span className="inline-block">國際科學對話平台</span>
         </h1>
         
-        {/* 副標題 */}
-        <h2 className="text-xl md:text-3xl font-light tracking-widest text-[#002B5B] mb-8">
+        {/* 副標題修正：
+          - 手機版使用 text-[10px] 與極窄字距 tracking-tighter 確保一行顯示 
+          - sm 以上恢復正常間距與大小
+          - md 以上維持原本 text-3xl 大氣感
+        */}
+        <h2 className="text-[10px] sm:text-lg md:text-3xl font-light tracking-tighter sm:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-visible">
           Nobel Science International Dialogue
         </h2>
         
-        <div className="space-y-2">
-          <p className="text-base md:text-xl text-slate-600">
+        <div className="space-y-3 px-2 md:px-0">
+          <p className="text-base md:text-xl text-slate-600 font-medium">
             連結台灣與世界頂尖科學家
           </p>
-          <p className="text-xs md:text-sm text-slate-400 font-light italic">
+          
+          {/* 最長英文翻譯修正：
+            - 手機版極限 text-[9px] 確保強行一行
+            - 使用 whitespace-nowrap 禁止任何斷行
+          */}
+          <p className="text-[9px] sm:text-xs md:text-sm text-slate-400 font-light italic whitespace-nowrap overflow-visible">
             A global platform connecting Taiwan with the world’s leading scientific minds
           </p>
         </div>
