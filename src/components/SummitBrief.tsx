@@ -19,7 +19,6 @@ export default function SummitBrief() {
             <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8">
                <div>
                  <p className="text-slate-400 text-xs uppercase tracking-widest mb-2">活動日期</p>
-                 {/* 更新 1：使用 inline-block 確保日期不被怪異切斷 */}
                  <p className="text-xl font-bold text-slate-800">
                    <span className="inline-block">2026年5月13日</span>
                    <span className="inline-block">至5月14日</span>
@@ -38,12 +37,15 @@ export default function SummitBrief() {
                <h3 className="text-xl font-bold mb-6 flex items-center gap-4 text-slate-800">
                  <span className="w-8 h-[1px] bg-[#002B5B]"></span> 峰會重點
                </h3>
-               <div className="space-y-6 text-slate-600 leading-relaxed text-justify">
-                 {/* 更新 2：使用 whitespace-nowrap 鎖定大師名字與頭銜 */}
-                 <p>本次峰會邀請 <span className="text-[#002B5B] font-bold border-b border-blue-200 pb-0.5">2013年諾貝爾化學獎得主 <span className="whitespace-nowrap">Michael Levitt 教授</span></span> 來台交流。</p>
+               
+               {/* 解決奇怪空格的關鍵：將手機版設定為 text-left，平板以上才使用 text-justify */}
+               <div className="space-y-6 text-slate-600 leading-relaxed text-left md:text-justify">
+                 
+                 {/* 移除標籤前後多餘的空白，使用 px-1 確保間距自然且不會被硬拉開 */}
+                 <p>本次峰會邀請<span className="text-[#002B5B] font-bold border-b border-blue-200 pb-0.5 px-1">2013年諾貝爾化學獎得主 <span className="whitespace-nowrap">Michael Levitt 教授</span></span>來台交流。</p>
+                 
                  <p>其研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。</p>
                  
-                 {/* 更新 3：引言使用 inline-block 做語意斷句，防止寡行 */}
                  <p className="text-slate-500 italic text-lg font-light border-l-2 border-slate-200 pl-4 py-1 mt-4">
                    <span className="inline-block">「這不只是知識的傳遞，」</span>
                    <span className="inline-block">而是一場關於『如何理解世界』的對話。」</span>
