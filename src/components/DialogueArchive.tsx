@@ -1,43 +1,80 @@
 import { Link } from 'react-router-dom';
 
-// 匯入 5/8 (路亞) 圖片
-import luya1 from '../assets/luya/luya-1.jpg';
-import luya2 from '../assets/luya/luya-2.jpg';
-import luya3 from '../assets/luya/luya-3.jpg';
-import luya4 from '../assets/luya/luya-4.jpg';
-import luya5 from '../assets/luya/luya-5.jpg';
-import luya6 from '../assets/luya/luya-6.jpg';
+// 匯入 5/9 (峰會晚宴) 圖片 [已加上 2025 路徑]
+import nightnight1 from '../assets/2025/nightnightevent/nightnight1.jpg';
+import nightnight2 from '../assets/2025/nightnightevent/nightnight2.jpg';
+import nightnight3 from '../assets/2025/nightnightevent/nightnight3.jpg';
+import nightnight4 from '../assets/2025/nightnightevent/nightnight4.jpg';
+import nightnight5 from '../assets/2025/nightnightevent/nightnight5.jpg';
+import nightnight6 from '../assets/2025/nightnightevent/nightnight6.jpg';
+import nightnight7 from '../assets/2025/nightnightevent/nightnight7.jpg';
+import nightnight8 from '../assets/2025/nightnightevent/nightnight8.jpg';
 
-// 匯入 5/7 (貴賓之夜) 圖片
-import night1 from '../assets/nightevent/night1.jpg';
-import night2 from '../assets/nightevent/night2.jpg';
-import night3 from '../assets/nightevent/night3.jpg';
-import night4 from '../assets/nightevent/night4.jpg';
-import night6 from '../assets/nightevent/night6.jpg';
-import night7 from '../assets/nightevent/night7.jpg';
-import night8 from '../assets/nightevent/night8.jpg';
+// 匯入 5/9 (北科大 最終場 - Louis J. Ignarro) 圖片
+import ntut4_1 from '../assets/2025/ntut/ntut4-1.jpg';
+import ntut4_2 from '../assets/2025/ntut/ntut4-2.jpg';
+import ntut4_3 from '../assets/2025/ntut/ntut4-3.jpg';
+import ntut4_4 from '../assets/2025/ntut/ntut4-4.jpg';
+import ntut4_5 from '../assets/2025/ntut/ntut4-5.jpg';
+import ntut4_6 from '../assets/2025/ntut/ntut4-6.jpg';
 
-// 匯入 5/8 (北一女中) 圖片
-import tfg1 from '../assets/tfghighschool/tfg1.jpg';
-import tfg2 from '../assets/tfghighschool/tfg2.jpg';
-import tfg3 from '../assets/tfghighschool/tfg3.jpg';
-import tfg4 from '../assets/tfghighschool/tfg4.jpg';
-import tfg5 from '../assets/tfghighschool/tfg5.jpg';
-import tfg6 from '../assets/tfghighschool/tfg6.jpg';
-import tfg7 from '../assets/tfghighschool/tfg7.jpg';
+// 匯入 5/8 (北科大 第三場 - Konstantin Novoselov) 圖片
+import ntut3_1 from '../assets/2025/ntut/ntut3-1.jpg';
+import ntut3_2 from '../assets/2025/ntut/ntut3-2.jpg';
+import ntut3_3 from '../assets/2025/ntut/ntut3-3.jpg';
+import ntut3_4 from '../assets/2025/ntut/ntut3-4.jpg';
+import ntut3_5 from '../assets/2025/ntut/ntut3-5.jpg';
+import ntut3_6 from '../assets/2025/ntut/ntut3-6.jpg';
 
-// 匯入 5/8 (偏鄉學子演講 - 政大) 圖片 (已修正：只匯入到 bright3)
-import bright1 from '../assets/bright/bright1.jpg';
-import bright2 from '../assets/bright/bright2.jpg';
-import bright3 from '../assets/bright/bright3.jpg';
+// 匯入 5/8 (北科大 第二場 - David W.C. MacMillan) 圖片
+import ntut2_1 from '../assets/2025/ntut/ntut2-1.jpg';
+import ntut2_2 from '../assets/2025/ntut/ntut2-2.jpg';
+import ntut2_3 from '../assets/2025/ntut/ntut2-3.jpg';
+import ntut2_4 from '../assets/2025/ntut/ntut2-4.jpg';
+import ntut2_5 from '../assets/2025/ntut/ntut2-5.jpg';
+import ntut2_6 from '../assets/2025/ntut/ntut2-6.jpg';
 
-// 匯入 5/7 (建中參訪) 圖片
-import ckhs1 from '../assets/ckhighschool/ckhs1.jpg';
-import ckhs2 from '../assets/ckhighschool/ckhs2.jpg';
-import ckhs3 from '../assets/ckhighschool/ckhs3.jpg';
-import ckhs4 from '../assets/ckhighschool/ckhs4.jpg';
-import ckhs5 from '../assets/ckhighschool/ckhs5.jpg';
-import ckhs6 from '../assets/ckhighschool/ckhs6.jpg';
+// 匯入 5/8 (北科大 第一場 - Jack Dongarra) 圖片
+import ntut1_1 from '../assets/2025/ntut/ntut1-1.jpg';
+import ntut1_2 from '../assets/2025/ntut/ntut1-2.jpg';
+import ntut1_3 from '../assets/2025/ntut/ntut1-3.jpg';
+import ntut1_4 from '../assets/2025/ntut/ntut1-4.jpg';
+
+// 匯入其他活動圖片 [皆已確認為 2025 資料夾]
+import luya1 from '../assets/2025/luya/luya-1.jpg';
+import luya2 from '../assets/2025/luya/luya-2.jpg';
+import luya3 from '../assets/2025/luya/luya-3.jpg';
+import luya4 from '../assets/2025/luya/luya-4.jpg';
+import luya5 from '../assets/2025/luya/luya-5.jpg';
+import luya6 from '../assets/2025/luya/luya-6.jpg';
+
+import night1 from '../assets/2025/nightevent/night1.jpg';
+import night2 from '../assets/2025/nightevent/night2.jpg';
+import night3 from '../assets/2025/nightevent/night3.jpg';
+import night4 from '../assets/2025/nightevent/night4.jpg';
+import night6 from '../assets/2025/nightevent/night6.jpg';
+import night7 from '../assets/2025/nightevent/night7.jpg';
+import night8 from '../assets/2025/nightevent/night8.jpg';
+
+import tfg1 from '../assets/2025/tfghighschool/tfg1.jpg';
+import tfg2 from '../assets/2025/tfghighschool/tfg2.jpg';
+import tfg3 from '../assets/2025/tfghighschool/tfg3.jpg';
+import tfg4 from '../assets/2025/tfghighschool/tfg4.jpg';
+import tfg5 from '../assets/2025/tfghighschool/tfg5.jpg';
+import tfg6 from '../assets/2025/tfghighschool/tfg6.jpg';
+import tfg7 from '../assets/2025/tfghighschool/tfg7.jpg';
+
+// 💡 確保只有 bright1, bright2, bright3 (沒有 bright4！)
+import bright1 from '../assets/2025/bright/bright1.jpg';
+import bright2 from '../assets/2025/bright/bright2.jpg';
+import bright3 from '../assets/2025/bright/bright3.jpg';
+
+import ckhs1 from '../assets/2025/ckhighschool/ckhs1.jpg';
+import ckhs2 from '../assets/2025/ckhighschool/ckhs2.jpg';
+import ckhs3 from '../assets/2025/ckhighschool/ckhs3.jpg';
+import ckhs4 from '../assets/2025/ckhighschool/ckhs4.jpg';
+import ckhs5 from '../assets/2025/ckhighschool/ckhs5.jpg';
+import ckhs6 from '../assets/2025/ckhighschool/ckhs6.jpg';
 
 export interface EventType {
   id: number;
@@ -52,13 +89,73 @@ export interface EventType {
   details: string;
 }
 
-// 資料陣列
+// 資料陣列：依照日期由新到舊排列 (最新活動 05.09 在上方)
 export const archiveData: EventType[] = [
+  {
+    id: 10, 
+    date: "05.09",
+    time: "18:00–21:30", 
+    title: "峰會晚宴｜小小科學種子閃耀登場",
+    location: "峰會晚宴",
+    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
+    displayImage: nightnight1,
+    images: [nightnight1, nightnight2, nightnight3, nightnight4, nightnight5, nightnight6, nightnight7, nightnight8],
+    description: "2025諾科獎台北峰會壓軸晚宴圓滿落幕，三位國際大師與產官學界貴賓齊聚，小小科學種子帶來精彩話劇演出。",
+    details: "【回顧｜5/9 峰會晚宴圓滿落幕 小小科學種子閃耀登場 】\n\n2025諾科獎台北峰會於5月9日晚間舉辦壓軸晚宴，三位來自諾貝爾與圖靈獎的大師與產官學界貴賓齊聚一堂，為這場為期三天的國際交流盛會畫下圓滿句點。\n\n晚宴中，特別邀請路亞實驗教育機構的小朋友們登台演出一齣富有創意與科學想像力的話劇，孩子們以純真生動的方式，表達他們對科學的理解與熱情，贏得全場嘉賓與大師們熱烈掌聲。\n\n這不僅是一場科學與產業的交流晚宴，更是希望與靈感的傳遞。感謝所有參與者與協力夥伴，讓2025諾科獎台北峰會圓滿落幕，也為未來世代播下追夢的種子。"
+  },
+  {
+    id: 9, 
+    date: "05.09",
+    time: "09:30–12:00", 
+    title: "台北科技大學｜Louis J. Ignarro 公益演講",
+    location: "台北科技大學",
+    speakers: ["路易斯·J·伊格納羅"],
+    displayImage: ntut4_1,
+    images: [ntut4_1, ntut4_2, ntut4_3, ntut4_4, ntut4_5, ntut4_6],
+    description: "1998年諾貝爾醫學獎得主 Louis J. Ignarro 教授分享一氧化氮研究歷程，啟發夢想與信念的生命對話。",
+    details: "【回顧｜5/9 Louis J. Ignarro 公益演講圓滿落幕 】\n\n「2025臺灣諾科獎週」最終場臺北市大學聯合公益演講於5月9日上午在臺北科技大學登場，由1998年諾貝爾生理學或醫學獎得主 Louis J. Ignarro 教授擔綱主講，吸引眾多醫學與生命科學領域師生熱情參與。\n\nIgnarro 教授以其開創性的研究—發現一氧化氮在生理訊號傳導中的關鍵角色為主軸，分享他長達15年的研究歷程，以及面對質疑與挑戰仍不放棄的堅持。他強調：「做研究不能只為了結果，更是為了對生命本質的理解與貢獻。」\n\n本場演講由諾科獎國際文教交流協會主辦、馬偕紀念醫院協辦，並特別感謝中央研究院院長廖俊智院士親臨現場致詞，肯定Ignarro 教授對生醫科學界的深遠貢獻，也勉勵在場青年學子勇於探索、投身科研。\n\n現場互動熱烈，學生提問踴躍，Ignarro 教授也以親切、風趣的態度一一回應，留下深刻印象。這場演講不僅是一堂科學課，更是一場啟發夢想與信念的生命對話。"
+  },
+  {
+    id: 8, 
+    date: "05.08",
+    time: "16:30–18:00", 
+    title: "台北科技大學｜Konstantin Novoselov 公益演講",
+    location: "台北科技大學",
+    speakers: ["康斯坦丁·諾沃肖洛夫"],
+    displayImage: ntut3_1,
+    images: [ntut3_1, ntut3_2, ntut3_3, ntut3_4, ntut3_5, ntut3_6],
+    description: "2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授分享石墨烯發現歷程，與學子探討科學創新的本質。",
+    details: "【回顧｜5/8 Konstantin Novoselov 台北科大公益演講 精彩回顧】\n\n「2025臺灣諾科獎週」系列活動於5月8日持續登場，下午場由2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授主講，現場座無虛席、反應熱烈。\n\n本場由諾科獎國際文教交流協會主辦、國立宜蘭大學協辦，特別感謝中央研究院副院長 周美吟院士親臨致詞與共襄盛舉，為活動增添亮點。\n\nNovoselov 教授以石墨烯的發現歷程為起點，深入分享科學創新的本質與跨領域合作的重要。他鼓勵學生勇於提問、保持好奇，並相信「重大發現往往來自對簡單問題的深刻思考」。\n\n現場學生提問踴躍，展現對科學的熱情與思辨力，也在與大師的互動中，激發對未來科技參與的想像與行動力。"
+  },
+  {
+    id: 7, 
+    date: "05.08",
+    time: "14:00–16:30", 
+    title: "台北科技大學｜David W.C. MacMillan 公益演講",
+    location: "台北科技大學",
+    speakers: ["戴維·麥克米倫"],
+    displayImage: ntut2_1,
+    images: [ntut2_1, ntut2_2, ntut2_3, ntut2_4, ntut2_5, ntut2_6],
+    description: "2021年諾貝爾化學獎得主 David W.C. MacMillan 教授分享有機催化技術革命，鼓勵青年擁抱未知。",
+    details: "【回顧｜5/8 David W.C. MacMillan 北科大公益演講 精彩回顧】\n\n在「2025臺灣諾科獎週」系列活動中，5月8日下午由2021年諾貝爾化學獎得主 David W.C. MacMillan 教授擔綱演講，吸引大量青年學子與科學愛好者熱烈參與。\n\n本場演講由諾科獎國際文教交流協會主辦、台北科技大學協辦，並榮幸邀請到中研院牟中原院士親臨現場致詞，為活動揭開深具高度與溫度的序幕。\n\nMacMillan 教授以其在不對稱有機催化技術方面的革命性研究為起點，分享自己從蘇格蘭小鎮走向國際科學舞台的歷程，鼓勵青年勇於發問、擁抱未知。他強調：「科學並非遙不可及，而是來自對身邊世界的好奇與觀察」。\n\n現場互動熱烈，學生踴躍提問，大師亦親切回應，這場面對面的對話不僅傳遞了知識，更為未來播下了靈感與勇氣的種子。"
+  },
+  {
+    id: 6, 
+    date: "05.08",
+    time: "09:30–12:00",
+    title: "台北科技大學｜Jack Dongarra 公益演講",
+    location: "台北科技大學",
+    speakers: ["傑克·唐加拉"],
+    displayImage: ntut1_1,
+    images: [ntut1_1, ntut1_2, ntut1_3, ntut1_4], 
+    description: "2021年圖靈獎得主 Jack Dongarra 教授分享高效能運算的前瞻貢獻，鼓勵青年參與科學與創新。",
+    details: "【回顧｜5/8 Jack Dongarra 台北科大公益演講 精彩時刻 】\n\n在「臺灣諾科獎週」系列活動中，由諾科獎國際文教交流協會主辦、國立中正大學協辦的臺北市大學聯合公益演講於5月8日上午在台北科技大學登場，講者為2021年圖靈獎得主 Jack Dongarra 教授。\n\n講題聚焦「青年學子未來如何參與科學與創新」，Dongarra 教授以生動案例介紹他在高效能運算（HPC）與超級電腦應用上的前瞻貢獻，並鼓勵學生勇於進入科學現場，掌握跨領域合作與技術突破的契機。\n\n現場座無席虛，氣氛熱烈，來自各校的青年學子踴躍提問，Dongarra 教授亦誠懇回應，展現一位國際頂尖科學家對教育的熱情與對未來世代的期許。\n\n透過這場演講，不僅讓學生對運算與科學創新有更深入的理解，也激發了對參與未來全球挑戰的想像力與信心。"
+  },
   {
     id: 1, 
     date: "05.08",
     time: "09:00–12:00",
-    title: "北一女中參訪｜向大師學習：諾貝爾化學獎得主對談",
+    title: "台北市北一女中｜向大師學習：諾貝爾化學獎得主對談",
     location: "北一女中",
     speakers: ["戴維·麥克米倫"],
     displayImage: tfg1,
@@ -74,7 +171,7 @@ export const archiveData: EventType[] = [
     location: "政大公企中心",
     speakers: ["康斯坦丁·諾沃肖洛夫"],
     displayImage: bright1,
-    images: [bright1, bright2, bright3], // 已修正：移除 bright4
+    images: [bright1, bright2, bright3],
     description: "2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授與全台偏鄉高中學子面對面交流，鼓勵青年勇敢逐夢。",
     details: "【回顧｜諾貝爾科學之光：照亮偏鄉學子夢想 】\n\n在教育部青年發展署的支持下，5月8日上午於政大公企中心舉辦的「全省高中公益演講」順利登場，主題為「諾貝爾科學之光：照亮偏鄉學子夢想」。\n\n現場邀請到2010年諾貝爾物理學獎得主 Konstantin Novoselov 教授親臨分享，與來自全台各地，尤其偏鄉地區的高中學子進行面對面交流。Novoselov 教授以自身經歷鼓勵青年學子勇於提問、勇敢逐夢，現場氣氛熱烈、充滿啟發。\n\n這場公益演講不僅是一堂科學教育的精彩課，更是一道希望的光，讓來自不同角落的學子感受到世界與未來的可能性。"
   },
@@ -94,7 +191,7 @@ export const archiveData: EventType[] = [
     id: 5, 
     date: "05.07",
     time: "14:30–16:30",
-    title: "建國中學參訪｜科學大師走進百年學府",
+    title: "建中參訪｜科學大師走進百年學府",
     location: "建國中學",
     speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
     displayImage: ckhs1,
