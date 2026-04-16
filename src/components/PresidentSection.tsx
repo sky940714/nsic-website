@@ -2,51 +2,78 @@ import presidentImg from '../assets/president.jpg';
 
 export default function PresidentSection() {
     return (
-        <section id="founder" className="py-24 bg-white scroll-mt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <div className="bg-slate-50 rounded-[2rem] p-8 md:p-16 border border-slate-100">
-                    <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+        <section id="founder" className="py-24 bg-white scroll-mt-24 border-t border-slate-100">
+            <div className="max-w-6xl mx-auto px-6">
+                
+                {/* 頂部小標題 */}
+                <div className="mb-12 md:mb-16 text-center md:text-left">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide mb-4">會長的話</h2>
+                    <div className="w-12 h-1 bg-[#002B5B] rounded-full mx-auto md:mx-0"></div>
+                </div>
+
+                {/* 內容區塊：使用 flex 控制手機與電腦的順序 */}
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-12 lg:gap-20">
+                    
+                    {/* 區塊 1：文字與引言 (手機版排在下方，電腦版在左方) */}
+                    <div className="order-2 md:order-1 w-full md:w-7/12 flex flex-col justify-center relative">
                         
-                        {/* 左側：文字內容 */}
-                        <div className="flex-grow space-y-8 order-2 md:order-1">
-                            <div>
-                                <h2 className="text-2xl font-bold text-slate-800 mb-2">會長的話</h2>
-                                <div className="w-10 h-1 bg-amber-500"></div>
-                            </div>
-                            
-                            <div className="space-y-6">
-                                <p className="text-2xl lg:text-3xl font-medium text-slate-600 leading-tight">
-                                    諾科獎的起點，是一個很單純的想法
-                                </p>
-                                <p className="text-xl lg:text-2xl text-slate-600 leading-snug">
-                                    讓世界級的科學家，走進台灣，<br className="hidden lg:block" />
-                                    與下一代面對面對話。
-                                </p>
-                                <div className="pt-4 text-lg text-slate-500 italic">
-                                    我們相信，有些時刻，會讓一個人看見世界的高度
-                                </div>
-                            </div>
+                        {/* 裝飾性巨型引號 (增加版面豐富度) */}
+                        <div className="hidden md:block absolute -top-12 -left-8 text-[140px] text-slate-50 font-serif leading-none select-none z-0">
+                            “
                         </div>
 
-                        {/* 右側：純淨的照片呈現與姓名職稱 */}
-                        <div className="w-full max-w-[280px] md:w-72 shrink-0 order-1 md:order-2 flex flex-col items-center">
-                            {/* 照片：僅保留基本圓角，移除所有裝飾框與線條 */}
-                            <div className="w-full overflow-hidden rounded-xl shadow-lg mb-6">
-                                <img 
-                                    src={presidentImg} 
-                                    alt="朱愛蓮會長" 
-                                    className="w-full h-auto object-cover" 
-                                />
-                            </div>
-                            
-                            {/* 姓名與職稱：直接置於照片下方 */}
-                            <div className="text-center">
-                                <span className="block text-slate-500 text-sm mb-1">創會會長</span>
-                                <h3 className="text-2xl font-bold text-blue-900 tracking-wider">朱愛蓮</h3>
-                            </div>
-                        </div>
+                        <div className="relative z-10">
+                            {/* 核心理念大字 */}
+                            <h3 className="text-3xl lg:text-4xl font-bold text-[#002B5B] leading-snug tracking-wide mb-8 text-center md:text-left">
+                                諾科獎的起點，<br className="hidden md:block" />是一個很單純的想法
+                            </h3>
 
+                            {/* 內文說明 (加粗並增加間距) */}
+                            <div className="space-y-6 text-xl text-slate-600 leading-relaxed text-justify md:text-left mb-10 md:pr-12">
+                                <p className="font-medium">
+                                    讓世界級的科學家，走進台灣，與下一代面對面對話。
+                                </p>
+                                {/* 精緻小分隔線 */}
+                                <div className="hidden md:block w-16 h-[1px] bg-slate-300"></div>
+                            </div>
+
+                            {/* 雜誌風質感引言卡片 (填補空虛感) */}
+                            <blockquote className="relative p-6 sm:p-8 bg-gradient-to-br from-[#f8fafc] to-white border border-slate-100 rounded-2xl shadow-sm md:mr-8 mt-4">
+                                {/* 左側深藍標示條 */}
+                                <div className="absolute top-0 left-0 w-2 h-full bg-[#002B5B] rounded-l-2xl"></div>
+                                <p className="text-xl lg:text-2xl text-slate-500 italic font-light leading-relaxed">
+                                    「我們相信，有些時刻，會讓一個人看見世界的高度。」
+                                </p>
+                            </blockquote>
+                        </div>
                     </div>
+
+                    {/* 區塊 2：照片與署名 (手機版排在上方，電腦版在右方) */}
+                    <div className="order-1 md:order-2 w-full max-w-[320px] md:max-w-none md:w-5/12 flex flex-col items-center md:items-end z-10">
+                        
+                        {/* 鎖定 3:4 比例的專業肖像 */}
+                        <div className="w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border border-slate-100 mb-6 relative group">
+                            <img 
+                                src={presidentImg} 
+                                alt="朱愛蓮會長" 
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                            />
+                        </div>
+
+                        {/* 精緻署名區塊：電腦版靠右，手機版置中 */}
+                        <div className="text-center md:text-right w-full md:pr-4">
+                            <span className="block text-slate-400 text-[10px] tracking-[0.2em] uppercase mb-1 font-semibold">
+                                Founder & President
+                            </span>
+                            <span className="block text-slate-500 text-sm mb-2 font-medium">
+                                創會會長
+                            </span>
+                            <h4 className="text-3xl font-bold text-[#002B5B] tracking-widest">
+                                朱愛蓮
+                            </h4>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
