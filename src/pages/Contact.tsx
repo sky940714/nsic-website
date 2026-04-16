@@ -22,7 +22,7 @@ export default function Contact() {
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
           <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
-          <div className="w-12 h-1 bg-blue-600 mt-6"></div>
+          <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
         </div>
 
         {/* 聯絡資訊區塊 */}
@@ -30,14 +30,14 @@ export default function Contact() {
           <div className="text-lg text-slate-600 leading-relaxed">
             <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
             <div className="flex gap-6 mb-10">
-              <a href="https://www.facebook.com/..." target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+              <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
                 <FacebookIcon className="w-7 h-7 fill-current" />
               </a>
               <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
                 <MessageCircle className="w-7 h-7 fill-current" />
               </a>
             </div>
-            <div className="flex items-center gap-3 text-blue-500">
+            <div className="flex items-center gap-3 text-[#002B5B]">
               <Mail className="w-5 h-5" />
               <span>E-mail：</span>
               <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
@@ -46,12 +46,12 @@ export default function Contact() {
 
           {/* 銀行匯款資訊 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
-            <div className="p-5 bg-slate-50 rounded-lg space-y-3 border border-slate-100">
-              <div className="flex items-center gap-2 text-blue-700 font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
               <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
             </div>
-            <div className="p-5 bg-slate-50 rounded-lg space-y-3 border border-slate-100">
-              <div className="flex items-center gap-2 text-blue-700 font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
               <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
             </div>
           </div>
@@ -59,32 +59,32 @@ export default function Contact() {
 
         {/* 夥伴單位區塊 */}
         <div className="pt-10 border-t border-slate-100 space-y-12">
+          
           {/* 主辦單位 */}
           <section>
             <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
             <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
           </section>
 
-          {/* 學術合作夥伴 - 維持縮小後的比例 */}
+          {/* 學術合作夥伴 (統一設為 h-12 md:h-14) */}
           <section>
             <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
             <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-7 md:h-9 w-auto object-contain" />
-              <img src={LogoNIU} alt="國立宜蘭大學" className="h-10 md:h-12 w-auto object-contain" />
+              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
             </div>
           </section>
 
-          {/* 國際執行夥伴 - 再次放大 */}
+          {/* 國際執行夥伴 (統一設為 h-12 md:h-14) */}
           <section>
             <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
             <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              {/* 依照您的要求提升至 h-16 md:h-18 */}
-              <img src={LogoRedin} alt="紅映國際活動製作" className="h-18 md:h-20 w-auto object-contain" />
-              <img src={LogoBright} alt="采傑國際會議服務" className="h-18 md:h-20 w-auto object-contain" />
+              <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
             </div>
           </section>
-        </div>
 
+        </div>
       </div>
     </div>
   );

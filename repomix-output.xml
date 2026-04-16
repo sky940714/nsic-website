@@ -45,6 +45,13 @@ public/
   icons.svg
 src/
   assets/
+    luya/
+      luya-1.jpg
+      luya-2.jpg
+      luya-3.jpg
+      luya-4.jpg
+      luya-5.jpg
+      luya-6.jpg
     about-origin.jpg
     david-macmillan.jpg
     hero-bg-1.jpg
@@ -82,6 +89,7 @@ src/
     Toast.tsx
   pages/
     Contact.tsx
+    EventDetail.tsx
     Guests.tsx
     Home.tsx
     Program.tsx
@@ -90,6 +98,7 @@ src/
   App.tsx
   index.css
   main.tsx
+  vite-env.d.ts
 .gitignore
 eslint.config.js
 index.html
@@ -166,116 +175,6 @@ export default function AnnouncementSection() {
             </div>
         </section>
     );
-}
-</file>
-
-<file path="src/components/DialogueArchive.tsx">
-import { useState } from 'react';
-import jackImg from '../assets/jack-dongarra.jpg';
-import konImg from '../assets/konstantin-novoselov.jpg';
-import louisImg from '../assets/louis-ignarro.jpg';
-
-
-const archiveData = [
-  {
-    id: 1,
-    date: "09.05",
-    time: "10:00–12:00",
-    title: "國際交流參訪｜學術 × 產業對話",
-    location: "陽明交通大學、新竹科學園區",
-    speakers: ["傑克·唐加拉", "戴維·麥克米倫"],
-    displayImage: jackImg,
-    description: "圖靈獎與諾貝爾化學獎得主共同參與，探討學術研究如何轉化為產業動力。",
-    details: "本次參訪深入探討了高效能運算與有機催化在半導體製程中的應用，大師們與園區工程師針對未來技術轉型進行了深度對話。"
-  },
-  {
-    id: 2,
-    date: "05.07",
-    time: "14:30–15:30",
-    title: "建國中學特別企劃｜跨領域科學對話",
-    location: "建國中學",
-    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
-    displayImage: konImg,
-    description: "三位大師與高中生面對面，播下科學探索的種子。",
-    details: "三位大師分享了各自在物理、化學與醫學領域的挫折與突破，鼓勵青年學子不應侷限於課本知識，而要具備跨領域的思辨能力。"
-  },
-  {
-    id: 3,
-    date: "05.08",
-    time: "10:00–11:30",
-    title: "校園講座｜生命科學與醫學對話",
-    location: "林口路亞實驗教育機構",
-    speakers: ["路易斯·J·伊格納羅"],
-    displayImage: louisImg,
-    description: "諾貝爾醫學獎得主分享一氧化氮的研究歷程與生命科學的未來。",
-    details: "Ignarro 教授詳細講解了一氧化氮作為訊號分子的發現過程，並與師生討論了基礎科學研究在日常預防醫學中的關鍵角色。"
-  }
-];
-
-export default function DialogueArchive() {
-  const [expandedId, setExpandedId] = useState<number | null>(null);
-
-  return (
-    <div className="bg-slate-50 py-16"> {/* 底色改為淺灰 */}
-      <div className="max-w-5xl mx-auto px-6">
-        
-        <div className="flex items-center gap-4 mb-16">
-          <h2 className="text-4xl font-bold text-[#002B5B]">2025 歷年回顧</h2> {/* 主標保留藍色 */}
-          <div className="h-[2px] flex-grow bg-slate-200"></div>
-        </div>
-
-        <div className="space-y-8">
-          {archiveData.map((item) => (
-            <div 
-              key={item.id}
-              onClick={() => setExpandedId(expandedId === item.id ? null : item.id)}
-              className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer overflow-hidden group"
-            >
-              <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8 items-center">
-                
-                {/* 左側日期：改為深灰文字 */}
-                <div className="w-full md:w-24 shrink-0 text-center md:text-left">
-                  <div className="text-[#002B5B] font-mono font-bold text-2xl">{item.date}</div>
-                  <div className="text-slate-400 text-xs mt-1">{item.time}</div>
-                </div>
-
-                {/* 文字內容：改為深灰/黑色 */}
-                <div className="flex-grow space-y-3">
-                  <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-semibold">
-                    {item.location}
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-
-                {/* 右側照片：縮小尺寸並保持精緻 */}
-                <div className="w-32 h-24 shrink-0 rounded-xl overflow-hidden border border-slate-100 shadow-inner">
-                  <img src={item.displayImage} alt="" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" />
-                </div>
-              </div>
-
-              {/* 點擊後展開的詳細內容 */}
-              {expandedId === item.id && (
-                <div className="px-8 pb-8 pt-2 border-t border-slate-50 bg-slate-50/50 animate-in fade-in slide-in-from-top-2">
-                  <h4 className="font-bold text-slate-700 mb-2">對話深度摘要：</h4>
-                  <p className="text-slate-600 text-sm leading-relaxed">{item.details}</p>
-                  <div className="mt-4 flex gap-2">
-                    {item.speakers.map(s => (
-                      <span key={s} className="text-[10px] bg-white px-2 py-1 rounded border border-slate-200 text-slate-500">#{s}</span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
 }
 </file>
 
@@ -503,6 +402,105 @@ export function ToastContainer({ toasts }: ToastContainerProps) {
 }
 </file>
 
+<file path="src/pages/EventDetail.tsx">
+import { useParams, useNavigate } from 'react-router-dom';
+import { archiveData } from '../components/DialogueArchive';
+import type { EventType } from '../components/DialogueArchive'; 
+
+// 輪播套件
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+export default function EventDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  
+  // 尋找對應的活動資料
+  const event = (archiveData as EventType[]).find(e => e.id === Number(id));
+
+  if (!event) {
+    return (
+      <div className="py-20 text-center text-slate-500">
+        找不到活動內容
+      </div>
+    );
+  }
+
+  return (
+    // pt-32 確保不被導覽列壓到
+    <div className="bg-white min-h-screen pt-32 pb-16">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        {/* 返回按鈕 */}
+        <button 
+          onClick={() => navigate(-1)}
+          className="mb-10 text-[#002B5B] hover:text-blue-700 transition-colors flex items-center gap-2 font-medium group"
+        >
+          <span className="group-hover:-translate-x-1 transition-transform">←</span> 返回歷年回顧
+        </button>
+
+        <div className="space-y-6">
+          {/* 日期與地點 */}
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-[#002B5B] font-mono font-bold text-3xl">{event.date}</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full font-semibold">
+              {event.location}
+            </span>
+          </div>
+
+          {/* 標題 */}
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 leading-tight">
+            {event.title}
+          </h1>
+
+          {/* 圖片輪播區塊 */}
+          <div className="w-full rounded-3xl overflow-hidden shadow-xl my-10 bg-slate-50 border border-slate-100">
+            <Swiper
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={0}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3500, disableOnInteraction: false }}
+              className="aspect-video w-full"
+            >
+              {event.images?.map((src: string, index: number) => (
+                <SwiperSlide key={index}>
+                  <img 
+                    src={src} 
+                    alt={`${event.title}-${index}`} 
+                    className="w-full h-full object-cover" 
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* 文字內容區塊（請確認這一段有在你的檔案裡） */}
+          <div className="prose prose-slate max-w-none">
+            {/* 活動簡介 */}
+            <p className="text-xl text-slate-600 font-medium mb-6">
+              {event.description}
+            </p>
+            
+            <div className="h-[1px] w-full bg-slate-100 my-8"></div>
+            
+            {/* 活動詳情 */}
+            <h4 className="text-lg font-bold text-slate-800 mb-4">活動詳情與紀錄</h4>
+            <p className="text-slate-600 leading-loose text-justify whitespace-pre-wrap">
+              {event.details}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
 <file path="src/App.css">
 .counter {
   font-size: 16px;
@@ -697,93 +695,103 @@ export function ToastContainer({ toasts }: ToastContainerProps) {
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
-body {
-    font-family: 'Noto Sans TC', sans-serif;
-    color: #334155;
-    background-color: #ffffff;
+@layer base {
+    :root {
+        /* 定義全域變數，方便日後微調 */
+        --app-bg: #f5f5f5;      /* 背景淺灰 */
+        --app-text: #1a1a1a;    /* 文字深黑 */
+        --app-primary: #1e3a8a;  /* 重點深藍 (Tailwind blue-900) */
+        --app-accent: #0f172a;   /* 更深一點的藍用於懸停或強調 */
+    }
+
+    body {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: var(--app-bg);
+        color: var(--app-text);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* 統一標題顏色 */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--app-text);
+        font-weight: 700;
+    }
 }
 
-/* 模仿截圖中的幾何結構背景 */
-.hex-bg {
-    background-color: #f0f9ff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23bae6fd' fill-opacity='0.4'/%3E%3C/svg%3E");
-    background-size: 120px;
-}
+@layer components {
+    /* 移除漸層，改為統一深藍色 */
+    .hero-title-primary {
+        color: var(--app-primary);
+    }
 
-.hero-title-gradient {
-    background: linear-gradient(to right, #0369a1, #0ea5e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+    /* 重點裝飾類別：可用於強調文字或小標 */
+    .text-highlight {
+        color: var(--app-primary);
+        font-weight: 600;
+    }
 
-/* 捲動動畫特效類別 */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
+    /* 導航列底線動畫：顏色改為深藍 */
+    .tv-nav-hover {
+        position: relative;
+    }
+    .tv-nav-hover::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--app-primary);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-50%);
+    }
 
-/* TradingView 風格專用 CSS */
-.tv-dropdown-shadow {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.2);
-}
+    .group:hover .tv-nav-hover::after,
+    .nav-item:hover .tv-nav-hover::after {
+        width: 100%;
+    }
 
-.tv-nav-hover {
-    position: relative;
-}
-.tv-nav-hover::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #2962FF; /* TradingView 經典藍 */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-50%);
-}
-
-.group:hover .tv-nav-hover::after,
-.nav-item:hover .tv-nav-hover::after {
-    width: 100%;
-}
-
-/* 隱藏原生 details 的箭頭 */
-details > summary { 
-    list-style: none; 
-}
-details > summary::-webkit-details-marker { 
-    display: none; 
-}
-
-/* Scroll to top button animation */
-@keyframes slideUp {
-    from {
-        transform: translateY(10px);
+    /* 捲動動畫 */
+    .animate-on-scroll {
         opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    to {
-        transform: translateY(0);
+    .animate-on-scroll.is-visible {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* 移除原本藍色的 hex-bg，如果需要背景紋理，建議改為極淺的灰色 */
+.hex-bg {
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23000000' fill-opacity='0.03'/%3E%3C/svg%3E");
+    background-size: 100px;
+}
+
+/* 其他功能性樣式保持不變 */
+.tv-dropdown-shadow {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+’
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+@keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .animate-in {
     animation: slideUp 0.3s ease-out forwards;
 }
 
-/* Utility classes */
-.delay-700 {
-    animation-delay: 700ms;
-}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-700 { animation-delay: 700ms; }
 </file>
 
 <file path="src/main.tsx">
@@ -797,6 +805,14 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+</file>
+
+<file path="src/vite-env.d.ts">
+/// <reference types="vite/client" />
+
+declare module 'swiper/css';
+declare module 'swiper/css/navigation';
+declare module 'swiper/css/pagination';
 </file>
 
 <file path=".gitignore">
@@ -1017,6 +1033,121 @@ export default defineConfig({
 })
 </file>
 
+<file path="src/components/DialogueArchive.tsx">
+import { Link } from 'react-router-dom';
+import jackImg from '../assets/jack-dongarra.jpg';
+import konImg from '../assets/konstantin-novoselov.jpg';
+
+
+// 1. 匯入路亞系列圖片
+import luya1 from '../assets/luya/luya-1.jpg';
+import luya2 from '../assets/luya/luya-2.jpg';
+import luya3 from '../assets/luya/luya-3.jpg';
+import luya4 from '../assets/luya/luya-4.jpg';
+import luya5 from '../assets/luya/luya-5.jpg';
+import luya6 from '../assets/luya/luya-6.jpg';
+
+// 2. 定義介面 (提供給 EventDetail.tsx 使用)
+export interface EventType {
+  id: number;
+  date: string;
+  time: string;
+  title: string;
+  location: string;
+  speakers: string[];
+  displayImage: string;
+  images: string[]; 
+  description: string;
+  details: string;
+}
+
+// 3. 更新資料陣列
+export const archiveData: EventType[] = [
+  {
+    id: 1,
+    date: "09.05",
+    time: "10:00–12:00",
+    title: "國際交流參訪｜學術 × 產業對話",
+    location: "陽明交通大學、新竹科學園區",
+    speakers: ["傑克·唐加拉", "戴維·麥克米倫"],
+    displayImage: jackImg,
+    images: [jackImg],
+    description: "圖靈獎與諾貝爾化學獎得主共同參與，探討學術研究如何轉化為產業動力。",
+    details: "本次參訪深入探討了高效能運算與有機催化在半導體製程中的應用..."
+  },
+  {
+    id: 2,
+    date: "05.07",
+    time: "14:30–15:30",
+    title: "建國中學特別企劃｜跨領域科學對話",
+    location: "建國中學",
+    speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
+    displayImage: konImg,
+    images: [konImg],
+    description: "三位大師與高中生面對面，播下科學探索的種子。",
+    details: "三位大師分享了各自在物理、化學與醫學領域的挫折與突破..."
+  },
+  {
+    id: 3,
+    date: "05.08",
+    time: "10:00–11:30",
+    title: "校園講座｜生命科學與醫學對話",
+    location: "林口路亞實驗教育機構",
+    speakers: ["路易斯·J·伊格納羅"],
+    displayImage: luya1,
+    images: [luya1, luya2, luya3, luya4, luya5, luya6], 
+    description: "諾貝爾醫學獎得主分享一氧化氮的研究歷程與生命科學的未來。",
+    details: "【回顧｜5/8 校園育苗專場｜科學種子在路亞發芽 🌱】\n在5月8日的「科學育苗計畫」校園專場中，路亞實驗教育機構迎來一位重量級嘉賓——1998年諾貝爾生理學或醫學獎得主 Louis J. Ignarro 教授。Ignarro 教授以深入淺出的方式分享自己在生理學研究上的突破，並與學生們對話交流，鼓勵年輕世代相信自己、勇敢探索，讓現場孩子們大受啟發。更令人感動的是，這場科學與教育的相遇，不僅點燃了好奇心，也在孩子們心中種下了未來的可能。感謝路亞實驗教育機構長期推動「科學育苗計畫」，讓更多孩子有機會親身接觸世界級科學家，在生活中看見科學、夢想與未來的連結。"
+  }
+];
+
+// 4. 關鍵修正：必須使用 export default 匯出組件
+export default function DialogueArchive() {
+  return (
+    <div className="bg-slate-50 py-16">
+      <div className="max-w-5xl mx-auto px-6">
+        
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="text-4xl font-bold text-[#002B5B]">歷年國際對話</h2>
+          <div className="h-[2px] flex-grow bg-slate-200"></div>
+        </div>
+
+        <div className="space-y-8">
+          {archiveData.map((item) => (
+            <Link 
+              key={item.id}
+              to={`/archive/${item.id}`}
+              className="block bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all cursor-pointer overflow-hidden group"
+            >
+              <div className="flex flex-col md:flex-row p-6 md:p-8 gap-8 items-center">
+                <div className="w-full md:w-24 shrink-0 text-center md:text-left">
+                  <div className="text-[#002B5B] font-mono font-bold text-2xl">{item.date}</div>
+                  <div className="text-slate-400 text-xs mt-1">{item.time}</div>
+                </div>
+                <div className="flex-grow space-y-3">
+                  <div className="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full font-semibold">
+                    {item.location}
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-800 group-hover:text-blue-700 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="w-32 h-24 shrink-0 rounded-xl overflow-hidden border border-slate-100 shadow-inner">
+                  <img src={item.displayImage} alt="" className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
 <file path="src/components/HeroSection.tsx">
 import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -1194,45 +1325,6 @@ export default function Review2025() {
 }
 </file>
 
-<file path="src/App.tsx">
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Home from './pages/Home';
-import Guests from './pages/Guests';
-import Contact from './pages/Contact'; // 👈 匯入
-import Review2025 from './pages/Review2025';
-import Program from './pages/Program'; // 👈 匯入
-
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-white flex flex-col">
-        <Navbar />
-        
-        {/* 主要內容區塊會根據網址變化 */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/guests" element={<Guests />} />
-            <Route path="/contact" element={<Contact />} /> {/* 👈 新增 */}
-            <Route path="/review-2025" element={<Review2025 />} />
-            <Route path="/program" element={<Program />} /> {/* 👈 新增路徑 */}
-          </Routes>
-        </main>
-
-        <Footer />
-        <ScrollToTop />
-      </div>
-    </Router>
-  );
-}
-
-export default App;
-</file>
-
 <file path="index.html">
 <!doctype html>
 <html lang="zh-TW">
@@ -1268,18 +1360,16 @@ export default App;
 <file path="tailwind.config.js">
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        // 根據您提供的色卡進行定義
-        'nsic-deep': '#0A2540',    // Prussian Blue (用於深色背景或標題文字)
-        'nsic-dusk': '#2C5282',    // Dusk Blue (用於次要文字或深藍強調)
-        'nsic-azure': '#174EA6',   // Steel Azure (主要的強調色，用於圖標、按鈕、線條)
-        'nsic-alice': '#E6F0FA',   // Alice Blue (用於區塊或卡片的淡色背景)
+        // 背景底色：極淺灰
+        'app-bg': '#f5f5f5', 
+        // 重點標示：深藍色
+        'app-primary': '#1e3a8a', 
+        // 一般文字：深黑色（或接近全黑的 Slate-900）
+        'app-text': '#1a1a1a', 
       },
     },
   },
@@ -1336,41 +1426,6 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
-}
-</file>
-
-<file path="src/pages/Guests.tsx">
-import LaureatesSection from '../components/LaureatesSection';
-
-// 1. 匯入 Michael Levitt 的照片
-// 請確保你已經把照片放進 src/assets/michael-levitt.jpg
-import levittImg from '../assets/michael-levitt.jpg'; 
-
-// 2. 建立今年講者的資料陣列
-const currentGuests = [
-  {
-    id: 1,
-    nameCH: "邁可·列維特",
-    nameEN: "Michael Levitt",
-    title: "諾貝爾化學獎得主",
-    image: levittImg,
-    bio: "1947年，列維特在南非開普敦出生。獲倫敦國王學院物理學學士學位之後，前往劍橋大學攻讀博士學位。在博士期間，他致力於開發計算方法來理解蛋白質和DNA的分子結構，針對生物大分子的動力學行為建立創新的模擬技術，1971年憑藉這項開創性的計算生物學研究獲得生物物理學博士學位。隨後他前往以色列魏茨曼科學研究所工作，1987年加入美國史丹佛大學醫學院。2013年，萊維特教授因「為複雜化學系統開發多尺度模型」的卓越貢獻榮獲諾貝爾化學獎，成功打通了經典物理學與量子物理學之間的橋樑。",
-    awards: [
-      { year: "2014年", detail: "獲「德拉諾」計算生物科學獎" },
-      { year: "2013年", detail: "獲 諾貝爾化學獎" },
-      { year: "2001年", detail: "獲選英國皇家學會院士" },
-    ]
-  }
-  // 如果未來還有今年的其他講者，直接在下面增加物件即可
-];
-
-export default function Guests() {
-  return (
-    <div className="pt-20 min-h-screen bg-white">
-      {/* 3. 呼叫通用積木，傳入「主要貴賓」標題與今年的資料 */}
-      <LaureatesSection pageTitle="本年度邀請科學家" laureates={currentGuests} />
-    </div>
   );
 }
 </file>
@@ -1473,43 +1528,44 @@ export default function Program() {
 }
 </file>
 
-<file path="package.json">
-{
-  "name": "nsic-website",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "framer-motion": "^12.38.0",
-    "lucide-react": "^1.7.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.4",
-    "@types/node": "^24.12.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.4",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
-    "globals": "^17.4.0",
-    "postcss": "^8.5.8",
-    "tailwindcss": "^3.4.19",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.57.0",
-    "vite": "^8.0.1"
-  }
+<file path="src/App.tsx">
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './pages/Home';
+import Guests from './pages/Guests';
+import Contact from './pages/Contact';
+import Review2025 from './pages/Review2025';
+import Program from './pages/Program';
+import EventDetail from './pages/EventDetail'; // 👈 待會建立此頁面
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-white flex flex-col">
+        <Navbar />
+        
+        {/* 主要內容區塊會根據網址變化 */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/guests" element={<Guests />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/review-2025" element={<Review2025 />} />
+            <Route path="/program" element={<Program />} />
+            <Route path="/archive/:id" element={<EventDetail />} /> {/* 👈 動態路由 */}
+          </Routes>
+        </main>
+
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </Router>
+  );
 }
+
+export default App;
 </file>
 
 <file path="src/components/Footer.tsx">
@@ -1636,7 +1692,7 @@ export default function PresidentSection() {
 <file path="src/components/StaticHero.tsx">
 const StaticHero = () => {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-[#002B5B] text-white overflow-hidden text-center">
+    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-[#e0e0e1] text-white overflow-hidden text-center">
       {/* 背景可以放一張低透明度的科技感圖片 */}
       <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-20 pointer-events-none" />
       
@@ -1653,7 +1709,7 @@ const StaticHero = () => {
         <p className="text-lg md:text-xl mb-12 max-w-4xl mx-auto leading-relaxed">
           連結台灣與世界頂尖科學家 <br />
           <span className="text-base md:text-lg block mt-2 opacity-80 font-light">
-            Connecting Taiwan with the world’s leading scientific minds
+            A global platform connecting Taiwan with the world’s leading scientific minds
           </span>
         </p>
       
@@ -1762,6 +1818,157 @@ export default function Contact() {
       </div>
     </div>
   );
+}
+</file>
+
+<file path="src/pages/Guests.tsx">
+import michaelLevittImg from '../assets/michael-levitt.jpg';
+import jackDongarraImg from '../assets/jack-dongarra.jpg';
+import konNovoselovImg from '../assets/konstantin-novoselov.jpg';
+import louisIgnarroImg from '../assets/louis-ignarro.jpg';
+import davidMacmillanImg from '../assets/david-macmillan.jpg';
+
+// 1. 將貴賓分類
+const mainMasters = [
+  {
+    id: 1,
+    nameZh: "邁可·列維特",
+    nameEn: "MICHAEL LEVITT",
+    title: "2013年諾貝爾化學獎得主",
+    image: michaelLevittImg,
+    description: "1947年，列維特在南非開普敦出生。他致力於蛋白質的電腦模擬，這一領域在當時剛剛起步，他開發了第一個計算蛋白質分子動力學的程式...",
+  }
+];
+
+const otherMasters = [
+  {
+    id: 2,
+    nameZh: "傑克·唐加拉",
+    nameEn: "JACK DONGARRA",
+    title: "圖靈獎得主",
+    image: jackDongarraImg,
+  },
+  {
+    id: 3,
+    nameZh: "康斯坦丁·諾沃肖洛夫",
+    nameEn: "KONSTANTIN NOVOSELOV",
+    title: "諾貝爾物理學獎得主",
+    image: konNovoselovImg,
+  },
+  {
+    id: 4,
+    nameZh: "路易斯·J·伊格納羅",
+    nameEn: "LOUIS J. IGNARRO",
+    title: "諾貝爾醫學獎得主",
+    image: louisIgnarroImg,
+  },
+  {
+    id: 5,
+    nameZh: "戴維·麥克米倫",
+    nameEn: "DAVID MACMILLAN",
+    title: "諾貝爾化學獎得主",
+    image: davidMacmillanImg,
+  }
+];
+
+export default function Guests() {
+  return (
+    <div className="bg-white min-h-screen pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* 標題 */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">科學大師陣容</h1>
+          <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        {/* 區塊一：主要貴賓 (大圖模式) */}
+        <div className="space-y-20 mb-24">
+          {mainMasters.map(master => (
+            <div key={master.id} className="relative group overflow-hidden rounded-3xl bg-slate-900 aspect-[16/9] md:aspect-[21/9]">
+              {/* 背景大圖 */}
+              <img 
+                src={master.image} 
+                className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" 
+                alt={master.nameZh} 
+              />
+              {/* 文字疊加層 */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
+                <div className="max-w-3xl">
+                  <span className="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full mb-4">
+                    {master.title}
+                  </span>
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">{master.nameZh}</h2>
+                  <p className="text-xl font-mono text-blue-400 mb-6">{master.nameEn}</p>
+                  <p className="text-slate-200 leading-relaxed text-sm md:text-base line-clamp-3 md:line-clamp-none">
+                    {master.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 區塊二：其他貴賓 (維持原本並排一行的小圖模式) */}
+        <div className="border-t border-slate-100 pt-16">
+          <h3 className="text-2xl font-bold text-slate-800 mb-10 text-center">更多受邀貴賓</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {otherMasters.map(master => (
+              <div key={master.id} className="text-center group">
+                <div className="aspect-square rounded-2xl overflow-hidden border border-slate-100 mb-4 shadow-sm group-hover:shadow-md transition-shadow">
+                  <img src={master.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" alt={master.nameZh} />
+                </div>
+                <h4 className="font-bold text-slate-800">{master.nameZh}</h4>
+                <p className="text-xs text-slate-400 mt-1">{master.nameEn}</p>
+                <p className="text-[10px] text-blue-600 mt-2 font-medium">{master.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="package.json">
+{
+  "name": "nsic-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.1",
+    "swiper": "^12.1.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.0",
+    "vite": "^8.0.1"
+  }
 }
 </file>
 

@@ -4,90 +4,106 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
 
-body {
-    font-family: 'Noto Sans TC', sans-serif;
-    color: #334155;
-    background-color: #ffffff;
+@layer base {
+    :root {
+        /* 極簡配色定義 */
+        --app-bg: #ffffff;         /* 純白底 */
+        --app-text: #1a1a1a;       /* 深黑字，維持高對比 */
+        --app-primary: #002B5B;    /* 你專案使用的核心深藍色 */
+        --app-secondary: #f8fafc;  /* 輔助淺灰色，用於區隔不同區塊 */
+        --app-border: #e2e8f0;     /* 細微邊框顏色 */
+    }
+
+    body {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: var(--app-bg);
+        color: var(--app-text);
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* 統一標題顏色，確保全站一致 */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--app-text);
+        font-weight: 700;
+        letter-spacing: 0.025em;
+    }
 }
 
-/* 模仿截圖中的幾何結構背景 */
-.hex-bg {
-    background-color: #f0f9ff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23bae6fd' fill-opacity='0.4'/%3E%3C/svg%3E");
-    background-size: 120px;
-}
+@layer components {
+    /* 標題與文字裝飾 */
+    .hero-title-primary {
+        color: var(--app-primary);
+    }
 
-.hero-title-gradient {
-    background: linear-gradient(to right, #0369a1, #0ea5e9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+    .text-highlight {
+        color: var(--app-primary);
+        font-weight: 600;
+    }
 
-/* 捲動動畫特效類別 */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
+    /* 導航列底線動畫：更換為深藍色 */
+    .tv-nav-hover {
+        position: relative;
+    }
+    
+    .tv-nav-hover::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: var(--app-primary);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(-50%);
+    }
 
-/* TradingView 風格專用 CSS */
-.tv-dropdown-shadow {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 0 1px rgba(0,0,0,0.2);
-}
+    .group:hover .tv-nav-hover::after,
+    .nav-item:hover .tv-nav-hover::after {
+        width: 100%;
+    }
 
-.tv-nav-hover {
-    position: relative;
-}
-.tv-nav-hover::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background-color: #2962FF; /* TradingView 經典藍 */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateX(-50%);
-}
-
-.group:hover .tv-nav-hover::after,
-.nav-item:hover .tv-nav-hover::after {
-    width: 100%;
-}
-
-/* 隱藏原生 details 的箭頭 */
-details > summary { 
-    list-style: none; 
-}
-details > summary::-webkit-details-marker { 
-    display: none; 
-}
-
-/* Scroll to top button animation */
-@keyframes slideUp {
-    from {
-        transform: translateY(10px);
+    /* 元素捲動進入畫面的動畫 */
+    .animate-on-scroll {
         opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     }
-    to {
-        transform: translateY(0);
+    
+    .animate-on-scroll.is-visible {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* 移除灰底感，背景紋理改為極淺的裝飾 */
+.hex-bg {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='93' viewBox='0 0 80 93'%3E%3Cpath fill-rule='evenodd' d='M40 0l40 23.094v46.188L40 92.376 0 69.282V23.094L40 0zm0 4.619L4.001 25.402v41.572L40 87.757l35.999-20.783V25.402L40 4.619z' fill='%23000000' fill-opacity='0.02'/%3E%3C/svg%3E");
+    background-size: 100px;
+}
+
+/* 下拉選單與卡片陰影微調：讓白色介面更有層次感 */
+.tv-dropdown-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+/* 隱藏原生細節標籤標記 */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+
+/* 基礎動畫設定 */
+@keyframes slideUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 .animate-in {
     animation: slideUp 0.3s ease-out forwards;
 }
 
-/* Utility classes */
-.delay-700 {
-    animation-delay: 700ms;
-}
+/* 動態延遲類別 */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-700 { animation-delay: 700ms; }
