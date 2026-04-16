@@ -16,7 +16,7 @@ const StaticHero = () => {
           - sm 以上恢復正常間距與大小
           - md 以上維持原本 text-3xl 大氣感
         */}
-        <h2 className="text-[2px] sm:text-lg md:text-3xl font-light tracking-tighter sm:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-visible">
+        <h2 className="text-[8px] sm:text-lg md:text-3xl font-light tracking-tighter sm:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-visible">
           Nobel Science International Dialogue
         </h2>
         
@@ -29,15 +29,15 @@ const StaticHero = () => {
             - 手機版極限 text-[9px] 確保強行一行
             - 使用 whitespace-nowrap 禁止任何斷行
           */}
-          <p className="text-[2px] sm:text-xs md:text-sm text-slate-400 font-light italic whitespace-nowrap overflow-visible">
-            A global platform connecting Taiwan with the world’s leading scientific minds
+          <p className="text-[8px] sm:text-xs md:text-sm text-slate-400 font-light italic whitespace-nowrap overflow-visible">
+            Ｃonnecting Taiwan with the world’s leading scientific minds
           </p>
         </div>
       </div>
 
       {/* 捲動提示：顏色改為深灰色 */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-        <p className="text-[10px] tracking-widest mb-2 text-slate-800">SCROLL DOWN</p>
+        <p className="text-[8px] tracking-widest mb-2 text-slate-800">SCROLL DOWN</p>
         <div className="w-[1px] h-10 bg-slate-800 mx-auto"></div>
       </div>
     </section>
