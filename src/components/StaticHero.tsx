@@ -17,7 +17,7 @@ const StaticHero = () => {
           - md (電腦) 以上維持 text-3xl
           - whitespace-nowrap 強制不換行
         */}
-        <h2 className="text-[11px] sm:text-sm md:text-3xl font-light tracking-[0.15em] md:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-hidden text-ellipsis w-full">
+        <h2 className="text-[15px] sm:text-sm md:text-3xl font-light tracking-[0.15em] md:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-hidden text-ellipsis w-full">
           Nobel Science International Dialogue
         </h2>
         

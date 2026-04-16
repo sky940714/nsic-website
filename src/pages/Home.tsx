@@ -7,7 +7,6 @@ import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT 
 import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
 import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
 import NewsSection from '../components/NewsSection';
-import AnnouncementSection from '../components/AnnouncementSection';
 
 export default function Home() {
   const { hash } = useLocation();
@@ -37,7 +36,6 @@ export default function Home() {
 
       {/* 5. 其他資訊區塊 */}
       <NewsSection />
-      <AnnouncementSection />
     </>
   );
 }

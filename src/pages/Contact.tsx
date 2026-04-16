@@ -1,4 +1,5 @@
 import { Mail, MessageCircle, Landmark } from 'lucide-react';
+import AnnouncementSection from '../components/AnnouncementSection';
 
 // 1. 匯入圖片檔案
 import LogoOrganizers from '../assets/logo-2.jpg';      
@@ -15,8 +16,8 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 export default function Contact() {
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="pt-32 bg-white min-h-screen flex flex-col">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full flex-grow">
         
         {/* 標題區 */}
         <div className="mb-16">
@@ -58,7 +59,7 @@ export default function Contact() {
         </div>
 
         {/* 夥伴單位區塊 */}
-        <div className="pt-10 border-t border-slate-100 space-y-12">
+        <div className="pt-10 border-t border-slate-100 space-y-12 pb-24">
           
           {/* 主辦單位 */}
           <section>
@@ -66,7 +67,7 @@ export default function Contact() {
             <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
           </section>
 
-          {/* 學術合作夥伴 (統一設為 h-12 md:h-14) */}
+          {/* 學術合作夥伴 */}
           <section>
             <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
             <div className="flex flex-wrap items-center gap-8 md:gap-12">
@@ -75,7 +76,7 @@ export default function Contact() {
             </div>
           </section>
 
-          {/* 國際執行夥伴 (統一設為 h-12 md:h-14) */}
+          {/* 國際執行夥伴 */}
           <section>
             <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
             <div className="flex flex-wrap items-center gap-8 md:gap-12">
@@ -86,6 +87,9 @@ export default function Contact() {
 
         </div>
       </div>
+
+      {/* 5. 移入底部的中立公告區塊 */}
+      <AnnouncementSection />
     </div>
   );
 }
