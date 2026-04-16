@@ -11,7 +11,7 @@ export default function PresidentSection() {
                     <div className="w-12 h-1 bg-[#002B5B] rounded-full mx-auto md:mx-0"></div>
                 </div>
 
-                {/* 內容區塊 */}
+                {/* 內容區塊：使用 flex 控制手機與電腦的順序 */}
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-12 lg:gap-20">
                     
                     {/* 區塊 1：文字與引言 */}
@@ -22,12 +22,11 @@ export default function PresidentSection() {
                             “
                         </div>
 
-                        {/* 為了防止手機版強制單行超出螢幕，加上 overflow-x-hidden 保護 */}
-                        <div className="relative z-10 w-full overflow-x-hidden md:overflow-visible">
+                        <div className="relative z-10 w-full">
                             
-                            {/* 核心理念大字：針對手機版強制不斷行 (whitespace-nowrap) 並縮小字級 */}
-                            <h3 className="text-[19px] sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#002B5B] leading-snug tracking-tight md:tracking-wide mb-8 text-center md:text-left whitespace-nowrap md:whitespace-normal">
-                                諾科獎的起點，<br className="hidden md:block" />是一個很單純的想法
+                            {/* 核心理念大字：恢復大字體，並使用 <br /> 強制在所有設備斷成兩行 */}
+                            <h3 className="text-3xl lg:text-4xl font-bold text-[#002B5B] leading-snug tracking-wide mb-8 text-center md:text-left">
+                                諾科獎的起點，<br />是一個很單純的想法
                             </h3>
 
                             {/* 內文說明 */}
