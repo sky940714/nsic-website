@@ -7,34 +7,37 @@ export default function SummitBrief() {
       <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 -skew-x-12 transform translate-x-20 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        {/* 調整：手機版兩大區塊間距縮短 (gap-12) */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           
           {/* 左欄：核心資訊 */}
-          <div className="space-y-12">
+          {/* 調整：手機版上下元素間距縮短 (space-y-8) */}
+          <div className="space-y-8 md:space-y-12">
             <div className="space-y-4">
                <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#002B5B]">2026 諾科獎台北峰會</h2>
                <p className="text-slate-500 text-lg md:text-xl font-medium tracking-wide">從台北出發，開啟與世界持續對話的起點</p>
             </div>
             
-            {/* 活動日期與地點：手機版改為上下排版，確保日期不換行 */}
-            <div className="flex flex-col sm:flex-row gap-12 border-t border-slate-200 pt-10">
+            {/* 活動日期與地點：優化手機版內縮間距 */}
+            <div className="flex flex-col sm:flex-row gap-8 md:gap-12 border-t border-slate-200 pt-6 md:pt-10">
                <div className="flex-1">
                  <p className="text-slate-400 text-xs uppercase tracking-widest mb-3 font-semibold">活動日期 Date</p>
                  <p className="text-xl md:text-2xl font-bold text-slate-800 whitespace-nowrap">
                    2026.05.13 — 05.14
                  </p>
                </div>
-               <div className="flex-1 border-t sm:border-t-0 sm:border-l border-slate-100 pt-8 sm:pt-0 sm:pl-12">
+               {/* 調整：手機版分隔間距從 pt-8 縮短至 pt-6 */}
+               <div className="flex-1 border-t sm:border-t-0 sm:border-l border-slate-100 pt-6 sm:pt-0 sm:pl-12">
                  <p className="text-slate-400 text-xs uppercase tracking-widest mb-3 font-semibold">活動地點 Location</p>
                  <p className="text-xl md:text-2xl font-bold text-slate-800">台北、宜蘭</p>
                </div>
             </div>
           </div>
 
-          {/* 右欄：峰會亮點 (垂直線條風) */}
+          {/* 右欄：峰會亮點 (維持你喜歡的垂直線條風) */}
           <div className="space-y-12">
             
-            {/* 標題區 */}
+            {/* 峰會重點標題區 */}
             <div className="flex items-center gap-4">
               <div className="h-[2px] w-8 bg-[#002B5B]"></div>
               <h3 className="text-lg md:text-xl font-bold text-slate-800 tracking-widest uppercase">
@@ -43,17 +46,14 @@ export default function SummitBrief() {
             </div>
 
             <div className="space-y-10">
-              {/* 大師強調區塊：修正字體大小與行整齊度 */}
+              {/* 大師強調區塊 */}
               <div className="border-l-4 border-[#002B5B] pl-6 md:pl-10 space-y-4">
                 <p className="text-lg md:text-xl text-slate-400 font-medium">本次峰會重磅邀請</p>
                 
                 <div className="space-y-2">
-                  {/* 第一行：頭銜 */}
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-800 leading-tight">
                     2013年諾貝爾化學獎得主
                   </h4>
-                  
-                  {/* 第二行：名字與訊息，字體與上一行一樣大，且電腦版強制一行 */}
                   <h4 className="text-2xl md:text-3xl font-bold text-[#002B5B] leading-tight">
                     <span className="inline-block sm:whitespace-nowrap">Michael Levitt 教授 <span className="text-slate-800">來台交流</span></span>
                   </h4>
@@ -73,7 +73,7 @@ export default function SummitBrief() {
               </div>
             </div>
 
-            {/* 按鈕：整齊美觀的圓形箭頭按鈕 */}
+            {/* 按鈕：圓形箭頭按鈕 */}
             <div className="flex justify-end pt-4">
               <Link 
                 to="/program" 
