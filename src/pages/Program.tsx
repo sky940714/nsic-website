@@ -5,10 +5,15 @@ export default function Program() {
         <div className="pt-32 pb-24 bg-white min-h-screen">
             <div className="max-w-5xl mx-auto px-4 sm:px-6">
                 
-                {/* 1. 頁面標題 */}
+                {/* 1. 頁面標題：手機版上下排列，電腦版維持左右並排 */}
                 <div className="mb-16">
-                    <h2 className="text-4xl font-bold text-slate-800 flex items-center gap-3">
-                        <span style={{ color: '#0A2540' }}>✦</span> 峰會議程 Summit Agenda
+                    <h2 className="flex flex-col md:flex-row md:items-end gap-2 md:gap-4 font-bold text-slate-800">
+                        <span className="text-4xl" style={{ color: '#0A2540' }}>
+                            <span className="mr-2">✦</span>峰會議程
+                        </span>
+                        <span className="text-2xl md:text-4xl text-slate-400 font-light tracking-tight pb-1">
+                            Summit Agenda
+                        </span>
                     </h2>
                     <div className="w-12 h-1 mt-6" style={{ backgroundColor: '#0A2540' }}></div>
                 </div>
@@ -34,10 +39,11 @@ export default function Program() {
                                 <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
                                     <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
                                 </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight">
+                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
                                     人工智慧與分子科學：理解生命與人類未來
                                 </p>
-                                <p className="text-slate-500 mt-2 italic">
+                                {/* 手機版英文調整：縮小字體並確保在一行 (或在寬度內自然呈現) */}
+                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
                                     Artificial Intelligence and Molecular Science: Understanding Life and the Future of Humanity
                                 </p>
                             </div>
@@ -69,10 +75,11 @@ export default function Program() {
                                 <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
                                     <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
                                 </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight">
+                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
                                     人工智慧如何改變生命科學與未來社會
                                 </p>
-                                <p className="text-slate-500 mt-2 italic">
+                                {/* 手機版英文調整 */}
+                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
                                     How Artificial Intelligence is Transforming Life Sciences and Future Society
                                 </p>
                             </div>
@@ -82,7 +89,7 @@ export default function Program() {
                                     <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
                                 </h3>
                                 <p className="text-lg text-slate-700">
-                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml1">（約250人）</span>
+                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml-1">（約250人）</span>
                                 </p>
                             </div>
                         </div>
