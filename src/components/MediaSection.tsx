@@ -48,7 +48,7 @@ const mediaData: MediaItem[] = [
 
 export default function MediaSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-16 pb-6 md:pt-24 md:pb-12 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="flex items-center gap-6 mb-12">
@@ -67,7 +67,6 @@ export default function MediaSection() {
               rel="noopener noreferrer"
               className="group flex flex-col md:flex-row md:items-center py-5 md:py-8 gap-3 md:gap-12 transition-all hover:bg-slate-50/50 px-4 -mx-4 rounded-xl"
             >
-              {/* 手機版將日期與來源並排，節省高度 */}
               <div className="flex items-center gap-4 md:contents">
                 <div className="text-slate-400 font-mono text-sm md:text-lg shrink-0">
                   {item.date}
