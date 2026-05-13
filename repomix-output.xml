@@ -218,30 +218,6 @@ This section contains the contents of the repository's files.
 <svg xmlns="http://www.w3.org/2000/svg" width="77" height="47" fill="none" aria-labelledby="vite-logo-title" viewBox="0 0 77 47"><title id="vite-logo-title">Vite</title><style>.parenthesis{fill:#000}@media (prefers-color-scheme:dark){.parenthesis{fill:#fff}}</style><path fill="#9135ff" d="M40.151 45.71c-.663.844-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.493c-.92 0-1.457-1.04-.92-1.788l7.479-10.471c1.07-1.498 0-3.578-1.842-3.578H15.443c-.92 0-1.456-1.04-.92-1.788l9.696-13.576c.213-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.472c-1.07 1.497 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.087.89 1.83L40.153 45.712z"/><mask id="a" width="48" height="47" x="14" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M40.047 45.71c-.663.843-2.02.374-2.02-.699V34.708a2.26 2.26 0 0 0-2.262-2.262H24.389c-.92 0-1.457-1.04-.92-1.788l7.479-10.472c1.07-1.497 0-3.578-1.842-3.578H15.34c-.92 0-1.456-1.04-.92-1.788l9.696-13.575c.213-.297.556-.474.92-.474H53.93c.92 0 1.456 1.04.92 1.788L47.37 13.03c-1.07 1.498 0 3.578 1.842 3.578h11.376c.944 0 1.474 1.088.89 1.831L40.049 45.712z"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#eee6ff" rx="5.508" ry="14.704" transform="rotate(269.814 20.96 11.29)scale(-1 1)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#eee6ff" rx="10.399" ry="29.851" transform="rotate(89.814 -16.902 -8.275)scale(1 -1)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#8900ff" rx="5.508" ry="30.487" transform="rotate(89.814 -19.197 -7.127)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.928 4.177)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#8900ff" rx="5.508" ry="30.599" transform="rotate(89.814 -25.738 5.52)scale(1 -1)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#eee6ff" rx="14.072" ry="22.078" transform="rotate(93.35 31.245 55.578)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#8900ff" rx="3.47" ry="21.501" transform="rotate(89.009 35.419 55.202)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx="14.592" cy="9.743" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(39.51 14.592 9.743)"/></g><g filter="url(#k)"><ellipse cx="61.728" cy="-5.321" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 61.728 -5.32)"/></g><g filter="url(#l)"><ellipse cx="55.618" cy="7.104" fill="#00c2ff" rx="5.971" ry="9.665" transform="rotate(37.892 55.618 7.104)"/></g><g filter="url(#m)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#n)"><ellipse cx="12.326" cy="39.103" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 12.326 39.103)"/></g><g filter="url(#o)"><ellipse cx="49.857" cy="30.678" fill="#8900ff" rx="4.407" ry="29.108" transform="rotate(37.892 49.857 30.678)"/></g><g filter="url(#p)"><ellipse cx="52.623" cy="33.171" fill="#00c2ff" rx="5.971" ry="15.297" transform="rotate(37.892 52.623 33.17)"/></g></g><path d="M6.919 0c-9.198 13.166-9.252 33.575 0 46.789h6.215c-9.25-13.214-9.196-33.623 0-46.789zm62.424 0h-6.215c9.198 13.166 9.252 33.575 0 46.789h6.215c9.25-13.214 9.196-33.623 0-46.789" class="parenthesis"/><defs><filter id="b" width="60.045" height="41.654" x="-5.564" y="16.92" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-40.407" y="-6.762" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-35.435" y="2.801" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-30.84" y="20.8" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-29.307" y="21.949" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="29.961" y="-17.13" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="37.754" y="3.055" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-13.43" y="-22.082" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="34.321" y="-37.644" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="38.847" y="-10.552" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-15.081" y="6.78" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="22.45" y="-1.645" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="32.919" y="11.36" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17286" stdDeviation="4.596"/></filter></defs></svg>
 </file>
 
-<file path="src/components/AnnouncementSection.tsx">
-export default function AnnouncementSection() {
-    return (
-        <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">諾科獎臺北峰會中立公告暨名義使用說明</h2>
-                
-                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
-                    <p>諾科獎為以公益價值、教育推動與國際交流為核心之公益協會，秉持中立與獨立原則運作。諾科獎不為任何政黨、候選人或政治團體進行背書、動員或宣傳；亦不涉及任何宗教立場，且不以任何特定宗教觀點作為訴求。</p>
-                    
-                    <p>為確保諾科獎之永續發展與專業品質，諾科獎得於不影響理念獨立、內容自主及公共責任之前提下，進行必要之合作與資源支持安排。任何合作不得要求介入或影響諾科獎之核心治理、活動或課程內容、講者安排或其他關鍵決策。未經諾科獎事前之正式書面授權，任何個人或單位不得以諾科獎名義、名稱、標誌或相關識別，進行對外宣傳、合作聲稱、活動舉辦、商品販售、募款，或任何足以使第三人誤認、混淆與諾科獎具有合作、授權或關聯關係之行為。媒體報導、學術引用或其他合理描述，如未造成混淆或誤導者，不在此限。</p>
-                    
-                    <p>凡涉及誤用、擅用或可能造成混淆、誤導之情形，諾科獎得要求立即停止使用、更正、移除相關內容，並保留依法採取必要措施之權利。</p>
-                    
-                    <p>本公告為諾科獎對外之長期適用原則說明，旨在維護協會之公益性、獨立性與公共信任。</p>
-                    
-                    <p>如需申請授權或通報疑似誤用，請聯繫：<a href="mailto:Service@Nsic.Org.Tw" className="text-blue-600 hover:text-blue-800 hover:underline transition">Service@Nsic.Org.Tw</a></p>
-                </div>
-            </div>
-        </section>
-    );
-}
-</file>
-
 <file path="src/components/ScrollToTop.tsx">
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
@@ -1249,6 +1225,42 @@ export default function AboutSection() {
 }
 </file>
 
+<file path="src/components/AnnouncementSection.tsx">
+export default function AnnouncementSection() {
+    return (
+        <section className="py-24 bg-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
+                {/* 標題優化：手機版強制斷行，電腦版維持一行 */}
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">
+                    諾科獎國際文教交流協會<br className="md:hidden" />中立公告暨名義使用說明
+                </h2>
+                
+                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
+                    <p>諾科獎為以公益、教育與國際交流為核心之非營利組織，秉持中立與獨立原則運作。不為任何政黨、候選人或政治團體背書、宣傳，亦不涉及特定宗教立場。</p>
+                    
+                    <p>在不影響理念獨立、內容自主與公共責任之前提下，諾科獎得進行必要之合作與資源支持。惟任何合作不得干預本會之治理、活動內容、講者安排或關鍵決策。</p>
+                    
+                    <p>未經事前書面授權，任何個人或單位不得使用諾科獎之名稱、標誌或相關識別進行宣傳、合作聲稱、活動舉辦、商品販售或募款等行為，以避免造成誤認或混淆。媒體報導及學術引用如未造成誤導者，不在此限。</p>
+                    
+                    <p>如有誤用或不當使用情形，諾科獎得要求停止、修正或移除，並保留依法處理之權利。</p>
+                    
+                    <p className="pt-4 border-t border-slate-100 font-medium text-slate-500">
+                        本公告為長期適用原則，旨在維護本會之公益性、獨立性與公信力。
+                    </p>
+                    
+                    <p className="flex flex-wrap items-center gap-2 font-bold text-[#002B5B]">
+                        如需申請授權或通報疑似誤用，請聯繫：
+                        <a href="mailto:Service@Nsic.Org.Tw" className="hover:underline transition underline-offset-4">
+                            Service@Nsic.Org.Tw
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+}
+</file>
+
 <file path="src/components/NewsSection.tsx">
 import { useState } from 'react';
 import { Clock, X } from 'lucide-react';
@@ -1389,104 +1401,6 @@ export default function NewsSection() {
 }
 </file>
 
-<file path="src/pages/Program.tsx">
-import { Calendar, MapPin, Users, BookOpen } from 'lucide-react';
-
-export default function Program() {
-    return (
-        <div className="pt-32 pb-24 bg-white min-h-screen">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6">
-                
-                {/* 1. 頁面標題 */}
-                <div className="mb-16">
-                    <h2 className="text-4xl font-bold text-slate-800 flex items-center gap-3">
-                        <span style={{ color: '#0A2540' }}>✦</span> 峰會議程 Summit Agenda
-                    </h2>
-                    <div className="w-12 h-1 mt-6" style={{ backgroundColor: '#0A2540' }}></div>
-                </div>
-
-                {/* 2. 議程列表 */}
-                <div className="space-y-12">
-                    
-                    {/* --- 5/13 台北場次 --- */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
-                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
-                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
-                                <Calendar className="w-5 h-5" />
-                                2026年5月13日｜台北
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-600 font-medium">
-                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
-                                國立台北科技大學
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
-                                </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight">
-                                    人工智慧與分子科學：理解生命與人類未來
-                                </p>
-                                <p className="text-slate-500 mt-2 italic">
-                                    Artificial Intelligence and Molecular Science: Understanding Life and the Future of Humanity
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
-                                </h3>
-                                <p className="text-lg text-slate-700">學術領袖與產業決策者</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* --- 5/14 宜蘭場次 --- */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
-                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
-                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
-                                <Calendar className="w-5 h-5" />
-                                2026年5月14日｜宜蘭
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-600 font-medium">
-                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
-                                國立宜蘭大學
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
-                                </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight">
-                                    人工智慧如何改變生命科學與未來社會
-                                </p>
-                                <p className="text-slate-500 mt-2 italic">
-                                    How Artificial Intelligence is Transforming Life Sciences and Future Society
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
-                                </h3>
-                                <p className="text-lg text-slate-700">
-                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml1">（約250人）</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    );
-}
-</file>
-
 <file path="src/App.tsx">
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -1611,77 +1525,108 @@ export default function Footer() {
 }
 </file>
 
-<file path="src/components/SummitBrief.tsx">
-import { Link } from 'react-router-dom';
+<file path="src/pages/Program.tsx">
+import { Calendar, MapPin, Users, BookOpen } from 'lucide-react';
 
-export default function SummitBrief() {
-  return (
-    <section className="py-24 bg-[#f8fafc] text-[#1a1a1a] overflow-hidden relative border-y border-slate-100">
-      {/* 裝飾線條 */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 -skew-x-12 transform translate-x-20"></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
-          {/* 左欄：活動基本資訊 */}
-          <div className="space-y-8">
-            <div className="space-y-3">
-               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#002B5B]">2026 諾科獎台北峰會</h2>
-               <p className="text-slate-500 text-lg font-medium tracking-wide">從台北出發，開啟與世界持續對話的起點</p>
+export default function Program() {
+    return (
+        <div className="pt-32 pb-24 bg-white min-h-screen">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                
+                {/* 1. 頁面標題：手機版上下排列，電腦版維持左右並排 */}
+                <div className="mb-16">
+                    <h2 className="flex flex-col md:flex-row md:items-end gap-2 md:gap-4 font-bold text-slate-800">
+                        <span className="text-4xl" style={{ color: '#0A2540' }}>
+                            <span className="mr-2">✦</span>峰會議程
+                        </span>
+                        <span className="text-2xl md:text-4xl text-slate-400 font-light tracking-tight pb-1">
+                            Summit Agenda
+                        </span>
+                    </h2>
+                    <div className="w-12 h-1 mt-6" style={{ backgroundColor: '#0A2540' }}></div>
+                </div>
+
+                {/* 2. 議程列表 */}
+                <div className="space-y-12">
+                    
+                    {/* --- 5/13 台北場次 --- */}
+                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
+                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
+                                <Calendar className="w-5 h-5" />
+                                2026年5月13日｜台北
+                            </div>
+                            <div className="flex items-center gap-2 text-slate-600 font-medium">
+                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
+                                國立台北科技大學
+                            </div>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
+                                </h3>
+                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
+                                    人工智慧與分子科學：理解生命與人類未來
+                                </p>
+                                {/* 手機版英文調整：縮小字體並確保在一行 (或在寬度內自然呈現) */}
+                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
+                                    Artificial Intelligence and Molecular Science: Understanding Life and the Future of Humanity
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
+                                </h3>
+                                <p className="text-lg text-slate-700">學術領袖與產業決策者</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* --- 5/14 宜蘭場次 --- */}
+                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
+                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
+                                <Calendar className="w-5 h-5" />
+                                2026年5月14日｜宜蘭
+                            </div>
+                            <div className="flex items-center gap-2 text-slate-600 font-medium">
+                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
+                                國立宜蘭大學
+                            </div>
+                        </div>
+
+                        <div className="space-y-6">
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
+                                </h3>
+                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
+                                    人工智慧如何改變生命科學與未來社會
+                                </p>
+                                {/* 手機版英文調整 */}
+                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
+                                    How Artificial Intelligence is Transforming Life Sciences and Future Society
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
+                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
+                                </h3>
+                                <p className="text-lg text-slate-700">
+                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml-1">（約250人）</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            
-            <div className="grid grid-cols-2 gap-8 border-t border-slate-200 pt-8">
-               <div>
-                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-2">活動日期</p>
-                 <p className="text-xl font-bold text-slate-800">
-                   <span className="inline-block">2026年5月13日</span>
-                   <span className="inline-block">至5月14日</span>
-                 </p>
-               </div>
-               <div>
-                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-2">活動地點</p>
-                 <p className="text-xl font-bold text-slate-800">台北、宜蘭</p>
-               </div>
-            </div>
-          </div>
-
-          {/* 右欄：峰會重點內容 */}
-          <div className="space-y-10">
-             <div>
-               <h3 className="text-xl font-bold mb-6 flex items-center gap-4 text-slate-800">
-                 <span className="w-8 h-[1px] bg-[#002B5B]"></span> 峰會重點
-               </h3>
-               
-               {/* 解決奇怪空格的關鍵：將手機版設定為 text-left，平板以上才使用 text-justify */}
-               <div className="space-y-6 text-slate-600 leading-relaxed text-left md:text-justify">
-                 
-                 {/* 移除標籤前後多餘的空白，使用 px-1 確保間距自然且不會被硬拉開 */}
-                 <p>本次峰會邀請<span className="text-[#002B5B] font-bold border-b border-blue-200 pb-0.5 px-1">2013年諾貝爾化學獎得主 <span className="whitespace-nowrap">Michael Levitt 教授</span></span>來台交流。</p>
-                 
-                 <p>其研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。</p>
-                 
-                 <p className="text-slate-500 italic text-lg font-light border-l-2 border-slate-200 pl-4 py-1 mt-4">
-                   <span className="inline-block">「這不只是知識的傳遞，」</span>
-                   <span className="inline-block">而是一場關於『如何理解世界』的對話。」</span>
-                 </p>
-               </div>
-             </div>
-
-             {/* 右下角 MORE 連結 */}
-             <div className="flex justify-end">
-               <Link 
-                 to="/program" 
-                 className="group relative flex items-center gap-4 bg-[#002B5B] text-white px-8 py-4 rounded-full font-bold overflow-hidden transition-all shadow-sm hover:shadow-md hover:bg-[#001f42] hover:pr-12"
-               >
-                 <span className="relative z-10">MORE DETAILS</span>
-                 <span className="absolute right-6 opacity-0 group-hover:opacity-100 transition-all">→</span>
-               </Link>
-             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  );
+    );
 }
 </file>
 
@@ -1779,141 +1724,6 @@ export default function AboutSection() {
 }
 </file>
 
-<file path="src/components/StaticHero.tsx">
-const StaticHero = () => {
-  return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-white text-[#1a1a1a] overflow-hidden text-center">
-      {/* 輕微的背景點綴 */}
-      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-5 pointer-events-none" />
-      
-      <div className="relative z-10 max-w-5xl">
-        {/* 主標題：使用 break-keep 避免中文字斷開 */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 break-keep">
-          <span className="inline-block">諾科獎</span>
-          <span className="inline-block">國際科學對話平台</span>
-        </h1>
-        
-        {/* 副標題 */}
-        <h2 className="text-xl md:text-3xl font-light tracking-widest text-[#002B5B] mb-8">
-          Nobel Science International Dialogue
-        </h2>
-        
-        <div className="space-y-2">
-          <p className="text-base md:text-xl text-slate-600">
-            連結台灣與世界頂尖科學家
-          </p>
-          <p className="text-xs md:text-sm text-slate-400 font-light italic">
-            A global platform connecting Taiwan with the world’s leading scientific minds
-          </p>
-        </div>
-      </div>
-
-      {/* 捲動提示：顏色改為深灰色 */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-        <p className="text-[10px] tracking-widest mb-2 text-slate-800">SCROLL DOWN</p>
-        <div className="w-[1px] h-10 bg-slate-800 mx-auto"></div>
-      </div>
-    </section>
-  );
-};
-
-export default StaticHero;
-</file>
-
-<file path="src/pages/Contact.tsx">
-import { Mail, MessageCircle, Landmark } from 'lucide-react';
-
-// 1. 匯入圖片檔案
-import LogoOrganizers from '../assets/logo-2.jpg';      
-import LogoNTUT from '../assets/logo-ntut.png';        
-import LogoNIU from '../assets/logo-niu.png';          
-import LogoRedin from '../assets/logo-redin.png';      
-import LogoBright from '../assets/logo-bright.png';    
-
-const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-export default function Contact() {
-  return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        
-        {/* 標題區 */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
-          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
-          <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
-        </div>
-
-        {/* 聯絡資訊區塊 */}
-        <div className="space-y-12 mb-16">
-          <div className="text-lg text-slate-600 leading-relaxed">
-            <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
-            <div className="flex gap-6 mb-10">
-              <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <FacebookIcon className="w-7 h-7 fill-current" />
-              </a>
-              <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <MessageCircle className="w-7 h-7 fill-current" />
-              </a>
-            </div>
-            <div className="flex items-center gap-3 text-[#002B5B]">
-              <Mail className="w-5 h-5" />
-              <span>E-mail：</span>
-              <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
-            </div>
-          </div>
-
-          {/* 銀行匯款資訊 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
-            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
-              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
-            </div>
-            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
-              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
-            </div>
-          </div>
-        </div>
-
-        {/* 夥伴單位區塊 */}
-        <div className="pt-10 border-t border-slate-100 space-y-12">
-          
-          {/* 主辦單位 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
-            <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
-          </section>
-
-          {/* 學術合作夥伴 (統一設為 h-12 md:h-14) */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
-              <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
-          </section>
-
-          {/* 國際執行夥伴 (統一設為 h-12 md:h-14) */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
-              <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </div>
-  );
-}
-</file>
-
 <file path="src/pages/Guests.tsx">
 import michaelLevittImg from '../assets/michael-levitt.jpg';
 
@@ -1982,52 +1792,6 @@ export default function Guests() {
 
       </div>
     </div>
-  );
-}
-</file>
-
-<file path="src/pages/Home.tsx">
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-// 匯入新設計的組件
-import StaticHero from '../components/StaticHero';
-import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT US 佈局
-import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
-import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
-import NewsSection from '../components/NewsSection';
-import AnnouncementSection from '../components/AnnouncementSection';
-
-export default function Home() {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      setTimeout(() => {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, [hash]);
-
-  return (
-    <>
-      {/* 1. 滿版輪播首頁 */}
-      <StaticHero />
-      {/* 2. 2026 峰會快訊 (含 Michael Levitt 介紹與連結) [cite: 1, 3] */}
-      <SummitBrief />
-      {/* 3. 關於我們 (NTHU 風格：照片左、文字右)  */}
-      <AboutSection /> 
-      {/* 4. 會長的話 (感性對話排版) */}
-      <PresidentSection />
-
-      {/* 5. 其他資訊區塊 */}
-      <NewsSection />
-      <AnnouncementSection />
-    </>
   );
 }
 </file>
@@ -2595,6 +2359,148 @@ export default function Navbar({ onShowToast }: NavbarProps) {
 }
 </file>
 
+<file path="src/pages/Contact.tsx">
+import { Mail, MessageCircle, Landmark } from 'lucide-react';
+import AnnouncementSection from '../components/AnnouncementSection';
+
+// 1. 匯入圖片檔案
+import LogoOrganizers from '../assets/logo-2.jpg';      
+import LogoNTUT from '../assets/logo-ntut.png';        
+import LogoNIU from '../assets/logo-niu.png';          
+import LogoRedin from '../assets/logo-redin.png';      
+import LogoBright from '../assets/logo-bright.png';    
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+  </svg>
+);
+
+export default function Contact() {
+  return (
+    <div className="pt-32 bg-white min-h-screen flex flex-col">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full flex-grow">
+        
+        {/* 標題區 */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
+          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
+          <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
+        </div>
+
+        {/* 聯絡資訊區塊 */}
+        <div className="space-y-12 mb-16">
+          <div className="text-lg text-slate-600 leading-relaxed">
+            <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
+            <div className="flex gap-6 mb-10">
+              <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+                <FacebookIcon className="w-7 h-7 fill-current" />
+              </a>
+              <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+                <MessageCircle className="w-7 h-7 fill-current" />
+              </a>
+            </div>
+            <div className="flex items-center gap-3 text-[#002B5B]">
+              <Mail className="w-5 h-5" />
+              <span>E-mail：</span>
+              <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
+            </div>
+          </div>
+
+          {/* 銀行匯款資訊 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+              <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
+            </div>
+            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+              <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
+            </div>
+          </div>
+        </div>
+
+        {/* 夥伴單位區塊 */}
+        <div className="pt-10 border-t border-slate-100 space-y-12 pb-24">
+          
+          {/* 主辦單位 */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
+            <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
+          </section>
+
+          {/* 學術合作夥伴 */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
+            </div>
+          </section>
+
+          {/* 國際執行夥伴 */}
+          <section>
+            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
+              <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      {/* 5. 移入底部的中立公告區塊 */}
+      <AnnouncementSection />
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/Home.tsx">
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+// 匯入新設計的組件
+import StaticHero from '../components/StaticHero';
+import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT US 佈局
+import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
+import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
+import NewsSection from '../components/NewsSection';
+
+export default function Home() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [hash]);
+
+  return (
+    <>
+      {/* 1. 滿版輪播首頁 */}
+      <StaticHero />
+      {/* 2. 2026 峰會快訊 (含 Michael Levitt 介紹與連結) [cite: 1, 3] */}
+      <SummitBrief />
+      {/* 3. 關於我們 (NTHU 風格：照片左、文字右)  */}
+      <AboutSection /> 
+      {/* 4. 會長的話 (感性對話排版) */}
+      <PresidentSection />
+
+      {/* 5. 其他資訊區塊 */}
+      <NewsSection />
+    </>
+  );
+}
+</file>
+
 <file path="src/components/PresidentSection.tsx">
 import presidentImg from '../assets/president.jpg';
 
@@ -2672,6 +2578,152 @@ export default function PresidentSection() {
         </section>
     );
 }
+</file>
+
+<file path="src/components/SummitBrief.tsx">
+import { Link } from 'react-router-dom';
+
+export default function SummitBrief() {
+  return (
+    // 調整：手機版上下內距縮短 (pt-10 pb-12)，電腦版維持 py-24
+    <section className="pt-10 pb-12 md:py-24 bg-[#f8fafc] text-[#1a1a1a] overflow-hidden relative border-y border-slate-100">
+      {/* 背景裝飾線條 */}
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 -skew-x-12 transform translate-x-20 pointer-events-none"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        {/* 調整：手機版兩大區塊間距縮短 (gap-12) */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+          
+          {/* 左欄：核心資訊 */}
+          {/* 調整：手機版內部元素間距縮短 (space-y-8) */}
+          <div className="space-y-8 md:space-y-12">
+            <div className="space-y-4">
+               <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-[#002B5B]">2026 諾科獎台北峰會</h2>
+               <p className="text-slate-500 text-lg md:text-xl font-medium tracking-wide">從台北出發，開啟與世界持續對話的起點</p>
+            </div>
+            
+            {/* 活動日期與地點：手機版間距縮短 (pt-6) */}
+            <div className="flex flex-col sm:flex-row gap-8 md:gap-12 border-t border-slate-200 pt-6 md:pt-10">
+               <div className="flex-1">
+                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-3 font-semibold">活動日期 Date</p>
+                 <p className="text-xl md:text-2xl font-bold text-slate-800 whitespace-nowrap">
+                   2026.05.13 — 05.14
+                 </p>
+               </div>
+               <div className="flex-1 border-t sm:border-t-0 sm:border-l border-slate-100 pt-6 sm:pt-0 sm:pl-12">
+                 <p className="text-slate-400 text-xs uppercase tracking-widest mb-3 font-semibold">活動地點 Location</p>
+                 <p className="text-xl md:text-2xl font-bold text-slate-800">台北、宜蘭</p>
+               </div>
+            </div>
+          </div>
+
+          {/* 右欄：峰會亮點 (垂直線條風) */}
+          {/* 調整：縮短按鈕與上方內容的距離 (space-y-8) */}
+          <div className="space-y-8 md:space-y-12">
+            
+            {/* 峰會重點標題區 */}
+            <div className="flex items-center gap-4">
+              <div className="h-[2px] w-8 bg-[#002B5B]"></div>
+              <h3 className="text-lg md:text-xl font-bold text-slate-800 tracking-widest uppercase">
+                峰會重點 <span className="text-slate-300 ml-2 font-light">Highlights</span>
+              </h3>
+            </div>
+
+            <div className="space-y-8 md:space-y-10">
+              {/* 大師強調區塊 */}
+              <div className="border-l-4 border-[#002B5B] pl-6 md:pl-10 space-y-4">
+                <p className="text-lg md:text-xl text-slate-400 font-medium">本次峰會重磅邀請</p>
+                
+                <div className="space-y-2">
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 leading-tight">
+                    2013年諾貝爾化學獎得主
+                  </h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-[#002B5B] leading-tight">
+                    <span className="inline-block sm:whitespace-nowrap">Michael Levitt 教授 <span className="text-slate-800">來台交流</span></span>
+                  </h4>
+                </div>
+              </div>
+
+              {/* 說明內容 */}
+              {/* 調整：手機版段落間距縮短 (space-y-6) */}
+              <div className="space-y-6 md:space-y-8 text-slate-600 leading-relaxed text-left md:text-justify text-lg">
+                <p>其研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。</p>
+                
+                <div className="relative pt-4 md:pt-6">
+                  <span className="absolute top-0 left-0 w-12 h-0.5 bg-slate-200"></span>
+                  <p className="text-slate-400 italic font-light">
+                    「這不只是知識的傳遞，而是一場關於『如何理解世界』的對話。」
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 按鈕：圓形箭頭按鈕 */}
+            {/* 調整：手機版按鈕頂部間距縮短 (pt-2) */}
+            <div className="flex justify-end pt-2 md:pt-4">
+              <Link 
+                to="/program" 
+                className="group flex items-center gap-4 text-sm font-bold tracking-[0.2em] text-[#002B5B]"
+              >
+                VIEW DETAILS 
+                <span className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-[#002B5B] group-hover:text-white group-hover:border-[#002B5B] transition-all duration-300">
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+</file>
+
+<file path="src/components/StaticHero.tsx">
+const StaticHero = () => {
+  return (
+    <section className="relative w-full h-screen flex flex-col justify-center items-center px-6 bg-white text-[#1a1a1a] overflow-hidden text-center">
+      {/* 輕微的背景點綴 */}
+      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center opacity-5 pointer-events-none" />
+      
+      <div className="relative z-10 max-w-5xl w-full">
+        {/* 主標題：使用 break-keep 避免中文字斷開 */}
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 break-keep">
+          <span className="inline-block">諾科獎</span>
+          <span className="inline-block">國際科學對話平台</span>
+        </h1>
+        
+        {/* 副標題修正：
+          - 手機版使用 text-[11px] 或 text-xs 確保一行顯示 
+          - sm (小平板) 以上使用 text-sm 或 text-base
+          - md (電腦) 以上維持 text-3xl
+          - whitespace-nowrap 強制不換行
+        */}
+        <h2 className="text-[15px] sm:text-sm md:text-3xl font-light tracking-[0.15em] md:tracking-widest text-[#002B5B] mb-8 whitespace-nowrap overflow-hidden text-ellipsis w-full">
+          Nobel Science International Dialogue
+        </h2>
+        
+        <div className="space-y-2 px-4 md:px-0">
+          <p className="text-base md:text-xl text-slate-600">
+            連結台灣與世界頂尖科學家
+          </p>
+          <p className="text-[10px] md:text-sm text-slate-400 font-light italic">
+            Connecting Taiwan with the world’s leading scientific minds
+          </p>
+        </div>
+      </div>
+
+      {/* 捲動提示：顏色改為深灰色 */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+        <p className="text-[10px] tracking-widest mb-2 text-slate-800">SCROLL DOWN</p>
+        <div className="w-[1px] h-10 bg-slate-800 mx-auto"></div>
+      </div>
+    </section>
+  );
+};
+
+export default StaticHero;
 </file>
 
 </files>
