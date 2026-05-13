@@ -23,7 +23,7 @@ const newsData: NewsItem[] = [
     title: "圓夢東部｜把與世界對話的機會，帶進宜蘭大學百年校慶",
     summary: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯",
     content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、很安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
-    image: new2Img // 照片已對調為 new2.jpg (禮堂)
+    image: new2Img 
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const newsData: NewsItem[] = [
     title: "籌備幕後｜重視每一個細節，感謝最強國際執行夥伴",
     summary: "今天場勘。走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節...",
     content: "今天場勘。\n\n走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節，很知道每一場會議、每一個節奏都是對講者及現場的尊重，那個當下對某個人來說，可能是影響往後的一個重要時刻，這種事沒辦法隨便。\n\n不知為什麼，今天一進現場就想到去年五月，那超級的五天四夜接待及三天14個大小現場⋯\n\n回想在當下，因為知道有紅映團隊，我不用一直回頭確認，采傑隨行秘書們在貴賓旁安靜照顧，不搶戲，但什麼都想到了～幾位得主回去之後都還特別提到他們的細膩。\n\n今年一樣有他們在，我放心！\n\n#國際執行夥伴\n#紅映國際活動製作\n#采傑國際會議服務",
-    image: new1Img // 照片已對調為 new1.jpg (場地討論)
+    image: new1Img 
   }
 ];
 
@@ -40,12 +40,15 @@ export default function NewsSection() {
 
   return (
     <section className="py-20 bg-slate-50 relative">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+      {/* 這裡調整為 max-w-6xl，確保與媒體報導電腦版精準對齊 */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
-        {/* 標題區 */}
+        {/* 標題區：加入 LATEST NEWS 副標，並將分隔線改為更精緻的 1px */}
         <div className="flex items-center gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">最新消息</h2>
-          <div className="h-[2px] flex-grow bg-slate-200"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
+            最新消息 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Latest News</span>
+          </h2>
+          <div className="h-[1px] flex-grow bg-slate-200"></div>
         </div>
         
         {/* 新聞列表 */}
