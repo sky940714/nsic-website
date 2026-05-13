@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, Globe, Settings, Menu, X } from 'lucide-react';
+import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // 1. 匯入你的 Logo
@@ -43,20 +43,8 @@ const pathMap: Record<string, string> = {
   '首頁': '/',
 };
 
-interface NavbarProps {
-  onShowToast?: (msg: string) => void;
-}
-
-export default function Navbar({ onShowToast }: NavbarProps) {
+export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleShowToast = (message: string) => {
-    if (onShowToast) {
-      onShowToast(message);
-    } else {
-      alert(message);
-    }
-  };
 
   return (
     <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
@@ -116,28 +104,6 @@ export default function Navbar({ onShowToast }: NavbarProps) {
 
         {/* Right Toolbar */}
         <div className="flex items-center space-x-5">
-          {/* Language Selector */}
-          <div className="hidden sm:flex items-center group relative h-full cursor-pointer">
-            <div className="flex items-center text-sm font-medium transition-colors duration-300 text-slate-500 hover:text-[#002B5B]">
-              <Globe className="w-4 h-4 mr-1.5" /> 繁中
-              <ChevronDown className="w-3.5 h-3.5 ml-1 transition-transform group-hover:rotate-180" />
-            </div>
-            {/* Language Dropdown */}
-            <div className="absolute top-full right-0 pt-2 w-32 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-white rounded-lg border border-slate-100 py-1.5 shadow-xl">
-                <button className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">中文</button>
-                <button onClick={() => handleShowToast('English version is under construction')} className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">English</button>
-              </div>
-            </div>
-          </div>
-
-          <button 
-            onClick={() => handleShowToast('系統設定功能即將開放')}
-            className="transition-all hover:rotate-90 duration-500 text-slate-400 hover:text-[#002B5B]"
-          >
-            <Settings className="w-5 h-5" />
-          </button>
-
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"

@@ -5,7 +5,6 @@ import { Clock, X } from 'lucide-react';
 import new1Img from '../assets/news/new1.jpg';
 import new2Img from '../assets/news/new2.jpg';
 
-// 定義新聞資料的型別
 interface NewsItem {
   id: number;
   date: string;
@@ -15,14 +14,13 @@ interface NewsItem {
   image: string;
 }
 
-// === 新聞資料庫 ===
 const newsData: NewsItem[] = [
   {
     id: 1,
     date: "2026-04-13",
     title: "圓夢東部｜把與世界對話的機會，帶進宜蘭大學百年校慶",
     summary: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯",
-    content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、很安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
+    content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、並安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
     image: new2Img 
   },
   {
@@ -40,10 +38,9 @@ export default function NewsSection() {
 
   return (
     <section className="py-20 bg-slate-50 relative">
-      {/* 這裡調整為 max-w-6xl，確保與媒體報導電腦版精準對齊 */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      {/* 修正：手機版 px-4 改為 px-6 與媒體報導對齊 */}
+      <div className="max-w-6xl mx-auto px-6">
         
-        {/* 標題區：加入 LATEST NEWS 副標，並將分隔線改為更精緻的 1px */}
         <div className="flex items-center gap-6 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
             最新消息 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Latest News</span>
@@ -51,7 +48,6 @@ export default function NewsSection() {
           <div className="h-[1px] flex-grow bg-slate-200"></div>
         </div>
         
-        {/* 新聞列表 */}
         <div className="space-y-12">
           {newsData.map((news, index) => (
             <div 
@@ -59,7 +55,6 @@ export default function NewsSection() {
               onClick={() => setSelectedNews(news)}
               className={`flex flex-col md:flex-row gap-6 md:gap-10 items-start animate-on-scroll is-visible cursor-pointer group ${index !== newsData.length - 1 ? 'border-b border-slate-200 pb-10 md:pb-12' : ''}`}
             >
-              {/* 左側縮圖 */}
               <div className="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition duration-300 aspect-video md:aspect-[4/3] bg-slate-200">
                 <img 
                   src={news.image} 
@@ -68,7 +63,6 @@ export default function NewsSection() {
                 />
               </div>
               
-              {/* 右側文字 */}
               <div className="w-full md:w-7/12 flex flex-col justify-center">
                 <div className="flex items-center text-xs text-slate-500 mb-2 md:mb-3 font-medium">
                   <Clock className="w-3.5 h-3.5 mr-1.5" /> {news.date}
@@ -88,20 +82,15 @@ export default function NewsSection() {
         </div>
       </div>
 
-      {/* 彈出視窗 (Modal) */}
       {selectedNews && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-sm transition-opacity">
-          
           <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300">
-            
             <button 
               onClick={() => setSelectedNews(null)}
               className="absolute top-4 right-4 z-10 w-9 h-9 md:w-10 md:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
-
-            {/* Modal 上方：大圖片 */}
             <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
               <img 
                 src={selectedNews.image} 
@@ -110,8 +99,6 @@ export default function NewsSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
             </div>
-
-            {/* Modal 下方：完整文字內容 */}
             <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
               <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
                 <Clock className="w-4 h-4" />
@@ -120,21 +107,14 @@ export default function NewsSection() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-8 leading-tight">
                 {selectedNews.title}
               </h2>
-              
               <div className="text-base md:text-lg text-slate-600 leading-relaxed text-justify whitespace-pre-wrap">
                 {selectedNews.content}
               </div>
             </div>
-
           </div>
-          
-          <div 
-            className="absolute inset-0 z-[-1]" 
-            onClick={() => setSelectedNews(null)}
-          ></div>
+          <div className="absolute inset-0 z-[-1]" onClick={() => setSelectedNews(null)}></div>
         </div>
       )}
-
     </section>
   );
 }
