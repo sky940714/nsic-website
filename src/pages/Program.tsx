@@ -152,10 +152,10 @@ export default function Program() {
         </div>
       </div>
 
-      {/* 4. 手機版：全螢幕沉浸式詳情頁 (帶有左上返回，且保留頂部 Navbar 空間) */}
+      {/* 4. 手機版：全螢幕沉浸式詳情頁 (保留頂部 Navbar 空間) */}
       {selectedProgram && (
         <div className="fixed top-20 inset-x-0 bottom-0 z-40 bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
-          {/* 頂部固定返回導覽列 (文字已修改) */}
+          {/* 頂部固定返回導覽列 */}
           <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-6">
             <button onClick={() => setSelectedProgram(null)} className="flex items-center gap-2 text-[#002B5B] font-bold">
               <ArrowLeft className="w-5 h-5" /> 返回峰會議程
@@ -163,14 +163,31 @@ export default function Program() {
           </div>
 
           {/* 內容區 */}
-          <div className="pb-32">
-            <div className="w-full aspect-[4/3] bg-slate-100">
-              <Swiper modules={[Pagination, Navigation]} pagination={{ type: 'fraction' }} navigation className="w-full h-full">
+          <div className="pb-32 bg-white">
+            
+            {/* 照片輪播區 (加入 Padding 留白，讓微圓角顯現) */}
+            <div className="w-full aspect-[4/3] px-5 pt-6 pb-2">
+              <Swiper 
+                modules={[Pagination, Navigation]} 
+                pagination={{ clickable: true }} // 預設就是圓圈點點
+                navigation 
+                style={{
+                  '--swiper-navigation-color': 'rgba(255, 255, 255, 0.85)', // 柔和的半透明白色箭頭
+                  '--swiper-navigation-size': '22px', // 箭頭稍微縮小
+                  '--swiper-pagination-color': '#002B5B', // 啟動時的點點顏色 (深藍)
+                  '--swiper-pagination-bullet-inactive-color': '#cbd5e1', // 未啟動時的點點顏色 (淺灰)
+                  textShadow: '0px 1px 3px rgba(0,0,0,0.4)' // 給白色箭頭一點微陰影，確保在白底照片上也看得見
+                } as React.CSSProperties}
+                className="w-full h-full rounded-2xl overflow-hidden shadow-md border border-slate-100"
+              >
                 {selectedProgram.images.map((img, idx) => (
-                  <SwiperSlide key={idx}><img src={img} className="w-full h-full object-cover" alt="slide" /></SwiperSlide>
+                  <SwiperSlide key={idx}>
+                    <img src={img} className="w-full h-full object-cover" alt="slide" />
+                  </SwiperSlide>
                 ))}
               </Swiper>
             </div>
+
             <div className="p-8">
               <div className="flex items-center gap-2 text-slate-500 font-mono tracking-widest text-xs mb-4">
                 <Clock className="w-4 h-4" /> {selectedProgram.date} ｜ {selectedProgram.location}
