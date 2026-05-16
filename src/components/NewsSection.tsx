@@ -4,6 +4,7 @@ import { Clock, X } from 'lucide-react';
 // === 圖片匯入區 ===
 import new1Img from '../assets/news/new1.jpg';
 import new2Img from '../assets/news/new2.jpg';
+import new3Img from '../assets/news/new3.jpg'; // 新增的圖片
 
 interface NewsItem {
   id: number;
@@ -15,6 +16,14 @@ interface NewsItem {
 }
 
 const newsData: NewsItem[] = [
+  {
+    id: 3,
+    date: "2026-05-16",
+    title: "啟發青年｜讓台灣孩子自然擁有與世界對話的自信",
+    summary: "2026 諾科獎國際科學論壇結束後，一直記得的不是舞台也不是掌聲，是在宜蘭大學青年學生站起來用英文向 Michael Levitt 教授提問的那一刻，心裡有一種很深的感受，台灣的孩子不是不敢，是過去很少有機會站在這樣的現場裡。",
+    content: "2026 諾科獎國際科學論壇結束後，一直記得的不是舞台也不是掌聲，是在宜蘭大學青年學生站起來用英文向 Michael Levitt 教授提問的那一刻，心裡有一種很深的感受，台灣的孩子不是不敢，是過去很少有機會站在這樣的現場裡。\n\n這也是我一直想做的，不是把諾貝爾獎得主「請來」而已，而是希望有一天，台灣年輕人會很自然地覺得自己可以跟世界對話，這次在宜蘭大學真的有看到這畫面，孩子們專注問安靜聽，問題問得也很好，這種感覺不是熱鬧，是一種很真實的交流。\n\nMichael Levitt 教授離開前，寫了一張紙條和一個紀念物給我，一句：\n“Thanks for everything.”\n很簡單，但讓我感動，雖然相處不久卻感受到彼此的真心。\n\nThank you, Professor Michael Levitt, for your kindness, trust, and the inspiration you brought to Taiwan.",
+    image: new3Img 
+  },
   {
     id: 1,
     date: "2026-04-13",
@@ -40,11 +49,21 @@ export default function NewsSection() {
     <section className="pt-12 pb-20 bg-slate-50 relative">
       <div className="max-w-6xl mx-auto px-6">
         
-        <div className="flex items-center gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
-            最新消息 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Latest News</span>
-          </h2>
-          <div className="h-[1px] flex-grow bg-slate-200"></div>
+        {/* ================================================================= */}
+        {/* 1. 更新後的標題區塊 (與媒體報導樣式一致) */}
+        {/* ================================================================= */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#002B5B] rounded-full"></span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-slate-800">
+                最新消息
+              </h2>
+            </div>
+            <p className="text-xs md:text-sm tracking-[0.25em] text-slate-400 font-light uppercase">
+              Latest News
+            </p>
+          </div>
         </div>
         
         <div className="space-y-12">
@@ -91,10 +110,11 @@ export default function NewsSection() {
               <X className="w-5 h-5" />
             </button>
             <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
+              {/* 優化為 object-contain，讓手寫紙條完整顯示不被裁切 */}
               <img 
                 src={selectedNews.image} 
                 alt={selectedNews.title} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
             </div>

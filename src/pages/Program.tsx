@@ -1,11 +1,12 @@
-import { Calendar, MapPin, PlayCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Calendar, MapPin, PlayCircle, X, ArrowRight, Clock } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectFade } from 'swiper/modules';
+import { Pagination, Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
 // 引入 Swiper 樣式
 import 'swiper/css';
 import 'swiper/css/pagination';
-// 忽略 TypeScript 對 CSS 模組的型別檢查，解決 ts(2882) 錯誤
+import 'swiper/css/navigation';
 // @ts-ignore
 import 'swiper/css/effect-fade';
 
@@ -31,16 +32,70 @@ import niu6 from '../assets/202605/niu26/niu6.jpg';
 import niu7 from '../assets/202605/niu26/niu7.jpg';
 import niu8 from '../assets/202605/niu26/niu8.jpg';
 
+// 定義資料結構
+interface ProgramItem {
+  id: number;
+  date: string;
+  location: string;
+  title: string;
+  content: string[];
+  images: string[];
+  liveLink?: string;
+  alignment: 'left' | 'right';
+}
+
+const programs: ProgramItem[] = [
+  {
+    id: 1,
+    date: "2026.05.13",
+    location: "國立臺北科技大學",
+    title: "探索生命與未來｜Michael Levitt 教授國際科學對話",
+    content: [
+      "由諾科獎推動的「國際科學對話」今天於國立臺北科技大學展開。",
+      "2013 年諾貝爾化學獎得主 Michael Levitt 教授，以「從原子到生命：人工智慧如何重塑分子科學並幫助我們理解生命與未來」為題，與現場教授、研究者及國際青年觀察員進行深度交流。",
+      "特別感謝國立臺北科技大學的共同推動與支持，也感謝中央研究院牟中原院士親自出席與引言。",
+      "對諾科獎而言，這不只是一場演講，更是一次讓世界級科學視野與台灣青年、學界彼此靠近的開始。科學真正重要的，不只是知識本身，是如何帶領我們理解生命、文明與未來。",
+      "謝謝今天所有參與的朋友。"
+    ],
+    images: [ntut1, ntut2, ntut3, ntut4, ntut5, ntut6],
+    alignment: 'left'
+  },
+  {
+    id: 2,
+    date: "2026.05.14",
+    location: "國立宜蘭大學",
+    title: "跨世代傳承｜宜大百年校慶 × 諾貝爾大師青年座談",
+    content: [
+      "在國立宜蘭大學百年校慶的重要時刻，由諾科獎國際文教交流協會與宜蘭大學共同主辦的「跨世代傳承－與諾貝爾得主青年座談」於昨日順利完成。",
+      "2013年諾貝爾化學獎得主 Michael Levitt 教授親自來到宜大，與青年學子分享 AI、生命科學與未來世界的視野，中央研究院蔡明道院士共同參與對談。現場令人印象深刻的，不只是世界級科學家的演講，青年學生以英文直接向 Michael Levitt 教授與蔡明道院士提問交流的畫面也令人難忘。",
+      "從諾貝爾獎得主、中央研究院院士，到大學生與高中學生，在同一個場域中自然對話，這正是諾科獎長期希望在台灣推動的國際交流風景。諾科獎始終相信，真正重要的，不只是邀請世界級科學家來到台灣，而是讓台灣青年世代開始擁有與世界對話的勇氣、能力與視野。",
+      "感謝國立宜蘭大學在百年校慶的重要時刻，與諾科獎共同完成這場跨世代的國際科學交流。"
+    ],
+    images: [niu1, niu2, niu3, niu4, niu5, niu6, niu7, niu8],
+    liveLink: "https://reurl.cc/vE4Zmj",
+    alignment: 'right'
+  }
+];
+
 export default function Program() {
-  const ntutImages = [ntut1, ntut2, ntut3, ntut4, ntut5, ntut6];
-  const niuImages = [niu1, niu2, niu3, niu4, niu5, niu6, niu7, niu8];
+  const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
+
+  // 彈出視窗鎖定捲動
+  useEffect(() => {
+    if (selectedProgram) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedProgram]);
 
   return (
     <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* ======================================================= */}
-        {/* 頁面標題區 */}
+        {/* 1. 頁面標題區 */}
         {/* ======================================================= */}
         <div className="mb-16 md:mb-24 flex flex-col items-center md:items-start">
           <h2 className="flex flex-col md:flex-row md:items-end gap-3 font-bold text-slate-800">
@@ -54,155 +109,157 @@ export default function Program() {
           <div className="w-16 h-1 mt-6 bg-[#002B5B] rounded-full"></div>
         </div>
 
-        <div className="space-y-24 md:space-y-32">
-          
-          {/* ======================================================= */}
-          {/* 第一場：北科大 (左圖右文排版) */}
-          {/* ======================================================= */}
-          <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
-            
-            {/* 左側：輪播照片區 */}
-            <div className="w-full md:w-1/2 shrink-0">
-              <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
-                <Swiper
-                  modules={[Pagination, Autoplay, EffectFade]}
-                  effect="fade"
-                  autoplay={{ delay: 3500, disableOnInteraction: false }}
-                  pagination={{ clickable: true }}
-                  className="w-full h-full"
-                >
-                  {ntutImages.map((img, idx) => (
-                    <SwiperSlide key={idx}>
-                      <img 
-                        src={img} 
-                        alt={`北科大場紀實-${idx + 1}`} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
-
-            {/* 右側：文字紀實區 */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
-              {/* 日期與地點標籤 */}
-              <div className="flex flex-wrap items-center gap-4 mb-6">
-                <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm">
-                  <Calendar className="w-4 h-4" /> 2026.05.13
-                </div>
-                <div className="flex items-center gap-2 text-slate-500 font-medium text-sm">
-                  <MapPin className="w-4 h-4" /> 國立臺北科技大學
+        {/* ======================================================= */}
+        {/* 2. 電腦版佈局：展開式雜誌排版 (md 以上顯示) */}
+        {/* ======================================================= */}
+        <div className="hidden md:flex flex-col gap-32">
+          {programs.map((item) => (
+            <div 
+              key={item.id} 
+              className={`flex items-center gap-16 ${item.alignment === 'right' ? 'flex-row-reverse' : 'flex-row'}`}
+            >
+              {/* 照片輪播 */}
+              <div className="w-1/2 shrink-0">
+                <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
+                  <Swiper
+                    modules={[Pagination, Autoplay, EffectFade]}
+                    effect="fade"
+                    autoplay={{ delay: 4000, disableOnInteraction: false }}
+                    pagination={{ clickable: true }}
+                    className="w-full h-full"
+                  >
+                    {item.images.map((img, idx) => (
+                      <SwiperSlide key={idx}>
+                        <img src={img} className="w-full h-full object-cover" alt="recaps" />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               </div>
 
-              {/* 標題 (已縮小) */}
-              <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">
-                探索生命與未來｜<br />Michael Levitt 教授國際科學對話
-              </h3>
-
-              {/* 紀實內文 (已放大) */}
-              <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
-                <p>
-                  由諾科獎推動的「國際科學對話」今天於國立臺北科技大學展開。
-                </p>
-                <p>
-                  2013 年諾貝爾化學獎得主 Michael Levitt 教授，以「從原子到生命：人工智慧如何重塑分子科學並幫助我們理解生命與未來」為題，與現場教授、研究者及國際青年觀察員進行深度交流。
-                </p>
-                <p>
-                  特別感謝國立臺北科技大學的共同推動與支持，也感謝中央研究院牟中原院士親自出席與引言。
-                </p>
-                <p>
-                  對諾科獎而言，這不只是一場演講，更是一次讓世界級科學視野與台灣青年、學界彼此靠近的開始。科學真正重要的，不只是知識本身，是如何帶領我們理解生命、文明與未來。
-                </p>
-                <p className="font-bold text-slate-800 pt-2">
-                  謝謝今天所有參與的朋友。
-                </p>
-              </div>
-            </div>
-
-          </div>
-
-
-          {/* ======================================================= */}
-          {/* 第二場：宜大百年校慶 (右圖左文排版 - md:flex-row-reverse) */}
-          {/* ======================================================= */}
-          <div className="flex flex-col md:flex-row-reverse items-center gap-10 lg:gap-16">
-            
-            {/* 右側：輪播照片區 */}
-            <div className="w-full md:w-1/2 shrink-0">
-              <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
-                <Swiper
-                  modules={[Pagination, Autoplay, EffectFade]}
-                  effect="fade"
-                  autoplay={{ delay: 4000, disableOnInteraction: false }}
-                  pagination={{ clickable: true }}
-                  className="w-full h-full"
-                >
-                  {niuImages.map((img, idx) => (
-                    <SwiperSlide key={idx}>
-                      <img 
-                        src={img} 
-                        alt={`宜蘭大學場紀實-${idx + 1}`} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2000ms]"
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
-
-            {/* 左側：文字紀實區 */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center">
-              {/* 日期與地點標籤 */}
-              <div className="flex flex-wrap items-center gap-4 mb-6">
-                <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm">
-                  <Calendar className="w-4 h-4" /> 2026.05.14
+              {/* 文字紀實 */}
+              <div className="w-1/2">
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm">
+                    <Calendar className="w-4 h-4" /> {item.date}
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-500 font-medium text-sm">
+                    <MapPin className="w-4 h-4" /> {item.location}
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-slate-500 font-medium text-sm">
-                  <MapPin className="w-4 h-4" /> 國立宜蘭大學
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">
+                  {item.title}
+                </h3>
+                <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
+                  {item.content.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
+                {item.liveLink && (
+                  <div className="mt-8">
+                    <a href={item.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#002B5B] text-white text-sm font-bold tracking-widest rounded-full hover:bg-blue-800 transition-all">
+                      <PlayCircle className="w-5 h-5" /> 觀看直播回放
+                    </a>
+                  </div>
+                )}
               </div>
-
-              {/* 標題 (已縮小) */}
-              <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">
-                跨世代傳承｜<br />宜大百年校慶 × 諾貝爾大師青年座談
-              </h3>
-
-              {/* 紀實內文 (已放大) */}
-              <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
-                <p>
-                  在國立宜蘭大學百年校慶的重要時刻，由諾科獎國際文教交流協會與宜蘭大學共同主辦的「跨世代傳承－與諾貝爾得主青年座談」於昨日順利完成。
-                </p>
-                <p>
-                  2013年諾貝爾化學獎得主 Michael Levitt 教授親自來到宜大，與青年學子分享 AI、生命科學與未來世界的視野，中央研究院蔡明道院士共同參與對談。現場令人印象深刻的，不只是世界級科學家的演講，青年學生以英文直接向 Michael Levitt 教授與蔡明道院士提問交流的畫面也令人難忘。
-                </p>
-                <p>
-                  從諾貝爾獎得主、中央研究院院士，到大學生與高中學生，在同一個場域中自然對話，這正是諾科獎長期希望在台灣推動的國際交流風景。諾科獎始終相信，真正重要的，不只是邀請世界級科學家來到台灣，而是讓台灣青年世代開始擁有與世界對話的勇氣、能力與視野。
-                </p>
-                <p className="font-bold text-slate-800">
-                  感謝國立宜蘭大學在百年校慶的重要時刻，與諾科獎共同完成這場跨世代的國際科學交流。
-                </p>
-              </div>
-
-              {/* 直播錄影連結按鈕 */}
-              <div className="mt-8">
-                <a 
-                  href="https://reurl.cc/vE4Zmj" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#002B5B] text-white text-sm font-bold tracking-widest rounded-full hover:bg-blue-800 hover:shadow-lg transition-all hover:-translate-y-0.5"
-                >
-                  <PlayCircle className="w-5 h-5" /> 觀看直播回放
-                </a>
-              </div>
-
             </div>
-
-          </div>
-
+          ))}
         </div>
+
+        {/* ======================================================= */}
+        {/* 3. 手機版佈局：卡片列表 (md 以下顯示) */}
+        {/* ======================================================= */}
+        <div className="md:hidden flex flex-col gap-10">
+          {programs.map((item) => (
+            <div 
+              key={item.id} 
+              onClick={() => setSelectedProgram(item)}
+              className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer active:scale-[0.98] transition-transform"
+            >
+              <div className="aspect-[16/10] w-full relative">
+                <img src={item.images[0]} className="w-full h-full object-cover" alt="cover" />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#002B5B] text-xs font-bold rounded-full shadow-sm">
+                    {item.date}
+                  </span>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium mb-3">
+                  <MapPin className="w-3 h-3" /> {item.location}
+                </div>
+                <h3 className="text-xl font-bold text-slate-800 leading-tight mb-6">
+                  {item.title}
+                </h3>
+                <div className="flex items-center text-[#002B5B] font-bold text-sm tracking-widest">
+                  查看詳情紀實 <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
+
+      {/* ======================================================= */}
+      {/* 4. 手機版彈出視窗 (Modal) */}
+      {/* ======================================================= */}
+      {selectedProgram && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-end md:hidden bg-slate-900/60 backdrop-blur-sm transition-opacity"
+          onClick={() => setSelectedProgram(null)}
+        >
+          <div 
+            className="bg-white rounded-t-[2.5rem] w-full h-[92vh] overflow-y-auto relative shadow-2xl animate-in slide-in-from-bottom duration-500"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* 關閉按鈕 */}
+            <button 
+              onClick={() => setSelectedProgram(null)}
+              className="absolute top-5 right-5 z-50 w-10 h-10 bg-black/40 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* 彈出視窗內的輪播圖 */}
+            <div className="w-full aspect-[4/3] bg-slate-100">
+              <Swiper
+                modules={[Pagination, Navigation]}
+                pagination={{ type: 'fraction' }}
+                navigation
+                className="w-full h-full"
+              >
+                {selectedProgram.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img src={img} className="w-full h-full object-cover" alt="slide" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* 彈出視窗內文 */}
+            <div className="p-8 pb-16">
+              <div className="flex items-center gap-2 text-slate-500 font-mono tracking-widest text-xs mb-4">
+                <Clock className="w-4 h-4" />
+                {selectedProgram.date} ｜ {selectedProgram.location}
+              </div>
+              <h2 className="text-2xl font-bold text-slate-800 leading-snug mb-8">
+                {selectedProgram.title}
+              </h2>
+              <div className="space-y-6 text-slate-600 text-[17px] leading-[1.8] text-justify">
+                {selectedProgram.content.map((p, i) => <p key={i}>{p}</p>)}
+              </div>
+              
+              {selectedProgram.liveLink && (
+                <div className="mt-10">
+                  <a href={selectedProgram.liveLink} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 w-full py-4 bg-[#002B5B] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform">
+                    <PlayCircle className="w-5 h-5" /> 觀看直播錄影回放
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
