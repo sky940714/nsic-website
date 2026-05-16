@@ -142,6 +142,7 @@ src/
     Footer.tsx
     HeroSection.tsx
     LaureatesSection.tsx
+    MediaSection.tsx
     Navbar.tsx
     NewsSection.tsx
     OriginAndFounderSection.tsx
@@ -1261,146 +1262,6 @@ export default function AnnouncementSection() {
 }
 </file>
 
-<file path="src/components/NewsSection.tsx">
-import { useState } from 'react';
-import { Clock, X } from 'lucide-react';
-
-// === 圖片匯入區 ===
-import new1Img from '../assets/news/new1.jpg';
-import new2Img from '../assets/news/new2.jpg';
-
-// 定義新聞資料的型別
-interface NewsItem {
-  id: number;
-  date: string;
-  title: string;
-  summary: string;
-  content: string;
-  image: string;
-}
-
-// === 新聞資料庫 ===
-const newsData: NewsItem[] = [
-  {
-    id: 1,
-    date: "2026-04-13",
-    title: "圓夢東部｜把與世界對話的機會，帶進宜蘭大學百年校慶",
-    summary: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯",
-    content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、很安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
-    image: new2Img // 照片已對調為 new2.jpg (禮堂)
-  },
-  {
-    id: 2,
-    date: "2026-04-09",
-    title: "籌備幕後｜重視每一個細節，感謝最強國際執行夥伴",
-    summary: "今天場勘。走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節...",
-    content: "今天場勘。\n\n走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節，很知道每一場會議、每一個節奏都是對講者及現場的尊重，那個當下對某個人來說，可能是影響往後的一個重要時刻，這種事沒辦法隨便。\n\n不知為什麼，今天一進現場就想到去年五月，那超級的五天四夜接待及三天14個大小現場⋯\n\n回想在當下，因為知道有紅映團隊，我不用一直回頭確認，采傑隨行秘書們在貴賓旁安靜照顧，不搶戲，但什麼都想到了～幾位得主回去之後都還特別提到他們的細膩。\n\n今年一樣有他們在，我放心！\n\n#國際執行夥伴\n#紅映國際活動製作\n#采傑國際會議服務",
-    image: new1Img // 照片已對調為 new1.jpg (場地討論)
-  }
-];
-
-export default function NewsSection() {
-  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
-
-  return (
-    <section className="py-20 bg-slate-50 relative">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        
-        {/* 標題區 */}
-        <div className="flex items-center gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">最新消息</h2>
-          <div className="h-[2px] flex-grow bg-slate-200"></div>
-        </div>
-        
-        {/* 新聞列表 */}
-        <div className="space-y-12">
-          {newsData.map((news, index) => (
-            <div 
-              key={news.id} 
-              onClick={() => setSelectedNews(news)}
-              className={`flex flex-col md:flex-row gap-6 md:gap-10 items-start animate-on-scroll is-visible cursor-pointer group ${index !== newsData.length - 1 ? 'border-b border-slate-200 pb-10 md:pb-12' : ''}`}
-            >
-              {/* 左側縮圖 */}
-              <div className="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition duration-300 aspect-video md:aspect-[4/3] bg-slate-200">
-                <img 
-                  src={news.image} 
-                  alt={news.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                />
-              </div>
-              
-              {/* 右側文字 */}
-              <div className="w-full md:w-7/12 flex flex-col justify-center">
-                <div className="flex items-center text-xs text-slate-500 mb-2 md:mb-3 font-medium">
-                  <Clock className="w-3.5 h-3.5 mr-1.5" /> {news.date}
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3 group-hover:text-[#002B5B] transition leading-snug">
-                  {news.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed text-sm mb-4 line-clamp-3">
-                  {news.summary}
-                </p>
-                <span className="text-slate-400 group-hover:text-[#002B5B] transition text-sm font-bold tracking-widest">
-                  查看詳情 <span className="ml-1 inline-block group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* 彈出視窗 (Modal) */}
-      {selectedNews && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-sm transition-opacity">
-          
-          <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300">
-            
-            <button 
-              onClick={() => setSelectedNews(null)}
-              className="absolute top-4 right-4 z-10 w-9 h-9 md:w-10 md:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            {/* Modal 上方：大圖片 */}
-            <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
-              <img 
-                src={selectedNews.image} 
-                alt={selectedNews.title} 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
-            </div>
-
-            {/* Modal 下方：完整文字內容 */}
-            <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
-              <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
-                <Clock className="w-4 h-4" />
-                {selectedNews.date}
-              </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-8 leading-tight">
-                {selectedNews.title}
-              </h2>
-              
-              <div className="text-base md:text-lg text-slate-600 leading-relaxed text-justify whitespace-pre-wrap">
-                {selectedNews.content}
-              </div>
-            </div>
-
-          </div>
-          
-          <div 
-            className="absolute inset-0 z-[-1]" 
-            onClick={() => setSelectedNews(null)}
-          ></div>
-        </div>
-      )}
-
-    </section>
-  );
-}
-</file>
-
 <file path="src/App.tsx">
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -1522,6 +1383,112 @@ export default function Footer() {
             </div>
         </footer>
     );
+}
+</file>
+
+<file path="src/components/MediaSection.tsx">
+import { ExternalLink } from 'lucide-react';
+
+interface MediaItem {
+  id: number;
+  date: string;
+  source: string;
+  title: string;
+  url: string;
+}
+
+const mediaData: MediaItem[] = [
+  {
+    id: 4,
+    date: "2026.05.13",
+    source: "工商時報",
+    title: "2026 諾科獎國際科學對話揭幕，Michael Levitt 分享分子科學願景",
+    url: "https://www.ctee.com.tw/news/20260513701602-431204",
+  },
+  {
+    id: 1,
+    date: "2026.05.13",
+    source: "更生日報",
+    title: "諾貝爾得主訪國立學校、推動科學育苗計畫",
+    url: "https://www.ksnews.com.tw/e/101231",
+  },
+  {
+    id: 5,
+    date: "2026.05.11",
+    source: "Yahoo新聞",
+    title: "Michael Levitt 來台啟動 2026 諾科獎國際科學對話",
+    url: "https://tw.news.yahoo.com/michael-levitt%E4%BE%86%E5%8F%B0%E5%95%9F%E5%8B%952026%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E7%A7%91%E5%AD%B8%E5%B0%8D%E8%A9%B1-120426563.html",
+  },
+  {
+    id: 3,
+    date: "2026.05.11",
+    source: "更生日報",
+    title: "諾貝爾大師 Michael Levitt 抵台，2026 諾科獎峰會點燃科學熱情",
+    url: "https://www.ksnews.com.tw/e/100429",
+  },
+  {
+    id: 2,
+    date: "2026.05.11",
+    source: "經濟日報",
+    title: "諾貝爾化學獎得主Michael Levitt五月來台 啟動諾科獎國際科學對話",
+    url: "https://share.google/AaiuM8293HGQZzKUx",
+  },
+];
+
+export default function MediaSection() {
+  return (
+    <section className="pt-16 pb-6 md:pt-24 md:pb-12 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        <div className="flex items-center gap-6 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
+            媒體報導 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Media Coverage</span>
+          </h2>
+          <div className="h-[1px] flex-grow bg-slate-100"></div>
+        </div>
+
+        <div className="divide-y divide-slate-100 border-t border-slate-100">
+          {mediaData.map((item) => (
+            <a
+              key={item.id}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col md:flex-row md:items-center py-5 md:py-8 gap-3 md:gap-12 transition-all hover:bg-slate-50/50 px-4 -mx-4 rounded-xl"
+            >
+              <div className="flex items-center gap-4 md:contents">
+                <div className="text-slate-400 font-mono text-sm md:text-lg shrink-0">
+                  {item.date}
+                </div>
+
+                <div className="shrink-0">
+                  <span className="px-3 py-1 md:px-4 md:py-1.5 bg-blue-50 text-[#002B5B] text-[10px] md:text-sm font-bold rounded shadow-sm border border-blue-100 uppercase tracking-widest">
+                    {item.source}
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex-grow">
+                <h3 className="text-base md:text-xl font-bold text-slate-700 group-hover:text-[#002B5B] transition-colors leading-snug">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="hidden md:flex items-center gap-2 text-slate-300 group-hover:text-[#002B5B] group-hover:translate-x-1 transition-all">
+                <span className="text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">READ ARTICLE</span>
+                <ExternalLink className="w-5 h-5" />
+              </div>
+              
+              <div className="md:hidden flex items-center text-[#002B5B] text-xs font-bold">
+                閱讀全文 →
+              </div>
+            </a>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 }
 </file>
 
@@ -2159,202 +2126,124 @@ export default function LaureatesSection({ pageTitle = "科學大師陣容", lau
 }
 </file>
 
-<file path="src/components/Navbar.tsx">
+<file path="src/components/NewsSection.tsx">
 import { useState } from 'react';
-import { ChevronDown, ChevronRight, Globe, Settings, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Clock, X } from 'lucide-react';
 
-// 1. 匯入你的 Logo
-import logoImg from '../assets/logo.png';
+// === 圖片匯入區 ===
+import new1Img from '../assets/news/new1.jpg';
+import new2Img from '../assets/news/new2.jpg';
 
-interface NavMenu {
-  label: string;
-  items: string[];
+interface NewsItem {
+  id: number;
+  date: string;
+  title: string;
+  summary: string;
+  content: string;
+  image: string;
 }
 
-const navMenus: Record<string, NavMenu> = {
-  peak: {
-    label: '峰會介紹',
-    items: ['關於我們', '會長的話'],
+const newsData: NewsItem[] = [
+  {
+    id: 1,
+    date: "2026-04-13",
+    title: "圓夢東部｜把與世界對話的機會，帶進宜蘭大學百年校慶",
+    summary: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯",
+    content: "今天剛走進宜蘭大學禮堂，看著一排排空著的紅色座椅，眼眶瞬間紅了。\n\n這一刻，腦海裡浮現的是孩子們坐在這裡聆聽諾貝爾得主演講的樣子⋯無論是家在東部，還是在這片土地上求學的孩子，他們同樣聰明、同樣充滿希望，卻常常因為地理的阻隔，少了一點親眼看見世界的機會。\n\n這一刻，心裡有個聲音在對自己說：愛蓮妳終於做到了，終於把這份與世界對話的機會，帶進了東部的校園，讓孩子們能真實地坐在這裡，跟世界頂尖的得主處在同一個空間，想讓他們知道，世界沒有遺忘他們，世界級的智慧與光芒，此刻就近在咫尺。\n\n感謝宜蘭大學校長與團隊的用心，在百年校慶的歷史時刻，謝謝你們如此細緻的安排，協助邀請宜蘭、花蓮、台東地區學校孩子們一起走進這個禮堂，讓這份禮物能圓滿送達，一起走進這個場域，接受這場世界的洗禮。\n\n站在禮堂裡，看著那些椅子，我心裡真的很激動、很安慰，過去所經歷的挑戰與疲憊，在這一刻都變得值得了，這件事對我而言比什麼都重要，我沒有讓這個願望只停留在想像裡。\n\n今天，是最開心的時刻\n今天，是最安慰的一天\n\n#國立宜蘭大學百年校慶",
+    image: new2Img 
   },
-  agenda: {
-    label: '活動內容',
-    items: ['峰會議程'],
-  },
-  guests: {
-    label: '貴賓介紹',
-    items: ['主要貴賓'],
-  },
-  review: {
-    label: '歷年回顧',
-    items: ['2025'],
-  },
-  about: {
-    label: '聯絡我們',
-    items: [],
+  {
+    id: 2,
+    date: "2026-04-09",
+    title: "籌備幕後｜重視每一個細節，感謝最強國際執行夥伴",
+    summary: "今天場勘。走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節...",
+    content: "今天場勘。\n\n走進去第一件事習慣先繞一圈，看桌子的間距、光線、人站哪裡？視線會到哪裡？不管大小場，我一定親自到現場推敲每個細節，很知道每一場會議、每一個節奏都是對講者及現場的尊重，那個當下對某個人來說，可能是影響往後的一個重要時刻，這種事沒辦法隨便。\n\n不知為什麼，今天一進現場就想到去年五月，那超級的五天四夜接待及三天14個大小現場⋯\n\n回想在當下，因為知道有紅映團隊，我不用一直回頭確認，采傑隨行秘書們在貴賓旁安靜照顧，不搶戲，但什麼都想到了～幾位得主回去之後都還特別提到他們的細膩。\n\n今年一樣有他們在，我放心！\n\n#國際執行夥伴\n#紅映國際活動製作\n#采傑國際會議服務",
+    image: new1Img 
   }
-};
+];
 
-const pathMap: Record<string, string> = {
-  '主要貴賓': '/guests',
-  '峰會議程': '/program',
-  '2025': '/review-2025',
-  '聯絡我們': '/contact',
-  '關於我們': '/#origin',
-  '會長的話': '/#founder',
-  '首頁': '/',
-};
-
-interface NavbarProps {
-  onShowToast?: (msg: string) => void;
-}
-
-export default function Navbar({ onShowToast }: NavbarProps) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleShowToast = (message: string) => {
-    if (onShowToast) {
-      onShowToast(message);
-    } else {
-      alert(message);
-    }
-  };
+export default function NewsSection() {
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+    <section className="pt-12 pb-20 bg-slate-50 relative">
+      <div className="max-w-6xl mx-auto px-6">
         
-        {/* Logo 區塊 */}
-        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
-          <div className="relative">
-            <img 
-              src={logoImg} 
-              alt="諾科獎 Logo" 
-              className="transition-all duration-500 object-contain h-10 w-auto"
-            />
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
-          {Object.entries(navMenus).map(([key, menu]) => {
-            const hasItems = menu.items.length > 0;
-            const targetPath = pathMap[menu.label] || '#';
-            const textColor = 'text-slate-700 hover:text-[#002B5B]'; // 統一深色文字
-
-            return (
-              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
-                {hasItems ? (
-                  <>
-                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
-                      {menu.label}
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
-                    </span>
-                    {/* Dropdown Menu */}
-                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
-                        {menu.items.map((item) => (
-                          <Link 
-                            key={item} 
-                            to={pathMap[item] || '#'} 
-                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
-                          >
-                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
-                    {menu.label}
-                  </Link>
-                )}
+        <div className="flex items-center gap-6 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
+            最新消息 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Latest News</span>
+          </h2>
+          <div className="h-[1px] flex-grow bg-slate-200"></div>
+        </div>
+        
+        <div className="space-y-12">
+          {newsData.map((news, index) => (
+            <div 
+              key={news.id} 
+              onClick={() => setSelectedNews(news)}
+              className={`flex flex-col md:flex-row gap-6 md:gap-10 items-start animate-on-scroll is-visible cursor-pointer group ${index !== newsData.length - 1 ? 'border-b border-slate-200 pb-10 md:pb-12' : ''}`}
+            >
+              <div className="w-full md:w-5/12 shrink-0 overflow-hidden rounded-2xl shadow-sm group-hover:shadow-md transition duration-300 aspect-video md:aspect-[4/3] bg-slate-200">
+                <img 
+                  src={news.image} 
+                  alt={news.title} 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
               </div>
-            );
-          })}
-        </nav>
-
-        {/* Right Toolbar */}
-        <div className="flex items-center space-x-5">
-          {/* Language Selector */}
-          <div className="hidden sm:flex items-center group relative h-full cursor-pointer">
-            <div className="flex items-center text-sm font-medium transition-colors duration-300 text-slate-500 hover:text-[#002B5B]">
-              <Globe className="w-4 h-4 mr-1.5" /> 繁中
-              <ChevronDown className="w-3.5 h-3.5 ml-1 transition-transform group-hover:rotate-180" />
-            </div>
-            {/* Language Dropdown */}
-            <div className="absolute top-full right-0 pt-2 w-32 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <div className="bg-white rounded-lg border border-slate-100 py-1.5 shadow-xl">
-                <button className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">中文</button>
-                <button onClick={() => handleShowToast('English version is under construction')} className="w-full text-left px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-[#002B5B]">English</button>
+              
+              <div className="w-full md:w-7/12 flex flex-col justify-center">
+                <div className="flex items-center text-xs text-slate-500 mb-2 md:mb-3 font-medium">
+                  <Clock className="w-3.5 h-3.5 mr-1.5" /> {news.date}
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-3 group-hover:text-[#002B5B] transition leading-snug">
+                  {news.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-sm mb-4 line-clamp-3">
+                  {news.summary}
+                </p>
+                <span className="text-slate-400 group-hover:text-[#002B5B] transition text-sm font-bold tracking-widest">
+                  查看詳情 <span className="ml-1 inline-block group-hover:translate-x-1 transition-transform">→</span>
+                </span>
               </div>
             </div>
-          </div>
-
-          <button 
-            onClick={() => handleShowToast('系統設定功能即將開放')}
-            className="transition-all hover:rotate-90 duration-500 text-slate-400 hover:text-[#002B5B]"
-          >
-            <Settings className="w-5 h-5" />
-          </button>
-
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          ))}
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
-          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-            {Object.entries(navMenus).map(([key, menu]) => {
-              const hasItems = menu.items.length > 0;
-              const targetPath = pathMap[menu.label] || '#';
-
-              if (!hasItems) {
-                return (
-                  <Link 
-                    key={key}
-                    to={targetPath}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#002B5B] rounded-xl transition"
-                  >
-                    {menu.label}
-                  </Link>
-                );
-              }
-
-              return (
-                <details key={key} className="group">
-                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
-                    {menu.label}
-                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-[#002B5B]/30 ml-6 my-1">
-                    {menu.items.map((item) => (
-                      <Link 
-                        key={item}
-                        to={pathMap[item] || '#'} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                </details>
-              );
-            })}
+      {selectedNews && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-sm transition-opacity">
+          <div className="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl relative flex flex-col animate-in fade-in zoom-in-95 duration-300">
+            <button 
+              onClick={() => setSelectedNews(null)}
+              className="absolute top-4 right-4 z-10 w-9 h-9 md:w-10 md:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
+              <img 
+                src={selectedNews.image} 
+                alt={selectedNews.title} 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
+            </div>
+            <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
+              <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
+                <Clock className="w-4 h-4" />
+                {selectedNews.date}
+              </div>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-8 leading-tight">
+                {selectedNews.title}
+              </h2>
+              <div className="text-base md:text-lg text-slate-600 leading-relaxed text-justify whitespace-pre-wrap">
+                {selectedNews.content}
+              </div>
+            </div>
           </div>
+          <div className="absolute inset-0 z-[-1]" onClick={() => setSelectedNews(null)}></div>
         </div>
       )}
-    </header>
+    </section>
   );
 }
 </file>
@@ -2457,15 +2346,182 @@ export default function Contact() {
 }
 </file>
 
+<file path="src/components/Navbar.tsx">
+import { useState } from 'react';
+import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+// 1. 匯入你的 Logo
+import logoImg from '../assets/logo.png';
+
+interface NavMenu {
+  label: string;
+  items: string[];
+}
+
+const navMenus: Record<string, NavMenu> = {
+  peak: {
+    label: '峰會介紹',
+    items: ['關於我們', '會長的話'],
+  },
+  agenda: {
+    label: '活動內容',
+    items: ['峰會議程'],
+  },
+  guests: {
+    label: '貴賓介紹',
+    items: ['主要貴賓'],
+  },
+  review: {
+    label: '歷年回顧',
+    items: ['2025'],
+  },
+  about: {
+    label: '聯絡我們',
+    items: [],
+  }
+};
+
+const pathMap: Record<string, string> = {
+  '主要貴賓': '/guests',
+  '峰會議程': '/program',
+  '2025': '/review-2025',
+  '聯絡我們': '/contact',
+  '關於我們': '/#origin',
+  '會長的話': '/#founder',
+  '首頁': '/',
+};
+
+export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  return (
+    <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        
+        {/* Logo 區塊 */}
+        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
+          <div className="relative">
+            <img 
+              src={logoImg} 
+              alt="諾科獎 Logo" 
+              className="transition-all duration-500 object-contain h-10 w-auto"
+            />
+          </div>
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
+          {Object.entries(navMenus).map(([key, menu]) => {
+            const hasItems = menu.items.length > 0;
+            const targetPath = pathMap[menu.label] || '#';
+            const textColor = 'text-slate-700 hover:text-[#002B5B]'; // 統一深色文字
+
+            return (
+              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
+                {hasItems ? (
+                  <>
+                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
+                      {menu.label}
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                    </span>
+                    {/* Dropdown Menu */}
+                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
+                        {menu.items.map((item) => (
+                          <Link 
+                            key={item} 
+                            to={pathMap[item] || '#'} 
+                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
+                          >
+                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
+                    {menu.label}
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        {/* Right Toolbar */}
+        <div className="flex items-center space-x-5">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
+          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+            {Object.entries(navMenus).map(([key, menu]) => {
+              const hasItems = menu.items.length > 0;
+              const targetPath = pathMap[menu.label] || '#';
+
+              if (!hasItems) {
+                return (
+                  <Link 
+                    key={key}
+                    to={targetPath}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#002B5B] rounded-xl transition"
+                  >
+                    {menu.label}
+                  </Link>
+                );
+              }
+
+              return (
+                <details key={key} className="group">
+                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
+                    {menu.label}
+                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-[#002B5B]/30 ml-6 my-1">
+                    {menu.items.map((item) => (
+                      <Link 
+                        key={item}
+                        to={pathMap[item] || '#'} 
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
+</file>
+
 <file path="src/pages/Home.tsx">
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-// 匯入新設計的組件
+// 匯入組件
 import StaticHero from '../components/StaticHero';
-import AboutSection from '../components/AboutSection';   // 仿清大 01. ABOUT US 佈局
-import SummitBrief from '../components/SummitBrief';   // 2026 峰會資訊與 MORE 連結
-import PresidentSection from '../components/PresidentSection'; // 獨立出的會長的話
+import SummitBrief from '../components/SummitBrief';
+import AboutSection from '../components/AboutSection'; 
+import PresidentSection from '../components/PresidentSection';
+import MediaSection from '../components/MediaSection';
 import NewsSection from '../components/NewsSection';
 
 export default function Home() {
@@ -2485,16 +2541,14 @@ export default function Home() {
 
   return (
     <>
-      {/* 1. 滿版輪播首頁 */}
       <StaticHero />
-      {/* 2. 2026 峰會快訊 (含 Michael Levitt 介紹與連結) [cite: 1, 3] */}
       <SummitBrief />
-      {/* 3. 關於我們 (NTHU 風格：照片左、文字右)  */}
       <AboutSection /> 
-      {/* 4. 會長的話 (感性對話排版) */}
       <PresidentSection />
-
-      {/* 5. 其他資訊區塊 */}
+      
+      {/* 媒體報導區塊置於此 */}
+      <MediaSection />
+      
       <NewsSection />
     </>
   );
