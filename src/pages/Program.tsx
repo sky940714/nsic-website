@@ -152,13 +152,13 @@ export default function Program() {
         </div>
       </div>
 
-      {/* 4. 手機版：全螢幕沉浸式詳情頁 (帶有左上返回) */}
+      {/* 4. 手機版：全螢幕沉浸式詳情頁 (帶有左上返回，且保留頂部 Navbar 空間) */}
       {selectedProgram && (
-        <div className="fixed inset-0 z-[100] bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
-          {/* 頂部固定返回導覽列 */}
+        <div className="fixed top-20 inset-x-0 bottom-0 z-40 bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
+          {/* 頂部固定返回導覽列 (文字已修改) */}
           <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-6">
             <button onClick={() => setSelectedProgram(null)} className="flex items-center gap-2 text-[#002B5B] font-bold">
-              <ArrowLeft className="w-5 h-5" /> 返回議程列表
+              <ArrowLeft className="w-5 h-5" /> 返回峰會議程
             </button>
           </div>
 
