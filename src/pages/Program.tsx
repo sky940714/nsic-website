@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calendar, MapPin, PlayCircle, X, ArrowRight, Clock } from 'lucide-react';
+import { Calendar, MapPin, PlayCircle, ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, EffectFade, Navigation } from 'swiper/modules';
 
@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
 // ==========================================
-// 1. 匯入北科大場 (NTUT) 照片
+// 匯入照片 (路徑與之前相同)
 // ==========================================
 import ntut1 from '../assets/202605/ntut26/ntut1.jpg';
 import ntut2 from '../assets/202605/ntut26/ntut2.jpg';
@@ -20,9 +20,6 @@ import ntut4 from '../assets/202605/ntut26/ntut4.jpg';
 import ntut5 from '../assets/202605/ntut26/ntut5.jpg';
 import ntut6 from '../assets/202605/ntut26/ntut6.jpg';
 
-// ==========================================
-// 2. 匯入宜大場 (NIU) 照片
-// ==========================================
 import niu1 from '../assets/202605/niu26/niu1.jpg';
 import niu2 from '../assets/202605/niu26/niu2.jpg';
 import niu3 from '../assets/202605/niu26/niu3.jpg';
@@ -32,7 +29,6 @@ import niu6 from '../assets/202605/niu26/niu6.jpg';
 import niu7 from '../assets/202605/niu26/niu7.jpg';
 import niu8 from '../assets/202605/niu26/niu8.jpg';
 
-// 定義資料結構
 interface ProgramItem {
   id: number;
   date: string;
@@ -80,9 +76,10 @@ const programs: ProgramItem[] = [
 export default function Program() {
   const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
 
-  // 彈出視窗鎖定捲動
+  // 當進入詳情頁時，回到頂部並鎖定捲動
   useEffect(() => {
     if (selectedProgram) {
+      window.scrollTo(0, 0);
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -94,62 +91,34 @@ export default function Program() {
     <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* ======================================================= */}
-        {/* 1. 頁面標題區 */}
-        {/* ======================================================= */}
+        {/* 1. 頁面標題 */}
         <div className="mb-16 md:mb-24 flex flex-col items-center md:items-start">
           <h2 className="flex flex-col md:flex-row md:items-end gap-3 font-bold text-slate-800">
-            <span className="text-4xl md:text-5xl text-[#002B5B] tracking-wide">
-              2026 峰會議程
-            </span>
-            <span className="text-xl md:text-3xl text-slate-400 font-light tracking-widest pb-1 uppercase">
-              Summit Agenda
-            </span>
+            <span className="text-4xl md:text-5xl text-[#002B5B] tracking-wide">2026 峰會議程</span>
+            <span className="text-xl md:text-3xl text-slate-400 font-light tracking-widest pb-1 uppercase">Summit Agenda</span>
           </h2>
           <div className="w-16 h-1 mt-6 bg-[#002B5B] rounded-full"></div>
         </div>
 
-        {/* ======================================================= */}
-        {/* 2. 電腦版佈局：展開式雜誌排版 (md 以上顯示) */}
-        {/* ======================================================= */}
+        {/* 2. 電腦版佈局：維持雜誌排版 */}
         <div className="hidden md:flex flex-col gap-32">
           {programs.map((item) => (
-            <div 
-              key={item.id} 
-              className={`flex items-center gap-16 ${item.alignment === 'right' ? 'flex-row-reverse' : 'flex-row'}`}
-            >
-              {/* 照片輪播 */}
+            <div key={item.id} className={`flex items-center gap-16 ${item.alignment === 'right' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className="w-1/2 shrink-0">
                 <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
-                  <Swiper
-                    modules={[Pagination, Autoplay, EffectFade]}
-                    effect="fade"
-                    autoplay={{ delay: 4000, disableOnInteraction: false }}
-                    pagination={{ clickable: true }}
-                    className="w-full h-full"
-                  >
+                  <Swiper modules={[Pagination, Autoplay, EffectFade]} effect="fade" autoplay={{ delay: 4000 }} pagination={{ clickable: true }} className="w-full h-full">
                     {item.images.map((img, idx) => (
-                      <SwiperSlide key={idx}>
-                        <img src={img} className="w-full h-full object-cover" alt="recaps" />
-                      </SwiperSlide>
+                      <SwiperSlide key={idx}><img src={img} className="w-full h-full object-cover" alt="recaps" /></SwiperSlide>
                     ))}
                   </Swiper>
                 </div>
               </div>
-
-              {/* 文字紀實 */}
               <div className="w-1/2">
                 <div className="flex flex-wrap items-center gap-4 mb-6">
-                  <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm">
-                    <Calendar className="w-4 h-4" /> {item.date}
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-500 font-medium text-sm">
-                    <MapPin className="w-4 h-4" /> {item.location}
-                  </div>
+                  <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm"><Calendar className="w-4 h-4" /> {item.date}</div>
+                  <div className="flex items-center gap-2 text-slate-500 font-medium text-sm"><MapPin className="w-4 h-4" /> {item.location}</div>
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">
-                  {item.title}
-                </h3>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">{item.title}</h3>
                 <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
                   {item.content.map((p, i) => <p key={i}>{p}</p>)}
                 </div>
@@ -165,95 +134,54 @@ export default function Program() {
           ))}
         </div>
 
-        {/* ======================================================= */}
-        {/* 3. 手機版佈局：卡片列表 (md 以下顯示) */}
-        {/* ======================================================= */}
+        {/* 3. 手機版佈局：精緻卡片列表 */}
         <div className="md:hidden flex flex-col gap-10">
           {programs.map((item) => (
-            <div 
-              key={item.id} 
-              onClick={() => setSelectedProgram(item)}
-              className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer active:scale-[0.98] transition-transform"
-            >
+            <div key={item.id} onClick={() => setSelectedProgram(item)} className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer active:scale-[0.98] transition-transform">
               <div className="aspect-[16/10] w-full relative">
                 <img src={item.images[0]} className="w-full h-full object-cover" alt="cover" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#002B5B] text-xs font-bold rounded-full shadow-sm">
-                    {item.date}
-                  </span>
-                </div>
+                <div className="absolute top-4 left-4"><span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#002B5B] text-xs font-bold rounded-full shadow-sm">{item.date}</span></div>
               </div>
               <div className="p-8">
-                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium mb-3">
-                  <MapPin className="w-3 h-3" /> {item.location}
-                </div>
-                <h3 className="text-xl font-bold text-slate-800 leading-tight mb-6">
-                  {item.title}
-                </h3>
-                <div className="flex items-center text-[#002B5B] font-bold text-sm tracking-widest">
-                  查看詳情紀實 <ArrowRight className="w-4 h-4 ml-2" />
-                </div>
+                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium mb-3"><MapPin className="w-3 h-3" /> {item.location}</div>
+                <h3 className="text-xl font-bold text-slate-800 leading-tight mb-6">{item.title}</h3>
+                <div className="flex items-center text-[#002B5B] font-bold text-sm tracking-widest">查看詳情紀實 <ArrowRight className="w-4 h-4 ml-2" /></div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
 
-      {/* ======================================================= */}
-      {/* 4. 手機版彈出視窗 (Modal) */}
-      {/* ======================================================= */}
+      {/* 4. 手機版：全螢幕沉浸式詳情頁 (帶有左上返回) */}
       {selectedProgram && (
-        <div 
-          className="fixed inset-0 z-[100] flex items-end md:hidden bg-slate-900/60 backdrop-blur-sm transition-opacity"
-          onClick={() => setSelectedProgram(null)}
-        >
-          <div 
-            className="bg-white rounded-t-[2.5rem] w-full h-[92vh] overflow-y-auto relative shadow-2xl animate-in slide-in-from-bottom duration-500"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* 關閉按鈕 */}
-            <button 
-              onClick={() => setSelectedProgram(null)}
-              className="absolute top-5 right-5 z-50 w-10 h-10 bg-black/40 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-colors"
-            >
-              <X className="w-5 h-5" />
+        <div className="fixed inset-0 z-[100] bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
+          {/* 頂部固定返回導覽列 */}
+          <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-6">
+            <button onClick={() => setSelectedProgram(null)} className="flex items-center gap-2 text-[#002B5B] font-bold">
+              <ArrowLeft className="w-5 h-5" /> 返回議程列表
             </button>
+          </div>
 
-            {/* 彈出視窗內的輪播圖 */}
+          {/* 內容區 */}
+          <div className="pb-32">
             <div className="w-full aspect-[4/3] bg-slate-100">
-              <Swiper
-                modules={[Pagination, Navigation]}
-                pagination={{ type: 'fraction' }}
-                navigation
-                className="w-full h-full"
-              >
+              <Swiper modules={[Pagination, Navigation]} pagination={{ type: 'fraction' }} navigation className="w-full h-full">
                 {selectedProgram.images.map((img, idx) => (
-                  <SwiperSlide key={idx}>
-                    <img src={img} className="w-full h-full object-cover" alt="slide" />
-                  </SwiperSlide>
+                  <SwiperSlide key={idx}><img src={img} className="w-full h-full object-cover" alt="slide" /></SwiperSlide>
                 ))}
               </Swiper>
             </div>
-
-            {/* 彈出視窗內文 */}
-            <div className="p-8 pb-16">
+            <div className="p-8">
               <div className="flex items-center gap-2 text-slate-500 font-mono tracking-widest text-xs mb-4">
-                <Clock className="w-4 h-4" />
-                {selectedProgram.date} ｜ {selectedProgram.location}
+                <Clock className="w-4 h-4" /> {selectedProgram.date} ｜ {selectedProgram.location}
               </div>
-              <h2 className="text-2xl font-bold text-slate-800 leading-snug mb-8">
-                {selectedProgram.title}
-              </h2>
-              <div className="space-y-6 text-slate-600 text-[17px] leading-[1.8] text-justify">
+              <h2 className="text-2xl font-bold text-slate-800 leading-snug mb-8">{selectedProgram.title}</h2>
+              <div className="space-y-6 text-slate-600 text-[17px] leading-[1.8] text-justify font-light">
                 {selectedProgram.content.map((p, i) => <p key={i}>{p}</p>)}
               </div>
-              
               {selectedProgram.liveLink && (
                 <div className="mt-10">
-                  <a href={selectedProgram.liveLink} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 w-full py-4 bg-[#002B5B] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform">
-                    <PlayCircle className="w-5 h-5" /> 觀看直播錄影回放
-                  </a>
+                  <a href={selectedProgram.liveLink} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 w-full py-4 bg-[#002B5B] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform"><PlayCircle className="w-5 h-5" /> 觀看直播錄影回放</a>
                 </div>
               )}
             </div>

@@ -118,7 +118,8 @@ export default function NewsSection() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
             </div>
-            <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
+            {/* ✨ 這裡已將 pb-32 加到這個外層 div 的 class 裡面，解決擋字問題 ✨ */}
+            <div className="p-6 pb-32 sm:p-10 sm:pb-32 md:p-12 pt-2 md:pt-4 bg-white">
               <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
                 <Clock className="w-4 h-4" />
                 {selectedNews.date}
