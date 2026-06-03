@@ -223,7 +223,7 @@ export default function DialogueArchive() {
         
         {/* 標題區 */}
         <div className="flex items-center gap-6 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">歷年國際對話</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">超級運算改變研究方式</h2>
           <div className="h-[2px] flex-grow bg-slate-200"></div>
         </div>
 
