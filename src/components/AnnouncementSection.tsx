@@ -22,8 +22,8 @@ export default function AnnouncementSection() {
                     
                     <p className="flex flex-wrap items-center gap-2 font-bold text-[#002B5B]">
                         如需申請授權或通報疑似誤用，請聯繫：
-                        <a href="mailto:Service@Nsic.Org.Tw" className="hover:underline transition underline-offset-4">
-                            Service@Nsic.Org.Tw
+                        <a href="mailto:Service@nsic.org.tw" className="hover:underline transition underline-offset-4">
+                            Service@nsic.org.tw
                         </a>
                     </p>
                 </div>
