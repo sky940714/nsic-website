@@ -90,7 +90,7 @@ export default function MediaSection() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-slate-100/60 to-slate-50 overflow-hidden relative border-y border-slate-100">
+    <section id="media" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-slate-100/60 to-slate-50 overflow-hidden relative border-y border-slate-100 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* ================================================================= */}
@@ -202,7 +202,6 @@ export default function MediaSection() {
             ))}
           </Swiper>
         </div>
-
 
         {/* ================================================================= */}
         {/* 3. 手機與平板佈局 (Mobile)：1.25張流線卡片，順暢防打架 */}

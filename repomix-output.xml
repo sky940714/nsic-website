@@ -112,9 +112,27 @@ src/
         tfg5.jpg
         tfg6.jpg
         tfg7.jpg
+    202605/
+      niu26/
+        niu1.jpg
+        niu2.jpg
+        niu3.jpg
+        niu4.jpg
+        niu5.jpg
+        niu6.jpg
+        niu7.jpg
+        niu8.jpg
+      ntut26/
+        ntut1.jpg
+        ntut2.jpg
+        ntut3.jpg
+        ntut4.jpg
+        ntut5.jpg
+        ntut6.jpg
     news/
       new1.jpg
       new2.jpg
+      new3.jpg
     about-origin.jpg
     david-macmillan.jpg
     hero-bg-1.jpg
@@ -135,6 +153,7 @@ src/
     president.jpg
     react.svg
     vite.svg
+    whitfield-diffie.jpg
   components/
     AboutSection.tsx
     AnnouncementSection.tsx
@@ -158,6 +177,7 @@ src/
     Home.tsx
     Program.tsx
     Review2025.tsx
+    review2026.tsx
   App.css
   App.tsx
   index.css
@@ -179,6 +199,237 @@ vite.config.ts
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="src/pages/review2026.tsx">
+// src/pages/Review2026.tsx
+
+import { useState, useEffect } from 'react';
+import { Calendar, MapPin, PlayCircle, ArrowLeft, ArrowRight, Clock } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay, EffectFade, Navigation } from 'swiper/modules';
+
+// 引入 Swiper 樣式
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+// 1. 匯入講者介紹組件和相關圖片
+import LaureatesSection from '../components/LaureatesSection';
+import michaelLevittImg from '../assets/michael-levitt.jpg';
+
+// 2. 匯入 2026 活動照片
+import ntut1 from '../assets/202605/ntut26/ntut1.jpg';
+import ntut2 from '../assets/202605/ntut26/ntut2.jpg';
+import ntut3 from '../assets/202605/ntut26/ntut3.jpg';
+import ntut4 from '../assets/202605/ntut26/ntut4.jpg';
+import ntut5 from '../assets/202605/ntut26/ntut5.jpg';
+import ntut6 from '../assets/202605/ntut26/ntut6.jpg';
+
+import niu1 from '../assets/202605/niu26/niu1.jpg';
+import niu2 from '../assets/202605/niu26/niu2.jpg';
+import niu3 from '../assets/202605/niu26/niu3.jpg';
+import niu4 from '../assets/202605/niu26/niu4.jpg';
+import niu5 from '../assets/202605/niu26/niu5.jpg';
+import niu6 from '../assets/202605/niu26/niu6.jpg';
+import niu7 from '../assets/202605/niu26/niu7.jpg';
+import niu8 from '../assets/202605/niu26/niu8.jpg';
+
+// 3. 定義活動和講者資料
+interface ProgramItem {
+  id: number;
+  date: string;
+  location: string;
+  title: string;
+  content: string[];
+  images: string[];
+  liveLink?: string;
+  alignment: 'left' | 'right';
+}
+
+const programs: ProgramItem[] = [
+  {
+    id: 1,
+    date: "2026.05.13",
+    location: "國立臺北科技大學",
+    title: "探索生命與未來｜Michael Levitt 教授國際科學對話",
+    content: [
+      "由諾科獎推動的「國際科學對話」今天於國立臺北科技大學展開。",
+      "2013 年諾貝爾化學獎得主 Michael Levitt 教授，以「從原子到生命：人工智慧如何重塑分子科學並幫助我們理解生命與未來」為題，與現場教授、研究者及國際青年觀察員進行深度交流。",
+      "特別感謝國立臺北科技大學的共同推動與支持，也感謝中央研究院牟中原院士親自出席與引言。",
+      "對諾科獎而言，這不只是一場演講，更是一次讓世界級科學視野與台灣青年、學界彼此靠近的開始。科學真正重要的，不只是知識本身，是如何帶領我們理解生命、文明與未來。",
+      "謝謝今天所有參與的朋友。"
+    ],
+    images: [ntut1, ntut2, ntut3, ntut4, ntut5, ntut6],
+    alignment: 'left'
+  },
+  {
+    id: 2,
+    date: "2026.05.14",
+    location: "國立宜蘭大學",
+    title: "跨世代傳承｜宜大百年校慶 × 諾貝爾大師青年座談",
+    content: [
+      "在國立宜蘭大學百年校慶的重要時刻，由諾科獎國際文教交流協會與宜蘭大學共同主辦的「跨世代傳承－與諾貝爾得主青年座談」於昨日順利完成。",
+      "2013年諾貝爾化學獎得主 Michael Levitt 教授親自來到宜大，與青年學子分享 AI、生命科學與未來世界的視野，中央研究院蔡明道院士共同參與對談。現場令人印象深刻的，不只是世界級科學家的演講，青年學生以英文直接向 Michael Levitt 教授與蔡明道院士提問交流的畫面也令人難忘。",
+      "從諾貝爾獎得主、中央研究院院士，到大學生與高中學生，在同一個場域中自然對話，這正是諾科獎長期希望在台灣推動的國際交流風景。諾科獎始終相信，真正重要的，不只是邀請世界級科學家來到台灣，而是讓台灣青年世代開始擁有與世界對話的勇氣、能力與視野。",
+      "感謝國立宜蘭大學在百年校慶的重要時刻，與諾科獎共同完成這場跨世代的國際科學交流。"
+    ],
+    images: [niu1, niu2, niu3, niu4, niu5, niu6, niu7, niu8],
+    liveLink: "https://reurl.cc/vE4Zmj",
+    alignment: 'right'
+  }
+];
+
+const speakers2026 = [
+  {
+    id: 1,
+    nameCH: "邁可·列維特",
+    nameEN: "Michael Levitt",
+    title: "2013年諾貝爾化學獎得主",
+    image: michaelLevittImg,
+    bio: "他的研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。",
+  }
+];
+
+export default function Review2026() {
+  const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
+
+  useEffect(() => {
+    if (selectedProgram) {
+      window.scrollTo(0, 0);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [selectedProgram]);
+
+  return (
+    <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* 頁面標題 - 已修改 */}
+        <div className="mb-16 md:mb-24 flex flex-col items-center md:items-start">
+          {/*
+            - 標題文字已更換為您指定的內容
+            - 調整字體大小以適應較長的標題 (text-3xl md:text-4xl)
+            - 移除英文副標題
+          */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#002B5B] tracking-wide leading-tight md:leading-snug">
+            人工智慧如何改變生命科學與未來社會
+          </h2>
+          <div className="w-16 h-1 mt-6 bg-[#002B5B] rounded-full"></div>
+        </div>
+
+        {/* 電腦版佈局：雜誌排版 */}
+        <div className="hidden md:flex flex-col gap-32">
+          {programs.map((item) => (
+            <div key={item.id} className={`flex items-center gap-16 ${item.alignment === 'right' ? 'flex-row-reverse' : 'flex-row'}`}>
+              <div className="w-1/2 shrink-0">
+                <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
+                  <Swiper modules={[Pagination, Autoplay, EffectFade]} effect="fade" autoplay={{ delay: 4000 }} pagination={{ clickable: true }} className="w-full h-full">
+                    {item.images.map((img, idx) => (
+                      <SwiperSlide key={idx}><img src={img} className="w-full h-full object-cover" alt="recaps" /></SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+              </div>
+              <div className="w-1/2">
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm"><Calendar className="w-4 h-4" /> {item.date}</div>
+                  <div className="flex items-center gap-2 text-slate-500 font-medium text-sm"><MapPin className="w-4 h-4" /> {item.location}</div>
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">{item.title}</h3>
+                <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
+                  {item.content.map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+                {item.liveLink && (
+                  <div className="mt-8">
+                    <a href={item.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#002B5B] text-white text-sm font-bold tracking-widest rounded-full hover:bg-blue-800 transition-all">
+                      <PlayCircle className="w-5 h-5" /> 觀看直播回放
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* 手機版佈局：精緻卡片列表 */}
+        <div className="md:hidden flex flex-col gap-10">
+          {programs.map((item) => (
+            <div key={item.id} onClick={() => setSelectedProgram(item)} className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer active:scale-[0.98] transition-transform">
+              <div className="aspect-[16/10] w-full relative">
+                <img src={item.images[0]} className="w-full h-full object-cover" alt="cover" />
+                <div className="absolute top-4 left-4"><span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#002B5B] text-xs font-bold rounded-full shadow-sm">{item.date}</span></div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium mb-3"><MapPin className="w-3 h-3" /> {item.location}</div>
+                <h3 className="text-xl font-bold text-slate-800 leading-tight mb-6">{item.title}</h3>
+                <div className="flex items-center text-[#002B5B] font-bold text-sm tracking-widest">查看詳情紀實 <ArrowRight className="w-4 h-4 ml-2" /></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* 手機版：全螢幕沉浸式詳情頁 */}
+      {selectedProgram && (
+        <div className="fixed top-20 inset-x-0 bottom-0 z-40 bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
+          <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-6">
+            <button onClick={() => setSelectedProgram(null)} className="flex items-center gap-2 text-[#002B5B] font-bold">
+              <ArrowLeft className="w-5 h-5" /> 返回
+            </button>
+          </div>
+          <div className="pb-32 bg-white">
+            <div className="w-full aspect-[4/3] px-5 pt-6 pb-2">
+              <Swiper 
+                modules={[Pagination, Navigation]} 
+                pagination={{ clickable: true }}
+                navigation 
+                style={{
+                  '--swiper-navigation-color': 'rgba(255, 255, 255, 0.85)',
+                  '--swiper-navigation-size': '22px',
+                  '--swiper-pagination-color': '#002B5B',
+                  '--swiper-pagination-bullet-inactive-color': '#cbd5e1',
+                  textShadow: '0px 1px 3px rgba(0,0,0,0.4)'
+                } as React.CSSProperties}
+                className="w-full h-full rounded-2xl overflow-hidden shadow-md border border-slate-100"
+              >
+                {selectedProgram.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img src={img} className="w-full h-full object-cover" alt="slide" />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="p-8">
+              <div className="flex items-center gap-2 text-slate-500 font-mono tracking-widest text-xs mb-4">
+                <Clock className="w-4 h-4" /> {selectedProgram.date} ｜ {selectedProgram.location}
+              </div>
+              <h2 className="text-2xl font-bold text-slate-800 leading-snug mb-8">{selectedProgram.title}</h2>
+              <div className="space-y-6 text-slate-600 text-[17px] leading-[1.8] text-justify font-light">
+                {selectedProgram.content.map((p, i) => <p key={i}>{p}</p>)}
+              </div>
+              {selectedProgram.liveLink && (
+                <div className="mt-10">
+                  <a href={selectedProgram.liveLink} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 w-full py-4 bg-[#002B5B] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform"><PlayCircle className="w-5 h-5" /> 觀看直播錄影回放</a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* 講者介紹區塊 */}
+      <div className="mt-12 md:mt-24 bg-white border-t border-slate-100">
+        <LaureatesSection pageTitle="2026 春季場 科學大師" laureates={speakers2026} />
+      </div>
+
+    </div>
+  );
+}
+</file>
 
 <file path="public/favicon.svg">
 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" fill="none" viewBox="0 0 48 46"><path fill="#863bff" d="M25.946 44.938c-.664.845-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.287c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.497 0-3.578-1.842-3.578H1.237c-.92 0-1.456-1.04-.92-1.788L10.013.474c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.579 1.842 3.579h11.377c.943 0 1.473 1.088.89 1.83L25.947 44.94z" style="fill:#863bff;fill:color(display-p3 .5252 .23 1);fill-opacity:1"/><mask id="a" width="48" height="46" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#000" d="M25.842 44.938c-.664.844-2.021.375-2.021-.698V33.937a2.26 2.26 0 0 0-2.262-2.262H10.183c-.92 0-1.456-1.04-.92-1.788l7.48-10.471c1.07-1.498 0-3.579-1.842-3.579H1.133c-.92 0-1.456-1.04-.92-1.787L9.91.473c.214-.297.556-.474.92-.474h28.894c.92 0 1.456 1.04.92 1.788l-7.48 10.471c-1.07 1.498 0 3.578 1.842 3.578h11.377c.943 0 1.473 1.088.89 1.832L25.843 44.94z" style="fill:#000;fill-opacity:1"/></mask><g mask="url(#a)"><g filter="url(#b)"><ellipse cx="5.508" cy="14.704" fill="#ede6ff" rx="5.508" ry="14.704" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -4.47 31.516)"/></g><g filter="url(#c)"><ellipse cx="10.399" cy="29.851" fill="#ede6ff" rx="10.399" ry="29.851" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -39.328 7.883)"/></g><g filter="url(#d)"><ellipse cx="5.508" cy="30.487" fill="#7e14ff" rx="5.508" ry="30.487" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -25.913 -14.639)scale(1 -1)"/></g><g filter="url(#e)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.814 -32.644 -3.334)scale(1 -1)"/></g><g filter="url(#f)"><ellipse cx="5.508" cy="30.599" fill="#7e14ff" rx="5.508" ry="30.599" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="matrix(.00324 1 1 -.00324 -34.34 30.47)"/></g><g filter="url(#g)"><ellipse cx="14.072" cy="22.078" fill="#ede6ff" rx="14.072" ry="22.078" style="fill:#ede6ff;fill:color(display-p3 .9275 .9033 1);fill-opacity:1" transform="rotate(93.35 24.506 48.493)scale(-1 1)"/></g><g filter="url(#h)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#i)"><ellipse cx="3.47" cy="21.501" fill="#7e14ff" rx="3.47" ry="21.501" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(89.009 28.708 47.59)scale(-1 1)"/></g><g filter="url(#j)"><ellipse cx=".387" cy="8.972" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(39.51 .387 8.972)"/></g><g filter="url(#k)"><ellipse cx="47.523" cy="-6.092" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 47.523 -6.092)"/></g><g filter="url(#l)"><ellipse cx="41.412" cy="6.333" fill="#47bfff" rx="5.971" ry="9.665" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 41.412 6.333)"/></g><g filter="url(#m)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#n)"><ellipse cx="-1.879" cy="38.332" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 -1.88 38.332)"/></g><g filter="url(#o)"><ellipse cx="35.651" cy="29.907" fill="#7e14ff" rx="4.407" ry="29.108" style="fill:#7e14ff;fill:color(display-p3 .4922 .0767 1);fill-opacity:1" transform="rotate(37.892 35.651 29.907)"/></g><g filter="url(#p)"><ellipse cx="38.418" cy="32.4" fill="#47bfff" rx="5.971" ry="15.297" style="fill:#47bfff;fill:color(display-p3 .2799 .748 1);fill-opacity:1" transform="rotate(37.892 38.418 32.4)"/></g></g><defs><filter id="b" width="60.045" height="41.654" x="-19.77" y="16.149" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="c" width="90.34" height="51.437" x="-54.613" y="-7.533" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="d" width="79.355" height="29.4" x="-49.64" y="2.03" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="e" width="79.579" height="29.4" x="-45.045" y="20.029" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="f" width="79.579" height="29.4" x="-43.513" y="21.178" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="g" width="74.749" height="58.852" x="15.756" y="-17.901" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="7.659"/></filter><filter id="h" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="i" width="61.377" height="25.362" x="23.548" y="2.284" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="j" width="56.045" height="63.649" x="-27.636" y="-22.853" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="k" width="54.814" height="64.646" x="20.116" y="-38.415" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="l" width="33.541" height="35.313" x="24.641" y="-11.323" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="m" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="n" width="54.814" height="64.646" x="-29.286" y="6.009" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="o" width="54.814" height="64.646" x="8.244" y="-2.416" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter><filter id="p" width="39.409" height="43.623" x="18.713" y="10.588" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_2002_17158" stdDeviation="4.596"/></filter></defs></svg>
@@ -616,11 +867,16 @@ createRoot(document.getElementById('root')!).render(
 </file>
 
 <file path="src/vite-env.d.ts">
+// src/vite-env.d.ts
+
 /// <reference types="vite/client" />
 
 declare module 'swiper/css';
 declare module 'swiper/css/navigation';
 declare module 'swiper/css/pagination';
+
+// 👇👇👇 請在這裡新增下面這一行 👇👇👇
+declare module 'swiper/css/effect-fade';
 </file>
 
 <file path=".gitignore">
@@ -849,6 +1105,10 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // 👇 加上這段設定
+  server: {
+    open: true // 這會讓 Vite 在啟動後自動打開您的預設瀏覽器
+  }
 })
 </file>
 
@@ -1022,7 +1282,7 @@ export default function Review2025() {
 
       {/* 2. 參與大師介紹 (白色背景) */}
       <div className="bg-white border-t border-white/10">
-        <LaureatesSection pageTitle="2025 參與科學大師" laureates={data2025} />
+        <LaureatesSection pageTitle="2025 科學大師" laureates={data2025} />
       </div>
     </div>
   );
@@ -1202,7 +1462,6 @@ export default function AboutSection() {
                </div>
             </div>
           </div>
-
           {/* 右側：文字區 */}
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="space-y-2">
@@ -1226,44 +1485,10 @@ export default function AboutSection() {
 }
 </file>
 
-<file path="src/components/AnnouncementSection.tsx">
-export default function AnnouncementSection() {
-    return (
-        <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6">
-                {/* 標題優化：手機版強制斷行，電腦版維持一行 */}
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">
-                    諾科獎國際文教交流協會<br className="md:hidden" />中立公告暨名義使用說明
-                </h2>
-                
-                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
-                    <p>諾科獎為以公益、教育與國際交流為核心之非營利組織，秉持中立與獨立原則運作。不為任何政黨、候選人或政治團體背書、宣傳，亦不涉及特定宗教立場。</p>
-                    
-                    <p>在不影響理念獨立、內容自主與公共責任之前提下，諾科獎得進行必要之合作與資源支持。惟任何合作不得干預本會之治理、活動內容、講者安排或關鍵決策。</p>
-                    
-                    <p>未經事前書面授權，任何個人或單位不得使用諾科獎之名稱、標誌或相關識別進行宣傳、合作聲稱、活動舉辦、商品販售或募款等行為，以避免造成誤認或混淆。媒體報導及學術引用如未造成誤導者，不在此限。</p>
-                    
-                    <p>如有誤用或不當使用情形，諾科獎得要求停止、修正或移除，並保留依法處理之權利。</p>
-                    
-                    <p className="pt-4 border-t border-slate-100 font-medium text-slate-500">
-                        本公告為長期適用原則，旨在維護本會之公益性、獨立性與公信力。
-                    </p>
-                    
-                    <p className="flex flex-wrap items-center gap-2 font-bold text-[#002B5B]">
-                        如需申請授權或通報疑似誤用，請聯繫：
-                        <a href="mailto:Service@Nsic.Org.Tw" className="hover:underline transition underline-offset-4">
-                            Service@Nsic.Org.Tw
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </section>
-    );
-}
-</file>
-
 <file path="src/App.tsx">
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// src/App.tsx
+
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -1272,7 +1497,8 @@ import Guests from './pages/Guests';
 import Contact from './pages/Contact';
 import Review2025 from './pages/Review2025';
 import Program from './pages/Program';
-import EventDetail from './pages/EventDetail'; // 👈 待會建立此頁面
+import EventDetail from './pages/EventDetail';
+import Review2026 from './pages/review2026';
 
 function App() {
   return (
@@ -1280,15 +1506,22 @@ function App() {
       <div className="min-h-screen bg-white flex flex-col">
         <Navbar />
         
-        {/* 主要內容區塊會根據網址變化 */}
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/guests" element={<Guests />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/review-2025" element={<Review2025 />} />
             <Route path="/program" element={<Program />} />
-            <Route path="/archive/:id" element={<EventDetail />} /> {/* 👈 動態路由 */}
+            <Route path="/archive/:id" element={<EventDetail />} />
+
+            {/* 更新為更有語意化的路徑 */}
+            <Route path="/review/2026-spring" element={<Review2026 />} />
+            <Route path="/review/2025" element={<Review2025 />} />
+            
+            {/* 為了相容舊連結，設定重定向 (Redirect) */}
+            <Route path="/review-2026" element={<Navigate to="/review/2026-spring" replace />} />
+            <Route path="/review-2025" element={<Navigate to="/review/2025" replace />} />
+
           </Routes>
         </main>
 
@@ -1386,217 +1619,6 @@ export default function Footer() {
 }
 </file>
 
-<file path="src/components/MediaSection.tsx">
-import { ExternalLink } from 'lucide-react';
-
-interface MediaItem {
-  id: number;
-  date: string;
-  source: string;
-  title: string;
-  url: string;
-}
-
-const mediaData: MediaItem[] = [
-  {
-    id: 4,
-    date: "2026.05.13",
-    source: "工商時報",
-    title: "2026 諾科獎國際科學對話揭幕，Michael Levitt 分享分子科學願景",
-    url: "https://www.ctee.com.tw/news/20260513701602-431204",
-  },
-  {
-    id: 1,
-    date: "2026.05.13",
-    source: "更生日報",
-    title: "諾貝爾得主訪國立學校、推動科學育苗計畫",
-    url: "https://www.ksnews.com.tw/e/101231",
-  },
-  {
-    id: 5,
-    date: "2026.05.11",
-    source: "Yahoo新聞",
-    title: "Michael Levitt 來台啟動 2026 諾科獎國際科學對話",
-    url: "https://tw.news.yahoo.com/michael-levitt%E4%BE%86%E5%8F%B0%E5%95%9F%E5%8B%952026%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E7%A7%91%E5%AD%B8%E5%B0%8D%E8%A9%B1-120426563.html",
-  },
-  {
-    id: 3,
-    date: "2026.05.11",
-    source: "更生日報",
-    title: "諾貝爾大師 Michael Levitt 抵台，2026 諾科獎峰會點燃科學熱情",
-    url: "https://www.ksnews.com.tw/e/100429",
-  },
-  {
-    id: 2,
-    date: "2026.05.11",
-    source: "經濟日報",
-    title: "諾貝爾化學獎得主Michael Levitt五月來台 啟動諾科獎國際科學對話",
-    url: "https://share.google/AaiuM8293HGQZzKUx",
-  },
-];
-
-export default function MediaSection() {
-  return (
-    <section className="pt-16 pb-6 md:pt-24 md:pb-12 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        <div className="flex items-center gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
-            媒體報導 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Media Coverage</span>
-          </h2>
-          <div className="h-[1px] flex-grow bg-slate-100"></div>
-        </div>
-
-        <div className="divide-y divide-slate-100 border-t border-slate-100">
-          {mediaData.map((item) => (
-            <a
-              key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col md:flex-row md:items-center py-5 md:py-8 gap-3 md:gap-12 transition-all hover:bg-slate-50/50 px-4 -mx-4 rounded-xl"
-            >
-              <div className="flex items-center gap-4 md:contents">
-                <div className="text-slate-400 font-mono text-sm md:text-lg shrink-0">
-                  {item.date}
-                </div>
-
-                <div className="shrink-0">
-                  <span className="px-3 py-1 md:px-4 md:py-1.5 bg-blue-50 text-[#002B5B] text-[10px] md:text-sm font-bold rounded shadow-sm border border-blue-100 uppercase tracking-widest">
-                    {item.source}
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex-grow">
-                <h3 className="text-base md:text-xl font-bold text-slate-700 group-hover:text-[#002B5B] transition-colors leading-snug">
-                  {item.title}
-                </h3>
-              </div>
-
-              <div className="hidden md:flex items-center gap-2 text-slate-300 group-hover:text-[#002B5B] group-hover:translate-x-1 transition-all">
-                <span className="text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">READ ARTICLE</span>
-                <ExternalLink className="w-5 h-5" />
-              </div>
-              
-              <div className="md:hidden flex items-center text-[#002B5B] text-xs font-bold">
-                閱讀全文 →
-              </div>
-            </a>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
-}
-</file>
-
-<file path="src/pages/Program.tsx">
-import { Calendar, MapPin, Users, BookOpen } from 'lucide-react';
-
-export default function Program() {
-    return (
-        <div className="pt-32 pb-24 bg-white min-h-screen">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6">
-                
-                {/* 1. 頁面標題：手機版上下排列，電腦版維持左右並排 */}
-                <div className="mb-16">
-                    <h2 className="flex flex-col md:flex-row md:items-end gap-2 md:gap-4 font-bold text-slate-800">
-                        <span className="text-4xl" style={{ color: '#0A2540' }}>
-                            <span className="mr-2">✦</span>峰會議程
-                        </span>
-                        <span className="text-2xl md:text-4xl text-slate-400 font-light tracking-tight pb-1">
-                            Summit Agenda
-                        </span>
-                    </h2>
-                    <div className="w-12 h-1 mt-6" style={{ backgroundColor: '#0A2540' }}></div>
-                </div>
-
-                {/* 2. 議程列表 */}
-                <div className="space-y-12">
-                    
-                    {/* --- 5/13 台北場次 --- */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
-                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
-                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
-                                <Calendar className="w-5 h-5" />
-                                2026年5月13日｜台北
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-600 font-medium">
-                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
-                                國立台北科技大學
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
-                                </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
-                                    人工智慧與分子科學：理解生命與人類未來
-                                </p>
-                                {/* 手機版英文調整：縮小字體並確保在一行 (或在寬度內自然呈現) */}
-                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
-                                    Artificial Intelligence and Molecular Science: Understanding Life and the Future of Humanity
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
-                                </h3>
-                                <p className="text-lg text-slate-700">學術領袖與產業決策者</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* --- 5/14 宜蘭場次 --- */}
-                    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-[2px] hover:border-[#392061] transition-all duration-300">
-                        <div className="flex flex-col md:flex-row md:items-center gap-4 mb-8 border-b border-slate-200 pb-6">
-                            <div className="text-white px-4 py-2 rounded-lg font-bold flex items-center gap-2 transition-colors duration-300 hover:bg-[#174EA6]" style={{ backgroundColor: '#0A2540' }}>
-                                <Calendar className="w-5 h-5" />
-                                2026年5月14日｜宜蘭
-                            </div>
-                            <div className="flex items-center gap-2 text-slate-600 font-medium">
-                                <MapPin className="w-5 h-5" style={{ color: '#2C5282' }} />
-                                國立宜蘭大學
-                            </div>
-                        </div>
-
-                        <div className="space-y-6">
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <BookOpen className="w-4 h-4" style={{ color: '#2C5282' }} /> 主題 Theme
-                                </h3>
-                                <p className="text-2xl font-bold text-slate-800 leading-tight mb-2">
-                                    人工智慧如何改變生命科學與未來社會
-                                </p>
-                                {/* 手機版英文調整 */}
-                                <p className="text-[13px] md:text-base text-slate-500 italic font-light leading-snug">
-                                    How Artificial Intelligence is Transforming Life Sciences and Future Society
-                                </p>
-                            </div>
-
-                            <div>
-                                <h3 className="text-sm font-bold uppercase tracking-wider mb-2 flex items-center gap-2" style={{ color: '#0A2540' }}>
-                                    <Users className="w-4 h-4" style={{ color: '#2C5282' }} /> 對象 Target Audience
-                                </h3>
-                                <p className="text-lg text-slate-700">
-                                    大學生、青年學子及教育界人士 <span className="text-slate-400 text-sm ml-1">（約250人）</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    );
-}
-</file>
-
 <file path="package.json">
 {
   "name": "nsic-website",
@@ -1634,6 +1656,315 @@ export default function Program() {
     "typescript-eslint": "^8.57.0",
     "vite": "^8.0.1"
   }
+}
+</file>
+
+<file path="src/components/AnnouncementSection.tsx">
+export default function AnnouncementSection() {
+    return (
+        <section className="py-24 bg-white">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6">
+                {/* 標題優化：手機版強制斷行，電腦版維持一行 */}
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-12 text-center animate-on-scroll is-visible">
+                    諾科獎國際文教交流協會<br className="md:hidden" />中立公告暨名義使用說明
+                </h2>
+                
+                <div className="space-y-6 text-slate-600 leading-relaxed text-justify animate-on-scroll is-visible delay-100">
+                    <p>諾科獎為以公益、教育與國際交流為核心之非營利組織，秉持中立與獨立原則運作。不為任何政黨、候選人或政治團體背書、宣傳，亦不涉及特定宗教立場。</p>
+                    
+                    <p>在不影響理念獨立、內容自主與公共責任之前提下，諾科獎得進行必要之合作與資源支持。惟任何合作不得干預本會之治理、活動內容、講者安排或關鍵決策。</p>
+                    
+                    <p>未經事前書面授權，任何個人或單位不得使用諾科獎之名稱、標誌或相關識別進行宣傳、合作聲稱、活動舉辦、商品販售或募款等行為，以避免造成誤認或混淆。媒體報導及學術引用如未造成誤導者，不在此限。</p>
+                    
+                    <p>如有誤用或不當使用情形，諾科獎得要求停止、修正或移除，並保留依法處理之權利。</p>
+                    
+                    <p className="pt-4 border-t border-slate-100 font-medium text-slate-500">
+                        本公告為長期適用原則，旨在維護本會之公益性、獨立性與公信力。
+                    </p>
+                    
+                    <p className="flex flex-wrap items-center gap-2 font-bold text-[#002B5B]">
+                        如需申請授權或通報疑似誤用，請聯繫：
+                        <a href="mailto:service@nsic.org.tw" className="hover:underline transition underline-offset-4">
+                            service@nsic.org.tw
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    );
+}
+</file>
+
+<file path="src/components/MediaSection.tsx">
+import { useState } from 'react';
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+
+// 引入 Swiper 核心樣式
+import 'swiper/css';
+
+interface MediaItem {
+  id: number;
+  date: string;
+  source: string;
+  title: string;
+  url: string;
+}
+
+// 已替換為最新的真實報導，並依照日期由新到舊排序
+const mediaData: MediaItem[] = [
+  {
+    id: 1,
+    date: "2026.05.14",
+    source: "葛瑪蘭新聞網",
+    title: "跨世代傳承 宜大百年校慶邀諾貝爾大師 Levitt 座談",
+    url: "https://www.kamalan-news.com/local/18/18055",
+  },
+  {
+    id: 2,
+    date: "2026.05.14",
+    source: "Yahoo新聞",
+    title: "宜大慶百年 諾貝爾獎大師與青年座談",
+    url: "https://tw.news.yahoo.com/%E5%AE%9C%E5%A4%A7%E6%85%B6%E7%99%BE%E5%B9%B4-%E8%AB%BE%E8%B2%9D%E7%88%BE%E7%8D%8E%E5%A4%A7%E5%B8%AB%E8%88%87%E9%9D%92%E5%B9%B4%E5%BA%A7%E8%AB%87-124003044.html",
+  },
+  {
+    id: 3,
+    date: "2026.05.14",
+    source: "蕃薯藤",
+    title: "國立宜蘭大學創校百週年 舉辦諾貝爾大師與青年交流座談",
+    url: "https://n.yam.com/Article/20260514696675",
+  },
+  {
+    id: 4,
+    date: "2026.05.13",
+    source: "工商時報",
+    title: "2026 諾科獎國際科學對話揭幕，Michael Levitt 分享分子科學願景",
+    url: "https://www.ctee.com.tw/news/20260513701602-431204",
+  },
+  {
+    id: 5,
+    date: "2026.05.13",
+    source: "更生日報",
+    title: "諾貝爾得主訪國立學校、推動科學育苗計畫",
+    url: "https://www.ksnews.com.tw/e/101231",
+  },
+  {
+    id: 6,
+    date: "2026.05.11",
+    source: "Yahoo新聞",
+    title: "Michael Levitt 來台啟動 2026 諾科獎國際科學對話",
+    url: "https://tw.news.yahoo.com/michael-levitt%E4%BE%86%E5%8F%B0%E5%95%9F%E5%8B%952026%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E7%A7%91%E5%AD%B8%E5%B0%8D%E8%A9%B1-120426563.html",
+  },
+  {
+    id: 7,
+    date: "2026.05.11",
+    source: "更生日報",
+    title: "諾貝爾大師 Michael Levitt 抵台，2026 諾科獎峰會點燃科學熱情",
+    url: "https://www.ksnews.com.tw/e/100429",
+  },
+  {
+    id: 8,
+    date: "2026.05.11",
+    source: "經濟日報",
+    title: "諾貝爾化學獎得主 Michael Levitt 五月來台 啟立諾科獎國際科學對話",
+    url: "https://share.google/AaiuM8293HGQZzKUx",
+  },
+];
+
+export default function MediaSection() {
+  // 電腦版 Swiper 實體與狀態
+  const [desktopSwiper, setDesktopSwiper] = useState<SwiperType | null>(null);
+  const [desktopActiveIndex, setDesktopActiveIndex] = useState(0);
+
+  // 手機版 Swiper 底部進度條百分比 (0~100)
+  const [mobileProgress, setMobileProgress] = useState(0);
+
+  // 將資料每 4 筆切分為一個陣列 (供電腦版 SwiperSlide 使用)
+  const chunkedMediaForDesktop = [];
+  for (let i = 0; i < mediaData.length; i += 4) {
+    chunkedMediaForDesktop.push(mediaData.slice(i, i + 4));
+  }
+
+  return (
+    <section className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-slate-100/60 to-slate-50 overflow-hidden relative border-y border-slate-100">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* ================================================================= */}
+        {/* 1. 區塊頂部標頭與導覽 (Title & Navigation) */}
+        {/* ================================================================= */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#002B5B] rounded-full"></span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-slate-800">
+                媒體報導
+              </h2>
+            </div>
+            <p className="text-xs md:text-sm tracking-[0.25em] text-slate-400 font-light uppercase">
+              NSIC Media Coverage
+            </p>
+          </div>
+
+          {/* 電腦版專屬：頂級精品質感的頁碼與箭頭導覽 */}
+          <div className="hidden lg:flex items-center gap-6 select-none">
+            {/* 頁碼：01 / 02 */}
+            <div className="flex items-center font-mono text-sm tracking-widest">
+              <span className="text-[#002B5B] font-bold text-lg">
+                {String(desktopActiveIndex + 1).padStart(2, '0')}
+              </span>
+              <span className="mx-3 text-slate-300">/</span>
+              <span className="text-slate-400">
+                {String(chunkedMediaForDesktop.length).padStart(2, '0')}
+              </span>
+            </div>
+            {/* 左右切換按鈕 */}
+            <div className="flex gap-2">
+              <button 
+                onClick={() => desktopSwiper?.slidePrev()}
+                className={`w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center transition-all ${
+                  desktopActiveIndex === 0 
+                    ? 'opacity-30 cursor-not-allowed bg-white' 
+                    : 'bg-white hover:bg-[#002B5B] hover:text-white hover:border-[#002B5B] shadow-sm'
+                }`}
+                aria-label="上一頁"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </button>
+              <button 
+                onClick={() => desktopSwiper?.slideNext()}
+                className={`w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center transition-all ${
+                  desktopActiveIndex === chunkedMediaForDesktop.length - 1 
+                    ? 'opacity-30 cursor-not-allowed bg-white' 
+                    : 'bg-white hover:bg-[#002B5B] hover:text-white hover:border-[#002B5B] shadow-sm'
+                }`}
+                aria-label="下一頁"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* ================================================================= */}
+        {/* 2. 電腦版佈局 (Desktop)：每頁 4 列的精緻列表，原地無縫滑動 */}
+        {/* ================================================================= */}
+        <div className="hidden lg:block bg-white/80 backdrop-blur-md rounded-3xl p-4 shadow-xl shadow-slate-200/50 border border-white">
+          <Swiper
+            modules={[Navigation]}
+            speed={700}
+            allowTouchMove={true}
+            onSwiper={setDesktopSwiper}
+            onSlideChange={(swiper) => setDesktopActiveIndex(swiper.activeIndex)}
+            className="w-full h-auto"
+          >
+            {chunkedMediaForDesktop.map((group, pageIndex) => (
+              <SwiperSlide key={pageIndex}>
+                <div className="divide-y divide-slate-100/80">
+                  {group.map((item) => (
+                    <a
+                      key={item.id}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center py-6 px-6 gap-10 transition-all hover:bg-slate-50/70 rounded-2xl"
+                    >
+                      {/* 左側：日期與來源 */}
+                      <div className="flex items-center gap-6 shrink-0 w-[240px]">
+                        <div className="text-slate-400 font-mono text-base tracking-wider shrink-0">
+                          {item.date}
+                        </div>
+                        <div className="shrink-0 border-l-2 border-[#002B5B]/30 pl-4">
+                          <span className="text-xs font-bold tracking-[0.15em] text-[#002B5B] uppercase block">
+                            {item.source}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* 中間：新聞標題 */}
+                      <div className="flex-grow">
+                        <h3 className="text-base md:text-lg font-bold text-slate-700 group-hover:text-[#002B5B] transition-colors leading-relaxed line-clamp-1">
+                          {item.title}
+                        </h3>
+                      </div>
+
+                      {/* 右側：隱形懸浮箭頭 */}
+                      <div className="text-slate-300 group-hover:text-[#002B5B] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all shrink-0">
+                        <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+
+        {/* ================================================================= */}
+        {/* 3. 手機與平板佈局 (Mobile)：1.25張流線卡片，順暢防打架 */}
+        {/* ================================================================= */}
+        <div className="lg:hidden -mx-6 px-6">
+          <Swiper
+            speed={500}
+            slidesPerView={1.2} /* 露出下一張卡片的邊緣，暗示可滑動 */
+            spaceBetween={20}
+            breakpoints={{
+              640: { slidesPerView: 2.2, spaceBetween: 24 }
+            }}
+            onProgress={(_, progress) => {
+              // 取得目前滑動百分比 (0 到 1) 轉換成 0~100
+              setMobileProgress(Math.max(0, Math.min(progress * 100, 100)));
+            }}
+            className="w-full !overflow-visible pb-4"
+          >
+            {mediaData.map((item) => (
+              <SwiperSlide key={item.id} className="h-auto">
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col justify-between p-6 h-full min-h-[220px] bg-white rounded-2xl border border-slate-200/60 shadow-md shadow-slate-100/50 active:scale-[0.98] transition-transform"
+                >
+                  <div className="space-y-4">
+                    {/* 頂部資訊列 */}
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                      <span className="text-xs font-mono font-medium text-slate-400 tracking-wider">
+                        {item.date}
+                      </span>
+                      <span className="text-[11px] font-bold text-[#002B5B] tracking-widest uppercase bg-blue-50/80 px-2.5 py-1 rounded">
+                        {item.source}
+                      </span>
+                    </div>
+
+                    {/* 標題 */}
+                    <h3 className="text-[15px] sm:text-base font-bold text-slate-800 leading-snug line-clamp-4">
+                      {item.title}
+                    </h3>
+                  </div>
+
+                  {/* 底部導引閱讀 */}
+                  <div className="flex items-center justify-end text-xs font-bold text-[#002B5B] tracking-wider gap-1 pt-4 mt-auto">
+                    閱讀全文 <ArrowUpRight className="w-3.5 h-3.5" />
+                  </div>
+                </a>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* 手機版專屬：底部極細流動進度條 */}
+          <div className="mt-6 mx-auto w-24 h-[2px] bg-slate-200/60 rounded-full relative overflow-hidden">
+            <div 
+              className="absolute top-0 left-0 h-full bg-[#002B5B] transition-all duration-200 ease-out rounded-full"
+              style={{ width: `${Math.max(mobileProgress, 20)}%` }} // 至少顯示 20% 寬度，避免一開始看不見
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
 }
 </file>
 
@@ -1692,65 +2023,80 @@ export default function AboutSection() {
 </file>
 
 <file path="src/pages/Guests.tsx">
-import michaelLevittImg from '../assets/michael-levitt.jpg';
+// src/pages/Guests.tsx
 
-// 1. 只保留主要貴賓
-const mainMasters = [
-  {
-    id: 1,
-    nameZh: "邁可·列維特",
-    nameEn: "MICHAEL LEVITT",
-    title: "2013年諾貝爾化學獎得主",
-    image: michaelLevittImg,
-    description: "1947年，列維特在南非開普敦出生。他致力於蛋白質的電腦模擬，這一領域在當時剛剛起步，他開發了第一個計算蛋白質分子動力學的程式。\n\n他的研究以計算科學方法解析生命系統，為人類理解複雜世界提供新的視角，也深刻影響當代科學與科技的發展方向。",
-  }
-];
+// 此頁面內容已合併至「活動內容」頁面，故留空或可刪除。
+// 為了避免路由出錯，暫時保留此檔案並導出一個空組件。
 
 export default function Guests() {
+  return null; // 返回 null，此路由將不會渲染任何內容
+}
+</file>
+
+<file path="src/components/LaureatesSection.tsx">
+interface Laureate {
+  id: number;
+  nameCH: string;
+  nameEN: string;
+  title: string;
+  image: string;
+  bio: string;
+}
+
+interface Props {
+  pageTitle?: string;
+  laureates: Laureate[];
+}
+
+export default function LaureatesSection({ pageTitle = "科學大師陣容", laureates }: Props) {
   return (
-    <div className="bg-white min-h-screen pt-32 pb-20">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         
-        {/* 頁面標題：已更改為「本年度受邀科學家」 */}
-        <div className="text-center mb-16 md:mb-24">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">本年度受邀科學家</h1>
-          <div className="w-12 h-1 bg-[#002B5B] mx-auto rounded-full"></div>
+        {/* 標題區塊 */}
+        <div className="text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">{pageTitle}</h2>
+          <div className="w-12 h-1 bg-[#002B5B] mx-auto mt-6 rounded-full"></div>
         </div>
 
-        {/* 主要貴賓介紹區塊 (左圖右文，手機版自動上下排列) */}
-        <div className="max-w-5xl mx-auto">
-          {mainMasters.map(master => (
-            <div key={master.id} className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        {/* 橫向並排網格：手機版1欄、平板2欄、電腦4欄 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          {laureates.map((person) => (
+            <div key={person.id} className="flex flex-col items-center text-center group">
               
-              {/* 左側：照片 */}
-              <div className="w-full md:w-5/12 shrink-0">
-                <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-slate-100 relative group">
+              {/* 照片區塊：限制最大寬度，確保手機版照片大小適中 */}
+              <div className="relative w-2/3 sm:w-full max-w-[240px] aspect-[3/4] mb-8">
+                {/* 底部旋轉裝飾框 */}
+                <div className="absolute inset-0 border-2 border-slate-200 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+                {/* 照片本體 */}
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-50">
                   <img 
-                    src={master.image} 
+                    src={person.image} 
+                    alt={person.nameCH} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                    alt={master.nameZh} 
                   />
                 </div>
               </div>
 
-              {/* 右側：文字介紹 */}
-              <div className="w-full md:w-7/12 flex flex-col justify-center space-y-6">
-                <div>
-                  <span className="inline-block px-4 py-1.5 bg-[#002B5B] text-white text-sm font-bold rounded-full mb-6 shadow-sm">
-                    {master.title}
-                  </span>
-                  
-                  <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-2">{master.nameZh}</h2>
-                  <p className="text-xl tracking-widest text-slate-400 font-medium uppercase mb-6">{master.nameEn}</p>
-                  
-                  <div className="w-12 h-[2px] bg-slate-200 mb-6"></div>
-                </div>
+              {/* 文字資訊區塊 */}
+              <div className="flex flex-col items-center w-full px-2">
                 
-                <div className="text-slate-600 text-lg leading-relaxed text-justify space-y-4">
-                  {master.description.split('\n').map((paragraph, idx) => (
-                    <p key={idx}>{paragraph}</p>
-                  ))}
-                </div>
+                {/* 中英文姓名 */}
+                <h3 className="text-xl font-bold text-slate-800 mb-1">{person.nameCH}</h3>
+                <p className="text-xs font-bold text-[#002B5B] uppercase tracking-widest mb-4">
+                  {person.nameEN}
+                </p>
+                
+                {/* 分隔線與頭銜 (取代原本的底色橢圓框) */}
+                <div className="w-8 h-[1px] bg-slate-200 mb-3"></div>
+                <p className="text-[11px] text-slate-400 font-medium tracking-widest mb-4">
+                  {person.title}
+                </p>
+                
+                {/* 簡介 */}
+                <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
+                  {person.bio}
+                </p>
               </div>
 
             </div>
@@ -1758,8 +2104,110 @@ export default function Guests() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
+}
+</file>
+
+<file path="src/pages/Contact.tsx">
+import { Mail, MessageCircle, Landmark } from 'lucide-react';
+import AnnouncementSection from '../components/AnnouncementSection';
+
+// 1. 匯入圖片檔案 (因為下方已註解，所以這裡也註解掉來消除警告)
+// import LogoOrganizers from '../assets/logo-2.jpg';      
+// import LogoNTUT from '../assets/logo-ntut.png';        
+// import LogoNIU from '../assets/logo-niu.png';          
+// import LogoRedin from '../assets/logo-redin.png';      
+// import LogoBright from '../assets/logo-bright.png';    
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+ <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+ </svg>
+);
+
+export default function Contact() {
+ return (
+   <div className="pt-32 bg-white min-h-screen flex flex-col">
+     <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full flex-grow">
+      
+       {/* 標題區 */}
+       <div className="mb-16">
+         <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
+         <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
+         <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
+       </div>
+
+       {/* 聯絡資訊區塊 */}
+       <div className="space-y-12 mb-16">
+         <div className="text-lg text-slate-600 leading-relaxed">
+           <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
+           <div className="flex gap-6 mb-10">
+             <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+               <FacebookIcon className="w-7 h-7 fill-current" />
+             </a>
+             <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
+               <MessageCircle className="w-7 h-7 fill-current" />
+             </a>
+           </div>
+           <div className="flex items-center gap-3 text-[#002B5B]">
+             <Mail className="w-5 h-5" />
+             <span>E-mail：</span>
+             <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
+           </div>
+         </div>
+
+         {/* 銀行匯款資訊 */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
+           <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+             <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+             <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
+           </div>
+           <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
+             <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
+             <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
+           </div>
+         </div>
+       </div>
+
+       {/*
+        * ==========================================================
+        * 以下是夥伴單位區塊，已被註解隱藏
+        * ==========================================================
+        */}
+       {/*
+       <div className="pt-10 border-t border-slate-100 space-y-12 pb-24">
+        
+         <section>
+           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
+           <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
+         </section>
+
+         <section>
+           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
+           <div className="flex flex-wrap items-center gap-8 md:gap-12">
+             <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
+             <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
+           </div>
+         </section>
+
+         <section>
+           <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
+           <div className="flex flex-wrap items-center gap-8 md:gap-12">
+             <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
+             <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
+           </div>
+         </section>
+
+       </div>
+       */}
+
+     </div>
+
+     {/* 移入底部的中立公告區塊 */}
+     <AnnouncementSection />
+   </div>
+ );
 }
 </file>
 
@@ -1989,7 +2437,7 @@ export default function DialogueArchive() {
         
         {/* 標題區 */}
         <div className="flex items-center gap-6 mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">歷年國際對話</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide">超級運算改變研究方式</h2>
           <div className="h-[2px] flex-grow bg-slate-200"></div>
         </div>
 
@@ -2050,78 +2498,286 @@ export default function DialogueArchive() {
 }
 </file>
 
-<file path="src/components/LaureatesSection.tsx">
-interface Laureate {
-  id: number;
-  nameCH: string;
-  nameEN: string;
-  title: string;
-  image: string;
-  bio: string;
-}
+<file path="src/pages/Home.tsx">
+// src/pages/Home.tsx
 
-interface Props {
-  pageTitle?: string;
-  laureates: Laureate[];
-}
+import { useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { Calendar, MapPin, Mic, ArrowRight } from 'lucide-react';
 
-export default function LaureatesSection({ pageTitle = "科學大師陣容", laureates }: Props) {
+// 匯入原有組件
+import StaticHero from '../components/StaticHero';
+import AboutSection from '../components/AboutSection'; 
+import PresidentSection from '../components/PresidentSection';
+import MediaSection from '../components/MediaSection';
+import NewsSection from '../components/NewsSection';
+
+// ✨ 我們將在這個檔案中直接定義新的「最新活動速覽」組件 ✨
+const UpcomingEventSpotlight = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 md:py-28 bg-slate-50 border-y border-slate-200/80">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         
-        {/* 標題區塊 */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">{pageTitle}</h2>
+        {/* 區塊標題 */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-800">最新活動</h2>
+          <p className="mt-2 text-sm text-slate-400 uppercase tracking-widest">Upcoming Events</p>
           <div className="w-12 h-1 bg-[#002B5B] mx-auto mt-6 rounded-full"></div>
         </div>
 
-        {/* 橫向並排網格：手機版1欄、平板2欄、電腦4欄 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {laureates.map((person) => (
-            <div key={person.id} className="flex flex-col items-center text-center group">
-              
-              {/* 照片區塊：限制最大寬度，確保手機版照片大小適中 */}
-              <div className="relative w-2/3 sm:w-full max-w-[240px] aspect-[3/4] mb-8">
-                {/* 底部旋轉裝飾框 */}
-                <div className="absolute inset-0 border-2 border-slate-200 rounded-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
-                {/* 照片本體 */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-50">
-                  <img 
-                    src={person.image} 
-                    alt={person.nameCH} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                  />
+        {/* 整合式活動速覽卡片 */}
+        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/70 overflow-hidden border border-slate-100">
+          <div className="p-8 md:p-10">
+            
+            {/* 卡片頂部：標題和主題 */}
+            <div className="border-b border-slate-100 pb-6 mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#002B5B] leading-tight">
+                2026 諾科獎國際論壇
+              </h3>
+              <p className="mt-2 text-base md:text-lg text-slate-600">
+                AI 時代的數位信任：從網際網路安全到未來世界
+              </p>
+            </div>
+
+            {/* 卡片中部：關鍵資訊 */}
+            <div className="space-y-5">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 flex-shrink-0 bg-blue-50 rounded-lg flex items-center justify-center">
+                  <Calendar className="w-5 h-5 text-[#002B5B]" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-700">日期</p>
+                  <p className="text-sm text-slate-500">2026年10月28日 (星期二)</p>
                 </div>
               </div>
-
-              {/* 文字資訊區塊 */}
-              <div className="flex flex-col items-center w-full px-2">
-                
-                {/* 中英文姓名 */}
-                <h3 className="text-xl font-bold text-slate-800 mb-1">{person.nameCH}</h3>
-                <p className="text-xs font-bold text-[#002B5B] uppercase tracking-widest mb-4">
-                  {person.nameEN}
-                </p>
-                
-                {/* 分隔線與頭銜 (取代原本的底色橢圓框) */}
-                <div className="w-8 h-[1px] bg-slate-200 mb-3"></div>
-                <p className="text-[11px] text-slate-400 font-medium tracking-widest mb-4">
-                  {person.title}
-                </p>
-                
-                {/* 簡介 */}
-                <p className="text-sm text-slate-500 leading-relaxed line-clamp-3 group-hover:line-clamp-none transition-all">
-                  {person.bio}
-                </p>
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 flex-shrink-0 bg-blue-50 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-[#002B5B]" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-700">地點</p>
+                  <p className="text-sm text-slate-500">國立政治大學公企中心 4樓A431會議廳</p>
+                </div>
               </div>
-
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 flex-shrink-0 bg-blue-50 rounded-lg flex items-center justify-center">
+                  <Mic className="w-5 h-5 text-[#002B5B]" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-700">主講貴賓</p>
+                  <p className="text-sm text-slate-500">Whitfield Diffie (2015 圖靈獎得主)</p>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
 
+          </div>
+          
+          {/* 卡片底部：行動呼籲按鈕 */}
+          <Link 
+            to="/program" 
+            className="group block bg-gray-50 hover:bg-gray-100 transition-colors"
+          >
+            <div className="p-5 flex justify-between items-center text-sm font-bold text-[#002B5B] tracking-widest">
+              <span>查看活動詳情與報名</span>
+              <ArrowRight className="w-5 h-5 transform transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
+        </div>
       </div>
     </section>
+  );
+};
+
+
+// 主要的 Home 組件
+export default function Home() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [hash]);
+
+  return (
+    <>
+      <StaticHero />
+      {/* ✨ 將舊的 SummitBrief 組件替換為新的 UpcomingEventSpotlight 組件 ✨ */}
+      <UpcomingEventSpotlight />
+      <AboutSection /> 
+      <PresidentSection />
+      <MediaSection />
+      <NewsSection />
+    </>
+  );
+}
+</file>
+
+<file path="src/components/Navbar.tsx">
+// src/components/Navbar.tsx
+
+import { useState } from 'react';
+import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+import logoImg from '../assets/logo.png';
+
+interface NavMenu {
+  label: string;
+  items: string[];
+}
+
+// 重新設計導覽列結構
+const navMenus: Record<string, NavMenu> = {
+  peak: {
+    label: '峰會介紹',
+    items: ['關於我們', '會長的話'],
+  },
+  // 合併「活動內容」和「貴賓介紹」為「最新活動」
+  agenda: {
+    label: '最新活動',
+    items: [], // 直接點擊，不再有下拉選單
+  },
+  review: {
+    label: '歷年回顧',
+    items: ['2026 春季場', '2025'],
+  },
+  about: {
+    label: '聯絡我們',
+    items: [],
+  }
+};
+
+const pathMap: Record<string, string> = {
+  // 將「最新活動」指向 /program
+  '最新活動': '/program',
+  '2026 春季場': '/review/2026-spring',
+  '2025': '/review/2025',
+  '聯絡我們': '/contact',
+  '關於我們': '/#origin',
+  '會長的話': '/#founder',
+  '首頁': '/',
+};
+
+export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const getPath = (item: string) => pathMap[item] || '#';
+
+  return (
+    <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+        
+        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
+          <div className="relative">
+            <img 
+              src={logoImg} 
+              alt="諾科獎 Logo" 
+              className="transition-all duration-500 object-contain h-10 w-auto"
+            />
+          </div>
+        </Link>
+
+        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
+          {Object.entries(navMenus).map(([key, menu]) => {
+            const hasItems = menu.items.length > 0;
+            const targetPath = getPath(menu.label);
+            const textColor = 'text-slate-700 hover:text-[#002B5B]';
+
+            return (
+              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
+                {hasItems ? (
+                  <>
+                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
+                      {menu.label}
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
+                    </span>
+                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
+                        {menu.items.map((item) => (
+                          <Link 
+                            key={item} 
+                            to={getPath(item)} 
+                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
+                          >
+                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                            {item}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor} h-full flex items-center`}>
+                    {menu.label}
+                  </Link>
+                )}
+              </div>
+            );
+          })}
+        </nav>
+
+        <div className="flex items-center space-x-5">
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
+          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
+            {Object.entries(navMenus).map(([key, menu]) => {
+              const hasItems = menu.items.length > 0;
+              const targetPath = getPath(menu.label);
+
+              if (!hasItems) {
+                return (
+                  <Link 
+                    key={key}
+                    to={targetPath}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#002B5B] rounded-xl transition"
+                  >
+                    {menu.label}
+                  </Link>
+                );
+              }
+
+              return (
+                <details key={key} className="group">
+                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
+                    {menu.label}
+                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-[#002B5B]/30 ml-6 my-1">
+                    {menu.items.map((item) => (
+                      <Link 
+                        key={item}
+                        to={getPath(item)} 
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
+                      >
+                        {item}
+                      </Link>
+                    ))}
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
 </file>
@@ -2133,6 +2789,7 @@ import { Clock, X } from 'lucide-react';
 // === 圖片匯入區 ===
 import new1Img from '../assets/news/new1.jpg';
 import new2Img from '../assets/news/new2.jpg';
+import new3Img from '../assets/news/new3.jpg'; // 新增的圖片
 
 interface NewsItem {
   id: number;
@@ -2144,6 +2801,14 @@ interface NewsItem {
 }
 
 const newsData: NewsItem[] = [
+  {
+    id: 3,
+    date: "2026-05-16",
+    title: "啟發青年｜讓台灣孩子自然擁有與世界對話的自信",
+    summary: "2026 諾科獎國際科學論壇結束後，一直記得的不是舞台也不是掌聲，是在宜蘭大學青年學生站起來用英文向 Michael Levitt 教授提問的那一刻，心裡有一種很深的感受，台灣的孩子不是不敢，是過去很少有機會站在這樣的現場裡。",
+    content: "2026 諾科獎國際科學論壇結束後，一直記得的不是舞台也不是掌聲，是在宜蘭大學青年學生站起來用英文向 Michael Levitt 教授提問的那一刻，心裡有一種很深的感受，台灣的孩子不是不敢，是過去很少有機會站在這樣的現場裡。\n\n這也是我一直想做的，不是把諾貝爾獎得主「請來」而已，而是希望有一天，台灣年輕人會很自然地覺得自己可以跟世界對話，這次在宜蘭大學真的有看到這畫面，孩子們專注問安靜聽，問題問得也很好，這種感覺不是熱鬧，是一種很真實的交流。\n\nMichael Levitt 教授離開前，寫了一張紙條和一個紀念物給我，一句：\n“Thanks for everything.”\n很簡單，但讓我感動，雖然相處不久卻感受到彼此的真心。\n\nThank you, Professor Michael Levitt, for your kindness, trust, and the inspiration you brought to Taiwan.",
+    image: new3Img 
+  },
   {
     id: 1,
     date: "2026-04-13",
@@ -2169,11 +2834,21 @@ export default function NewsSection() {
     <section className="pt-12 pb-20 bg-slate-50 relative">
       <div className="max-w-6xl mx-auto px-6">
         
-        <div className="flex items-center gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 tracking-wide shrink-0">
-            最新消息 <span className="text-slate-300 ml-2 font-light uppercase text-xl md:text-2xl">Latest News</span>
-          </h2>
-          <div className="h-[1px] flex-grow bg-slate-200"></div>
+        {/* ================================================================= */}
+        {/* 1. 更新後的標題區塊 (與媒體報導樣式一致) */}
+        {/* ================================================================= */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <span className="w-1.5 h-6 bg-[#002B5B] rounded-full"></span>
+              <h2 className="text-3xl md:text-4xl font-bold tracking-wider text-slate-800">
+                最新消息
+              </h2>
+            </div>
+            <p className="text-xs md:text-sm tracking-[0.25em] text-slate-400 font-light uppercase">
+              Latest News
+            </p>
+          </div>
         </div>
         
         <div className="space-y-12">
@@ -2220,14 +2895,16 @@ export default function NewsSection() {
               <X className="w-5 h-5" />
             </button>
             <div className="w-full aspect-video md:h-96 shrink-0 relative bg-slate-100">
+              {/* 優化為 object-contain，讓手寫紙條完整顯示不被裁切 */}
               <img 
                 src={selectedNews.image} 
                 alt={selectedNews.title} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
             </div>
-            <div className="p-6 sm:p-10 md:p-12 pt-2 md:pt-4 bg-white">
+            {/* ✨ 這裡已將 pb-32 加到這個外層 div 的 class 裡面，解決擋字問題 ✨ */}
+            <div className="p-6 pb-32 sm:p-10 sm:pb-32 md:p-12 pt-2 md:pt-4 bg-white">
               <div className="flex items-center gap-2 text-[#002B5B] mb-4 text-xs md:text-sm font-bold tracking-widest">
                 <Clock className="w-4 h-4" />
                 {selectedNews.date}
@@ -2244,313 +2921,6 @@ export default function NewsSection() {
         </div>
       )}
     </section>
-  );
-}
-</file>
-
-<file path="src/pages/Contact.tsx">
-import { Mail, MessageCircle, Landmark } from 'lucide-react';
-import AnnouncementSection from '../components/AnnouncementSection';
-
-// 1. 匯入圖片檔案
-import LogoOrganizers from '../assets/logo-2.jpg';      
-import LogoNTUT from '../assets/logo-ntut.png';        
-import LogoNIU from '../assets/logo-niu.png';          
-import LogoRedin from '../assets/logo-redin.png';      
-import LogoBright from '../assets/logo-bright.png';    
-
-const FacebookIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-export default function Contact() {
-  return (
-    <div className="pt-32 bg-white min-h-screen flex flex-col">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 w-full flex-grow">
-        
-        {/* 標題區 */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold text-slate-800">聯絡我們</h2>
-          <p className="text-xl text-slate-500 font-light mt-2 tracking-wide">Contact</p>
-          <div className="w-12 h-1 bg-[#002B5B] mt-6 rounded-full"></div>
-        </div>
-
-        {/* 聯絡資訊區塊 */}
-        <div className="space-y-12 mb-16">
-          <div className="text-lg text-slate-600 leading-relaxed">
-            <p className="mb-6">若有任何與協會相關問題與建議，歡迎透過以下方式與我們聯繫：</p>
-            <div className="flex gap-6 mb-10">
-              <a href="https://www.facebook.com/p/%E8%AB%BE%E7%A7%91%E7%8D%8E%E5%9C%8B%E9%9A%9B%E6%96%87%E6%95%99%E4%BA%A4%E6%B5%81%E5%8D%94%E6%9C%83-61566980976065/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#1877F2] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <FacebookIcon className="w-7 h-7 fill-current" />
-              </a>
-              <a href="https://line.me/ti/p/~@171iygsm" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-[#06c755] rounded-full flex items-center justify-center text-white shadow-lg hover:opacity-90 transition-opacity">
-                <MessageCircle className="w-7 h-7 fill-current" />
-              </a>
-            </div>
-            <div className="flex items-center gap-3 text-[#002B5B]">
-              <Mail className="w-5 h-5" />
-              <span>E-mail：</span>
-              <a href="mailto:service@nsic.org.tw" className="hover:underline font-medium">service@nsic.org.tw</a>
-            </div>
-          </div>
-
-          {/* 銀行匯款資訊 */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10 border-t border-slate-100">
-            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
-              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110595-0</p><p>戶名：諾科獎國際文教交流協會</p></div>
-            </div>
-            <div className="p-5 bg-[#f8fafc] rounded-xl space-y-3 border border-slate-100 shadow-sm">
-              <div className="flex items-center gap-2 text-[#002B5B] font-bold"><Landmark className="w-5 h-5" /> 銀行：華南銀行-台北南門分行</div>
-              <div className="text-slate-600 text-sm"><p>帳號：117-10-110600-5</p><p>戶名：諾科獎教育有限公司</p></div>
-            </div>
-          </div>
-        </div>
-
-        {/* 夥伴單位區塊 */}
-        <div className="pt-10 border-t border-slate-100 space-y-12 pb-24">
-          
-          {/* 主辦單位 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">主辦單位</h3>
-            <img src={LogoOrganizers} alt="主辦單位" className="h-12 md:h-14 w-auto object-contain" />
-          </section>
-
-          {/* 學術合作夥伴 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">學術合作夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoNTUT} alt="國立臺北科技大學" className="h-12 md:h-14 w-auto object-contain" />
-              <img src={LogoNIU} alt="國立宜蘭大學" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
-          </section>
-
-          {/* 國際執行夥伴 */}
-          <section>
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">國際執行夥伴</h3>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <img src={LogoRedin} alt="紅映國際活動製作" className="h-12 md:h-14 w-auto object-contain" />
-              <img src={LogoBright} alt="采傑國際會議服務" className="h-12 md:h-14 w-auto object-contain" />
-            </div>
-          </section>
-
-        </div>
-      </div>
-
-      {/* 5. 移入底部的中立公告區塊 */}
-      <AnnouncementSection />
-    </div>
-  );
-}
-</file>
-
-<file path="src/components/Navbar.tsx">
-import { useState } from 'react';
-import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-// 1. 匯入你的 Logo
-import logoImg from '../assets/logo.png';
-
-interface NavMenu {
-  label: string;
-  items: string[];
-}
-
-const navMenus: Record<string, NavMenu> = {
-  peak: {
-    label: '峰會介紹',
-    items: ['關於我們', '會長的話'],
-  },
-  agenda: {
-    label: '活動內容',
-    items: ['峰會議程'],
-  },
-  guests: {
-    label: '貴賓介紹',
-    items: ['主要貴賓'],
-  },
-  review: {
-    label: '歷年回顧',
-    items: ['2025'],
-  },
-  about: {
-    label: '聯絡我們',
-    items: [],
-  }
-};
-
-const pathMap: Record<string, string> = {
-  '主要貴賓': '/guests',
-  '峰會議程': '/program',
-  '2025': '/review-2025',
-  '聯絡我們': '/contact',
-  '關於我們': '/#origin',
-  '會長的話': '/#founder',
-  '首頁': '/',
-};
-
-export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  return (
-    <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-        
-        {/* Logo 區塊 */}
-        <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
-          <div className="relative">
-            <img 
-              src={logoImg} 
-              alt="諾科獎 Logo" 
-              className="transition-all duration-500 object-contain h-10 w-auto"
-            />
-          </div>
-        </Link>
-
-        {/* Desktop Menu */}
-        <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
-          {Object.entries(navMenus).map(([key, menu]) => {
-            const hasItems = menu.items.length > 0;
-            const targetPath = pathMap[menu.label] || '#';
-            const textColor = 'text-slate-700 hover:text-[#002B5B]'; // 統一深色文字
-
-            return (
-              <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
-                {hasItems ? (
-                  <>
-                    <span className={`flex items-center gap-1.5 transition-colors duration-300 ${textColor}`}>
-                      {menu.label}
-                      <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
-                    </span>
-                    {/* Dropdown Menu */}
-                    <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
-                        {menu.items.map((item) => (
-                          <Link 
-                            key={item} 
-                            to={pathMap[item] || '#'} 
-                            className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
-                          >
-                            <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                            {item}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
-                    {menu.label}
-                  </Link>
-                )}
-              </div>
-            );
-          })}
-        </nav>
-
-        {/* Right Toolbar */}
-        <div className="flex items-center space-x-5">
-          <button 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
-          <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-            {Object.entries(navMenus).map(([key, menu]) => {
-              const hasItems = menu.items.length > 0;
-              const targetPath = pathMap[menu.label] || '#';
-
-              if (!hasItems) {
-                return (
-                  <Link 
-                    key={key}
-                    to={targetPath}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3.5 text-base font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#002B5B] rounded-xl transition"
-                  >
-                    {menu.label}
-                  </Link>
-                );
-              }
-
-              return (
-                <details key={key} className="group">
-                  <summary className="flex justify-between items-center px-4 py-3.5 text-base font-semibold text-slate-700 cursor-pointer hover:bg-slate-50 rounded-xl list-none">
-                    {menu.label}
-                    <ChevronDown className="w-4 h-4 text-slate-400 transition-transform group-open:rotate-180" />
-                  </summary>
-                  <div className="bg-slate-50/50 px-4 py-2 space-y-1 border-l-2 border-[#002B5B]/30 ml-6 my-1">
-                    {menu.items.map((item) => (
-                      <Link 
-                        key={item}
-                        to={pathMap[item] || '#'} 
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
-                      >
-                        {item}
-                      </Link>
-                    ))}
-                  </div>
-                </details>
-              );
-            })}
-          </div>
-        </div>
-      )}
-    </header>
-  );
-}
-</file>
-
-<file path="src/pages/Home.tsx">
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-// 匯入組件
-import StaticHero from '../components/StaticHero';
-import SummitBrief from '../components/SummitBrief';
-import AboutSection from '../components/AboutSection'; 
-import PresidentSection from '../components/PresidentSection';
-import MediaSection from '../components/MediaSection';
-import NewsSection from '../components/NewsSection';
-
-export default function Home() {
-  const { hash } = useLocation();
-
-  useEffect(() => {
-    if (hash) {
-      setTimeout(() => {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, [hash]);
-
-  return (
-    <>
-      <StaticHero />
-      <SummitBrief />
-      <AboutSection /> 
-      <PresidentSection />
-      
-      {/* 媒體報導區塊置於此 */}
-      <MediaSection />
-      
-      <NewsSection />
-    </>
   );
 }
 </file>
@@ -2730,6 +3100,136 @@ export default function SummitBrief() {
         </div>
       </div>
     </section>
+  );
+}
+</file>
+
+<file path="src/pages/Program.tsx">
+// src/pages/Program.tsx
+
+import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
+import whitfieldDiffieImg from '../assets/whitfield-diffie.jpg'; // 確保圖片已在 src/assets/
+
+export default function Program() {
+  // Google 表單連結
+  const registrationLink = "https://forms.gle/2r45xBWFtJDgxPmX6";
+
+  return (
+    <div className="bg-slate-50 min-h-screen">
+      <div className="flex items-center justify-center pt-28 pb-24 px-4">
+        
+        <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl shadow-slate-300/30 overflow-hidden flex flex-col lg:flex-row">
+          
+          {/* 左欄：講者照片 */}
+          <div className="w-full lg:w-5/12 bg-gray-100 lg:bg-transparent">
+            <div className="p-4 lg:p-0 flex items-center justify-center">
+              <div className="w-4/5 lg:w-full">
+                <img 
+                  src={whitfieldDiffieImg} 
+                  alt="Whitfield Diffie"
+                  className="w-full h-full rounded-2xl lg:rounded-none object-contain lg:object-cover lg:object-top"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* 右欄：所有資訊 */}
+          <div className="w-full lg:w-7/12 flex flex-col p-6 sm:p-10 md:p-12">
+            
+            {/* 活動標題 */}
+            <div className="mb-2 lg:mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#002B5B] leading-tight">
+                2026 諾科獎國際論壇
+              </h1>
+              <p className="mt-2 text-lg sm:text-xl text-slate-600 font-medium">
+                AI 時代的數位信任：從網際網路安全到未來世界
+              </p>
+            </div>
+            
+            {/* 講者介紹 */}
+            <div className="mb-2 lg:mb-8">
+              <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">主講貴賓</p>
+              <h2 className="text-3xl font-bold text-slate-800">Whitfield Diffie</h2>
+              <p className="mt-1 text-lg font-semibold text-[#002B5B]">2015 年圖靈獎得主</p>
+              <div className="mt-3 text-base text-slate-600 space-y-2">
+                <p>• 現代網路安全與公開金鑰密碼技術的奠基者之一</p>
+                <p>• DNS、Diffie-Hellman 金鑰交換等核心技術的發明人</p>
+                <p>• 讓安全的網路銀行、電子商務與私密通訊成為可能</p>
+              </div>
+            </div>
+
+            {/* 分隔線 */}
+            <div className="w-full h-px bg-slate-200 my-2 lg:my-4"></div>
+
+            {/* 活動詳情 & 報名 */}
+            <div className="mt-auto flex flex-col gap-6 lg:gap-8">
+              {/*
+                [電腦版優化]
+                - 手機上依然是 grid-cols-1。
+                - sm 螢幕上是 grid-cols-3 均分。
+                - lg 螢幕上，我們自定義欄位寬度，讓日期和地點更寬。
+              */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-[2fr_1.5fr_2fr] gap-6">
+                
+                {/* 日期欄位 */}
+                <div className="flex items-center gap-3">
+                  <Calendar className="w-5 h-5 text-slate-400 shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">日期</p>
+                    <p className="text-sm font-bold text-slate-800 whitespace-nowrap">2026年10月13日 (星期二)</p>
+                  </div>
+                </div>
+
+                {/* 時間欄位 */}
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-slate-400 shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">時間</p>
+                    <p className="text-sm font-bold text-slate-800">13:30 – 15:20</p>
+                  </div>
+                </div>
+
+                {/* 地點欄位 */}
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">地點</p>
+                    <p className="text-sm font-bold text-slate-800">
+                      國立政治大學公企中心<br/>4樓A431會議廳
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* 唯一的報名按鈕 */}
+              <a 
+                href={registrationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#002B5B] text-white text-base font-bold tracking-widest rounded-xl shadow-lg hover:bg-blue-800 transition-all transform hover:-translate-y-1"
+              >
+                立即報名
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      {/* 關於本場論壇的深度論述 */}
+      <div className="bg-white py-16 sm:py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-slate-800 mb-6">為何這場論壇至關重要？</h2>
+          <div className="text-lg text-slate-600 leading-relaxed space-y-6">
+            <p>當人工智慧（AI）正以前所未有的速度重塑世界，我們對數位互動的「信任」基礎也面臨著嚴峻挑戰。這場論壇將帶您回歸本源，深入了解現代網路安全的基石，並與此領域的開創者一同展望在 AI 驅動的未來中，我們將如何建立一個更安全、更值得信賴的數位社會。</p>
+            <blockquote className="border-l-4 border-[#002B5B] pl-6 py-2 text-left italic text-slate-500">
+              “他不是一般的資安專家，而是奠定現代網路安全世界的開創者之一。”
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 </file>

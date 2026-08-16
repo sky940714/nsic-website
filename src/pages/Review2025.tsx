@@ -64,7 +64,7 @@ export default function Review2025() {
 
       {/* 2. 參與大師介紹 (白色背景) */}
       <div className="bg-white border-t border-white/10">
-        <LaureatesSection pageTitle="2025 參與科學大師" laureates={data2025} />
+        <LaureatesSection pageTitle="2025 科學大師" laureates={data2025} />
       </div>
     </div>
   );

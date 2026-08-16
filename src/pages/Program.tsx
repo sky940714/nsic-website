@@ -1,210 +1,127 @@
-import { useState, useEffect } from 'react';
-import { Calendar, MapPin, PlayCircle, ArrowLeft, ArrowRight, Clock } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, EffectFade, Navigation } from 'swiper/modules';
+// src/pages/Program.tsx
 
-// 引入 Swiper 樣式
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-// @ts-ignore
-import 'swiper/css/effect-fade';
-
-// ==========================================
-// 匯入照片 (路徑與之前相同)
-// ==========================================
-import ntut1 from '../assets/202605/ntut26/ntut1.jpg';
-import ntut2 from '../assets/202605/ntut26/ntut2.jpg';
-import ntut3 from '../assets/202605/ntut26/ntut3.jpg';
-import ntut4 from '../assets/202605/ntut26/ntut4.jpg';
-import ntut5 from '../assets/202605/ntut26/ntut5.jpg';
-import ntut6 from '../assets/202605/ntut26/ntut6.jpg';
-
-import niu1 from '../assets/202605/niu26/niu1.jpg';
-import niu2 from '../assets/202605/niu26/niu2.jpg';
-import niu3 from '../assets/202605/niu26/niu3.jpg';
-import niu4 from '../assets/202605/niu26/niu4.jpg';
-import niu5 from '../assets/202605/niu26/niu5.jpg';
-import niu6 from '../assets/202605/niu26/niu6.jpg';
-import niu7 from '../assets/202605/niu26/niu7.jpg';
-import niu8 from '../assets/202605/niu26/niu8.jpg';
-
-interface ProgramItem {
-  id: number;
-  date: string;
-  location: string;
-  title: string;
-  content: string[];
-  images: string[];
-  liveLink?: string;
-  alignment: 'left' | 'right';
-}
-
-const programs: ProgramItem[] = [
-  {
-    id: 1,
-    date: "2026.05.13",
-    location: "國立臺北科技大學",
-    title: "探索生命與未來｜Michael Levitt 教授國際科學對話",
-    content: [
-      "由諾科獎推動的「國際科學對話」今天於國立臺北科技大學展開。",
-      "2013 年諾貝爾化學獎得主 Michael Levitt 教授，以「從原子到生命：人工智慧如何重塑分子科學並幫助我們理解生命與未來」為題，與現場教授、研究者及國際青年觀察員進行深度交流。",
-      "特別感謝國立臺北科技大學的共同推動與支持，也感謝中央研究院牟中原院士親自出席與引言。",
-      "對諾科獎而言，這不只是一場演講，更是一次讓世界級科學視野與台灣青年、學界彼此靠近的開始。科學真正重要的，不只是知識本身，是如何帶領我們理解生命、文明與未來。",
-      "謝謝今天所有參與的朋友。"
-    ],
-    images: [ntut1, ntut2, ntut3, ntut4, ntut5, ntut6],
-    alignment: 'left'
-  },
-  {
-    id: 2,
-    date: "2026.05.14",
-    location: "國立宜蘭大學",
-    title: "跨世代傳承｜宜大百年校慶 × 諾貝爾大師青年座談",
-    content: [
-      "在國立宜蘭大學百年校慶的重要時刻，由諾科獎國際文教交流協會與宜蘭大學共同主辦的「跨世代傳承－與諾貝爾得主青年座談」於昨日順利完成。",
-      "2013年諾貝爾化學獎得主 Michael Levitt 教授親自來到宜大，與青年學子分享 AI、生命科學與未來世界的視野，中央研究院蔡明道院士共同參與對談。現場令人印象深刻的，不只是世界級科學家的演講，青年學生以英文直接向 Michael Levitt 教授與蔡明道院士提問交流的畫面也令人難忘。",
-      "從諾貝爾獎得主、中央研究院院士，到大學生與高中學生，在同一個場域中自然對話，這正是諾科獎長期希望在台灣推動的國際交流風景。諾科獎始終相信，真正重要的，不只是邀請世界級科學家來到台灣，而是讓台灣青年世代開始擁有與世界對話的勇氣、能力與視野。",
-      "感謝國立宜蘭大學在百年校慶的重要時刻，與諾科獎共同完成這場跨世代的國際科學交流。"
-    ],
-    images: [niu1, niu2, niu3, niu4, niu5, niu6, niu7, niu8],
-    liveLink: "https://reurl.cc/vE4Zmj",
-    alignment: 'right'
-  }
-];
+import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
+import whitfieldDiffieImg from '../assets/whitfield-diffie.jpg'; // 確保圖片已在 src/assets/
 
 export default function Program() {
-  const [selectedProgram, setSelectedProgram] = useState<ProgramItem | null>(null);
-
-  // 當進入詳情頁時，回到頂部並鎖定捲動
-  useEffect(() => {
-    if (selectedProgram) {
-      window.scrollTo(0, 0);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [selectedProgram]);
+  // Google 表單連結
+  const registrationLink = "https://forms.gle/2r45xBWFtJDgxPmX6";
 
   return (
-    <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
-      <div className="max-w-6xl mx-auto px-6">
+    <div className="bg-slate-50 min-h-screen">
+      <div className="flex items-center justify-center pt-28 pb-24 px-4">
         
-        {/* 1. 頁面標題 */}
-        <div className="mb-16 md:mb-24 flex flex-col items-center md:items-start">
-          <h2 className="flex flex-col md:flex-row md:items-end gap-3 font-bold text-slate-800">
-            <span className="text-4xl md:text-5xl text-[#002B5B] tracking-wide">2026 峰會議程</span>
-            <span className="text-xl md:text-3xl text-slate-400 font-light tracking-widest pb-1 uppercase">Summit Agenda</span>
-          </h2>
-          <div className="w-16 h-1 mt-6 bg-[#002B5B] rounded-full"></div>
-        </div>
-
-        {/* 2. 電腦版佈局：維持雜誌排版 */}
-        <div className="hidden md:flex flex-col gap-32">
-          {programs.map((item) => (
-            <div key={item.id} className={`flex items-center gap-16 ${item.alignment === 'right' ? 'flex-row-reverse' : 'flex-row'}`}>
-              <div className="w-1/2 shrink-0">
-                <div className="aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-xl border border-white/50 relative group bg-slate-200">
-                  <Swiper modules={[Pagination, Autoplay, EffectFade]} effect="fade" autoplay={{ delay: 4000 }} pagination={{ clickable: true }} className="w-full h-full">
-                    {item.images.map((img, idx) => (
-                      <SwiperSlide key={idx}><img src={img} className="w-full h-full object-cover" alt="recaps" /></SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
+        <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl shadow-slate-300/30 overflow-hidden flex flex-col lg:flex-row">
+          
+          {/* 左欄：講者照片 */}
+          <div className="w-full lg:w-5/12 bg-gray-100 lg:bg-transparent">
+            <div className="p-4 lg:p-0 flex items-center justify-center">
+              <div className="w-4/5 lg:w-full">
+                <img 
+                  src={whitfieldDiffieImg} 
+                  alt="Whitfield Diffie"
+                  className="w-full h-full rounded-2xl lg:rounded-none object-contain lg:object-cover lg:object-top"
+                />
               </div>
-              <div className="w-1/2">
-                <div className="flex flex-wrap items-center gap-4 mb-6">
-                  <div className="flex items-center gap-2 text-[#002B5B] font-mono font-bold tracking-widest bg-blue-50 px-3 py-1 rounded-full text-sm"><Calendar className="w-4 h-4" /> {item.date}</div>
-                  <div className="flex items-center gap-2 text-slate-500 font-medium text-sm"><MapPin className="w-4 h-4" /> {item.location}</div>
-                </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-slate-800 leading-snug mb-6">{item.title}</h3>
-                <div className="space-y-5 text-slate-600 text-[17px] md:text-[19px] leading-[1.8] text-justify">
-                  {item.content.map((p, i) => <p key={i}>{p}</p>)}
-                </div>
-                {item.liveLink && (
-                  <div className="mt-8">
-                    <a href={item.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#002B5B] text-white text-sm font-bold tracking-widest rounded-full hover:bg-blue-800 transition-all">
-                      <PlayCircle className="w-5 h-5" /> 觀看直播回放
-                    </a>
+            </div>
+          </div>
+
+          {/* 右欄：所有資訊 */}
+          <div className="w-full lg:w-7/12 flex flex-col p-6 sm:p-10 md:p-12">
+            
+            {/* 活動標題 */}
+            <div className="mb-2 lg:mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold text-[#002B5B] leading-tight">
+                2026 諾科獎國際論壇
+              </h1>
+              <p className="mt-2 text-lg sm:text-xl text-slate-600 font-medium">
+                AI 時代的數位信任：從網際網路安全到未來世界
+              </p>
+            </div>
+            
+            {/* 講者介紹 */}
+            <div className="mb-2 lg:mb-8">
+              <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">主講貴賓</p>
+              <h2 className="text-3xl font-bold text-slate-800">Whitfield Diffie</h2>
+              <p className="mt-1 text-lg font-semibold text-[#002B5B]">2015 年圖靈獎得主</p>
+              <div className="mt-3 text-base text-slate-600 space-y-2">
+                <p>• 現代網路安全與公開金鑰密碼技術的奠基者之一</p>
+                <p>• DNS、Diffie-Hellman 金鑰交換等核心技術的發明人</p>
+                <p>• 讓安全的網路銀行、電子商務與私密通訊成為可能</p>
+              </div>
+            </div>
+
+            {/* 分隔線 */}
+            <div className="w-full h-px bg-slate-200 my-2 lg:my-4"></div>
+
+            {/* 活動詳情 & 報名 */}
+            <div className="mt-auto flex flex-col gap-6 lg:gap-8">
+              {/*
+                [電腦版優化]
+                - 手機上依然是 grid-cols-1。
+                - sm 螢幕上是 grid-cols-3 均分。
+                - lg 螢幕上，我們自定義欄位寬度，讓日期和地點更寬。
+              */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-[2fr_1.5fr_2fr] gap-6">
+                
+                {/* 日期欄位 */}
+                <div className="flex items-center gap-3">
+                  <Calendar className="w-5 h-5 text-slate-400 shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">日期</p>
+                    <p className="text-sm font-bold text-slate-800 whitespace-nowrap">2026年10月13日 (星期二)</p>
                   </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+                </div>
 
-        {/* 3. 手機版佈局：精緻卡片列表 */}
-        <div className="md:hidden flex flex-col gap-10">
-          {programs.map((item) => (
-            <div key={item.id} onClick={() => setSelectedProgram(item)} className="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-slate-100 cursor-pointer active:scale-[0.98] transition-transform">
-              <div className="aspect-[16/10] w-full relative">
-                <img src={item.images[0]} className="w-full h-full object-cover" alt="cover" />
-                <div className="absolute top-4 left-4"><span className="px-3 py-1 bg-white/90 backdrop-blur-md text-[#002B5B] text-xs font-bold rounded-full shadow-sm">{item.date}</span></div>
+                {/* 時間欄位 */}
+                <div className="flex items-center gap-3">
+                  <Clock className="w-5 h-5 text-slate-400 shrink-0" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">時間</p>
+                    <p className="text-sm font-bold text-slate-800">13:30 – 15:20</p>
+                  </div>
+                </div>
+
+                {/* 地點欄位 */}
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-xs text-slate-500 font-semibold">地點</p>
+                    <p className="text-sm font-bold text-slate-800">
+                      國立政治大學公企中心<br/>4樓A431會議廳
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="p-8">
-                <div className="flex items-center gap-2 text-slate-400 text-xs font-medium mb-3"><MapPin className="w-3 h-3" /> {item.location}</div>
-                <h3 className="text-xl font-bold text-slate-800 leading-tight mb-6">{item.title}</h3>
-                <div className="flex items-center text-[#002B5B] font-bold text-sm tracking-widest">查看詳情紀實 <ArrowRight className="w-4 h-4 ml-2" /></div>
-              </div>
+              
+              {/* 唯一的報名按鈕 */}
+              <a 
+                href={registrationLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group w-full flex items-center justify-center gap-3 px-6 py-4 bg-[#002B5B] text-white text-base font-bold tracking-widest rounded-xl shadow-lg hover:bg-blue-800 transition-all transform hover:-translate-y-1"
+              >
+                立即報名
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
-          ))}
+
+          </div>
         </div>
       </div>
-
-      {/* 4. 手機版：全螢幕沉浸式詳情頁 (保留頂部 Navbar 空間) */}
-      {selectedProgram && (
-        <div className="fixed top-20 inset-x-0 bottom-0 z-40 bg-white md:hidden animate-in fade-in slide-in-from-right duration-300 overflow-y-auto">
-          {/* 頂部固定返回導覽列 */}
-          <div className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-6">
-            <button onClick={() => setSelectedProgram(null)} className="flex items-center gap-2 text-[#002B5B] font-bold">
-              <ArrowLeft className="w-5 h-5" /> 返回峰會議程
-            </button>
-          </div>
-
-          {/* 內容區 */}
-          <div className="pb-32 bg-white">
-            
-            {/* 照片輪播區 (加入 Padding 留白，讓微圓角顯現) */}
-            <div className="w-full aspect-[4/3] px-5 pt-6 pb-2">
-              <Swiper 
-                modules={[Pagination, Navigation]} 
-                pagination={{ clickable: true }} // 預設就是圓圈點點
-                navigation 
-                style={{
-                  '--swiper-navigation-color': 'rgba(255, 255, 255, 0.85)', // 柔和的半透明白色箭頭
-                  '--swiper-navigation-size': '22px', // 箭頭稍微縮小
-                  '--swiper-pagination-color': '#002B5B', // 啟動時的點點顏色 (深藍)
-                  '--swiper-pagination-bullet-inactive-color': '#cbd5e1', // 未啟動時的點點顏色 (淺灰)
-                  textShadow: '0px 1px 3px rgba(0,0,0,0.4)' // 給白色箭頭一點微陰影，確保在白底照片上也看得見
-                } as React.CSSProperties}
-                className="w-full h-full rounded-2xl overflow-hidden shadow-md border border-slate-100"
-              >
-                {selectedProgram.images.map((img, idx) => (
-                  <SwiperSlide key={idx}>
-                    <img src={img} className="w-full h-full object-cover" alt="slide" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-
-            <div className="p-8">
-              <div className="flex items-center gap-2 text-slate-500 font-mono tracking-widest text-xs mb-4">
-                <Clock className="w-4 h-4" /> {selectedProgram.date} ｜ {selectedProgram.location}
-              </div>
-              <h2 className="text-2xl font-bold text-slate-800 leading-snug mb-8">{selectedProgram.title}</h2>
-              <div className="space-y-6 text-slate-600 text-[17px] leading-[1.8] text-justify font-light">
-                {selectedProgram.content.map((p, i) => <p key={i}>{p}</p>)}
-              </div>
-              {selectedProgram.liveLink && (
-                <div className="mt-10">
-                  <a href={selectedProgram.liveLink} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center gap-2 w-full py-4 bg-[#002B5B] text-white font-bold rounded-2xl shadow-lg active:scale-95 transition-transform"><PlayCircle className="w-5 h-5" /> 觀看直播錄影回放</a>
-                </div>
-              )}
-            </div>
+      
+      {/* 關於本場論壇的深度論述 */}
+      <div className="bg-white py-16 sm:py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-slate-800 mb-6">為何這場論壇至關重要？</h2>
+          <div className="text-lg text-slate-600 leading-relaxed space-y-6">
+            <p>當人工智慧（AI）正以前所未有的速度重塑世界，我們對數位互動的「信任」基礎也面臨著嚴峻挑戰。這場論壇將帶您回歸本源，深入了解現代網路安全的基石，並與此領域的開創者一同展望在 AI 驅動的未來中，我們將如何建立一個更安全、更值得信賴的數位社會。</p>
+            <blockquote className="border-l-4 border-[#002B5B] pl-6 py-2 text-left italic text-slate-500">
+              “他不是一般的資安專家，而是奠定現代網路安全世界的開創者之一。”
+            </blockquote>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

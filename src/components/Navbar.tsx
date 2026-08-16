@@ -1,8 +1,9 @@
+// src/components/Navbar.tsx
+
 import { useState } from 'react';
 import { ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// 1. 匯入你的 Logo
 import logoImg from '../assets/logo.png';
 
 interface NavMenu {
@@ -10,41 +11,43 @@ interface NavMenu {
   items: string[];
 }
 
+// 重新設計導覽列結構
 const navMenus: Record<string, NavMenu> = {
-  peak: {
-    label: '峰會介紹',
-    items: ['關於我們', '會長的話'],
+  aboutUs: {
+    label: '關於我們',
+    items: ['峰會介紹', '會長的話', '最新活動', '媒體報導'],
   },
-  agenda: {
-    label: '活動內容',
-    items: ['2026 峰會議程'],
-  },
-  guests: {
-    label: '貴賓介紹',
-    items: ['主要貴賓'],
+  program: {
+    label: '活動內容', // 已改為「活動內容」這四個字
+    items: [], // 沒有下拉選單，直接點擊跳轉 /program
   },
   review: {
     label: '歷年回顧',
-    items: ['2025'],
+    items: ['2026 春季場', '2025'],
   },
-  about: {
+  contact: {
     label: '聯絡我們',
-    items: [],
+    items: [], // 沒有下拉選單，直接點擊跳轉 /contact
   }
 };
 
+// 設定各個項目點擊後的跳轉路徑與錨點
 const pathMap: Record<string, string> = {
-  '主要貴賓': '/guests',
-  '2026 峰會議程': '/program',
-  '2025': '/review-2025',
+  '峰會介紹': '/#origin',       // 對應首頁的「關於我們（NSIC）」區塊
+  '會長的話': '/#founder',      // 對應首頁的「會長的話（朱會長）」區塊
+  '最新活動': '/#upcoming',     // 對應首頁的「最新活動（圖二）」區塊
+  '媒體報導': '/#media',        // 對應首頁的「媒體報導」區塊
+  '活動內容': '/program',       // 對應獨立的詳細活動與報名頁面
+  '2026 春季場': '/review/2026-spring',
+  '2025': '/review/2025',
   '聯絡我們': '/contact',
-  '關於我們': '/#origin',
-  '會長的話': '/#founder',
   '首頁': '/',
 };
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const getPath = (item: string) => pathMap[item] || '#';
 
   return (
     <header className="fixed w-full top-0 z-50 bg-white border-b border-slate-100 shadow-sm py-0 transition-all duration-300">
@@ -61,12 +64,12 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop Menu */}
+        {/* 電腦版選單 */}
         <nav className="hidden lg:flex items-center space-x-1 text-[15px] font-medium h-full">
           {Object.entries(navMenus).map(([key, menu]) => {
             const hasItems = menu.items.length > 0;
-            const targetPath = pathMap[menu.label] || '#';
-            const textColor = 'text-slate-700 hover:text-[#002B5B]'; // 統一深色文字
+            const targetPath = getPath(menu.label);
+            const textColor = 'text-slate-700 hover:text-[#002B5B]';
 
             return (
               <div key={key} className="relative group h-full flex items-center px-4 cursor-pointer">
@@ -76,13 +79,12 @@ export default function Navbar() {
                       {menu.label}
                       <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
                     </span>
-                    {/* Dropdown Menu */}
                     <div className="absolute top-[calc(100%-10px)] left-0 pt-4 w-52 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                       <div className="bg-white rounded-xl border border-slate-100 overflow-hidden py-2 shadow-2xl">
                         {menu.items.map((item) => (
                           <Link 
                             key={item} 
-                            to={pathMap[item] || '#'} 
+                            to={getPath(item)} 
                             className="flex items-center px-5 py-3 text-[14px] text-slate-600 hover:bg-slate-50 hover:text-[#002B5B] transition-all"
                           >
                             <ChevronRight className="w-3.5 h-3.5 mr-2 opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
@@ -93,7 +95,7 @@ export default function Navbar() {
                     </div>
                   </>
                 ) : (
-                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor}`}>
+                  <Link to={targetPath} className={`transition-colors duration-300 ${textColor} h-full flex items-center`}>
                     {menu.label}
                   </Link>
                 )}
@@ -102,7 +104,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right Toolbar */}
+        {/* 漢堡排按鈕（手機版） */}
         <div className="flex items-center space-x-5">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -113,13 +115,13 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* 手機版下拉選單 */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-slate-100 shadow-2xl animate-in slide-in-from-top duration-300">
           <div className="px-3 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
             {Object.entries(navMenus).map(([key, menu]) => {
               const hasItems = menu.items.length > 0;
-              const targetPath = pathMap[menu.label] || '#';
+              const targetPath = getPath(menu.label);
 
               if (!hasItems) {
                 return (
@@ -144,7 +146,7 @@ export default function Navbar() {
                     {menu.items.map((item) => (
                       <Link 
                         key={item}
-                        to={pathMap[item] || '#'} 
+                        to={getPath(item)} 
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block py-3 px-4 text-[15px] text-slate-600 hover:text-[#002B5B] hover:bg-white rounded-lg transition"
                       >

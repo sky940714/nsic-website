@@ -26,7 +26,6 @@ export default function AboutSection() {
                </div>
             </div>
           </div>
-
           {/* 右側：文字區 */}
           <div className="w-full lg:w-1/2 space-y-8">
             <div className="space-y-2">
