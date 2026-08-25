@@ -5,7 +5,6 @@ import nightnight1 from '../assets/2025/nightnightevent/nightnight1.jpg';
 import nightnight2 from '../assets/2025/nightnightevent/nightnight2.jpg';
 import nightnight3 from '../assets/2025/nightnightevent/nightnight3.jpg';
 import nightnight4 from '../assets/2025/nightnightevent/nightnight4.jpg';
-import nightnight5 from '../assets/2025/nightnightevent/nightnight5.jpg';
 import nightnight6 from '../assets/2025/nightnightevent/nightnight6.jpg';
 import nightnight7 from '../assets/2025/nightnightevent/nightnight7.jpg';
 import nightnight8 from '../assets/2025/nightnightevent/nightnight8.jpg';
@@ -102,7 +101,7 @@ export const archiveData: EventType[] = [
     location: "峰會晚宴",
     speakers: ["傑克·唐加拉", "康斯坦丁·諾沃肖洛夫", "路易斯·J·伊格納羅"],
     displayImage: nightnight1,
-    images: [nightnight1, nightnight2, nightnight3, nightnight4, nightnight5, nightnight6, nightnight7, nightnight8],
+    images: [nightnight1, nightnight2, nightnight3, nightnight4, nightnight6, nightnight7, nightnight8],
     description: "2025諾科獎台北峰會壓軸晚宴圓滿落幕，三位國際大師與產官學界貴賓齊聚，小小科學種子帶來精彩話劇演出。",
     details: "【回顧｜5/9 峰會晚宴圓滿落幕 小小科學種子閃耀登場 】\n\n2025諾科獎台北峰會於5月9日晚間舉辦壓軸晚宴，三位來自諾貝爾與圖靈獎的大師與產官學界貴賓齊聚一堂，為這場為期三天的國際交流盛會畫下圓滿句點。\n\n晚宴中，特別邀請路亞實驗教育機構的小朋友們登台演出一齣富有創意與科學想像力的話劇，孩子們以純真生動的方式，表達他們對科學的理解與熱情，贏得全場嘉賓與大師們熱烈掌聲。\n\n這不僅是一場科學與產業的交流晚宴，更是希望與靈感的傳遞。感謝所有參與者與協力夥伴，讓2025諾科獎台北峰會圓滿落幕，也為未來世代播下追夢的種子。"
   },
@@ -147,7 +146,7 @@ export const archiveData: EventType[] = [
     date: "05.08",
     time: "09:30–12:00",
     title: "台北科技大學｜Jack Dongarra 公益演講",
-    location: "台北科技大學",
+    location: "台北科技大学",
     speakers: ["傑克·唐加拉"],
     displayImage: ntut1_1,
     images: [ntut1_1, ntut1_2, ntut1_3, ntut1_4], 
