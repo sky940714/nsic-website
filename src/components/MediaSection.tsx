@@ -15,8 +15,38 @@ interface MediaItem {
   url: string;
 }
 
-// 已替換為最新的真實報導，並依照日期由新到舊排序
+// 已新增 4 筆最新報導，總共 12 筆，並依照日期由新到舊排序
 const mediaData: MediaItem[] = [
+  // --- 以下是新增的 4 筆報導 ---
+  {
+    id: 9,
+    date: "2026.09.02",
+    source: "經濟日報",
+    title: "圖靈獎得主十月來台，聚焦 AI 時代數位信任",
+    url: "https://money.udn.com/money/story/5723/9727340",
+  },
+  {
+    id: 10,
+    date: "2026.09.01",
+    source: "工商時報",
+    title: "圖靈獎得主Diffie10月13日訪台 聚焦AI時代數位信任與資安",
+    url: "https://www.ctee.com.tw/news/20260901701136-431204",
+  },
+  {
+    id: 11,
+    date: "2026.09.01",
+    source: "自由時報",
+    title: "圖靈獎得主訪台 Diffie 10月暢談AI數位信任",
+    url: "https://news.ltn.com.tw/news/life/breakingnews/5559305",
+  },
+  {
+    id: 12,
+    date: "2026.09.01",
+    source: "鋒燦傳媒",
+    title: "諾科獎邀圖靈獎得主探討「從密碼學革命到AI時代數位信任」",
+    url: "https://www.ftnn.com.tw/news/575070",
+  },
+  // --- 以下是原有的 8 筆報導 ---
   {
     id: 1,
     date: "2026.05.14",
@@ -111,7 +141,7 @@ export default function MediaSection() {
 
           {/* 電腦版專屬：頂級精品質感的頁碼與箭頭導覽 */}
           <div className="hidden lg:flex items-center gap-6 select-none">
-            {/* 頁碼：01 / 02 */}
+            {/* 頁碼：01 / 03 */}
             <div className="flex items-center font-mono text-sm tracking-widest">
               <span className="text-[#002B5B] font-bold text-lg">
                 {String(desktopActiveIndex + 1).padStart(2, '0')}
